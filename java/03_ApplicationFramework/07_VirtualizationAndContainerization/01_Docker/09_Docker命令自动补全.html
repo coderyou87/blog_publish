@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker命令自动补全 | 小游</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon1" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-02-18/d687f535b564447e82a3178a4e9b2f8c.jpg">
+    <link rel="icon2" href="https://you-blog.oss-cn-shenzhen.aliyuncs.com/typora/2021-02-18/icon.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="知行合一">
+    <link rel="preload" href="/blog_publish/assets/css/0.styles.9a82886c.css" as="style"><link rel="preload" href="/blog_publish/assets/js/app.0051f6c0.js" as="script"><link rel="preload" href="/blog_publish/assets/js/2.92f2819f.js" as="script"><link rel="preload" href="/blog_publish/assets/js/242.d008ab10.js" as="script"><link rel="prefetch" href="/blog_publish/assets/js/10.023b4711.js"><link rel="prefetch" href="/blog_publish/assets/js/100.0f88c6ef.js"><link rel="prefetch" href="/blog_publish/assets/js/101.58f9a916.js"><link rel="prefetch" href="/blog_publish/assets/js/102.ae49ad0d.js"><link rel="prefetch" href="/blog_publish/assets/js/103.3ba55d11.js"><link rel="prefetch" href="/blog_publish/assets/js/104.1905b533.js"><link rel="prefetch" href="/blog_publish/assets/js/105.55146dd9.js"><link rel="prefetch" href="/blog_publish/assets/js/106.64819f26.js"><link rel="prefetch" href="/blog_publish/assets/js/107.7be6b4dd.js"><link rel="prefetch" href="/blog_publish/assets/js/108.48663450.js"><link rel="prefetch" href="/blog_publish/assets/js/109.28075081.js"><link rel="prefetch" href="/blog_publish/assets/js/11.20553c69.js"><link rel="prefetch" href="/blog_publish/assets/js/110.5389d6da.js"><link rel="prefetch" href="/blog_publish/assets/js/111.9b581704.js"><link rel="prefetch" href="/blog_publish/assets/js/112.028e9f90.js"><link rel="prefetch" href="/blog_publish/assets/js/113.4078971e.js"><link rel="prefetch" href="/blog_publish/assets/js/114.500ddf8f.js"><link rel="prefetch" href="/blog_publish/assets/js/115.e8c4cb62.js"><link rel="prefetch" href="/blog_publish/assets/js/116.6614a492.js"><link rel="prefetch" href="/blog_publish/assets/js/117.037d39c2.js"><link rel="prefetch" href="/blog_publish/assets/js/118.8679ec64.js"><link rel="prefetch" href="/blog_publish/assets/js/119.228304df.js"><link rel="prefetch" href="/blog_publish/assets/js/12.5ba20854.js"><link rel="prefetch" href="/blog_publish/assets/js/120.025003e4.js"><link rel="prefetch" href="/blog_publish/assets/js/121.fdf4c640.js"><link rel="prefetch" href="/blog_publish/assets/js/122.3f9388ed.js"><link rel="prefetch" href="/blog_publish/assets/js/123.559f8127.js"><link rel="prefetch" href="/blog_publish/assets/js/124.b469c643.js"><link rel="prefetch" href="/blog_publish/assets/js/125.38fd577f.js"><link rel="prefetch" href="/blog_publish/assets/js/126.7bd0a394.js"><link rel="prefetch" href="/blog_publish/assets/js/127.34157a0a.js"><link rel="prefetch" href="/blog_publish/assets/js/128.861fc2c1.js"><link rel="prefetch" href="/blog_publish/assets/js/129.4c337a44.js"><link rel="prefetch" href="/blog_publish/assets/js/13.6201bcbf.js"><link rel="prefetch" href="/blog_publish/assets/js/130.1d128033.js"><link rel="prefetch" href="/blog_publish/assets/js/131.87b1f46f.js"><link rel="prefetch" href="/blog_publish/assets/js/132.0aef37eb.js"><link rel="prefetch" href="/blog_publish/assets/js/133.230b36f9.js"><link rel="prefetch" href="/blog_publish/assets/js/134.91922cfa.js"><link rel="prefetch" href="/blog_publish/assets/js/135.d9d3136b.js"><link rel="prefetch" href="/blog_publish/assets/js/136.05b3ff56.js"><link rel="prefetch" href="/blog_publish/assets/js/137.23940669.js"><link rel="prefetch" href="/blog_publish/assets/js/138.d74f8786.js"><link rel="prefetch" href="/blog_publish/assets/js/139.ef87c3f7.js"><link rel="prefetch" href="/blog_publish/assets/js/14.02e4d7e8.js"><link rel="prefetch" href="/blog_publish/assets/js/140.8484bc1b.js"><link rel="prefetch" href="/blog_publish/assets/js/141.9c6d8d29.js"><link rel="prefetch" href="/blog_publish/assets/js/142.77e732b2.js"><link rel="prefetch" href="/blog_publish/assets/js/143.33cbd558.js"><link rel="prefetch" href="/blog_publish/assets/js/144.9547b6f8.js"><link rel="prefetch" href="/blog_publish/assets/js/145.37c7da6f.js"><link rel="prefetch" href="/blog_publish/assets/js/146.c7f8b0d8.js"><link rel="prefetch" href="/blog_publish/assets/js/147.362f935a.js"><link rel="prefetch" href="/blog_publish/assets/js/148.bf70ee0e.js"><link rel="prefetch" href="/blog_publish/assets/js/149.24b153eb.js"><link rel="prefetch" href="/blog_publish/assets/js/15.d530c3b2.js"><link rel="prefetch" href="/blog_publish/assets/js/150.7a328259.js"><link rel="prefetch" href="/blog_publish/assets/js/151.cff20f9e.js"><link rel="prefetch" href="/blog_publish/assets/js/152.2fe7320d.js"><link rel="prefetch" href="/blog_publish/assets/js/153.9130260b.js"><link rel="prefetch" href="/blog_publish/assets/js/154.c3c0873c.js"><link rel="prefetch" href="/blog_publish/assets/js/155.25c3d024.js"><link rel="prefetch" href="/blog_publish/assets/js/156.cbe9af61.js"><link rel="prefetch" href="/blog_publish/assets/js/157.6f55a109.js"><link rel="prefetch" href="/blog_publish/assets/js/158.c40bcdc9.js"><link rel="prefetch" href="/blog_publish/assets/js/159.ada5ff9e.js"><link rel="prefetch" href="/blog_publish/assets/js/16.fc66bebf.js"><link rel="prefetch" href="/blog_publish/assets/js/160.4f48100a.js"><link rel="prefetch" href="/blog_publish/assets/js/161.8569c3f6.js"><link rel="prefetch" href="/blog_publish/assets/js/162.30594df7.js"><link rel="prefetch" href="/blog_publish/assets/js/163.aba136b2.js"><link rel="prefetch" href="/blog_publish/assets/js/164.ee2573cf.js"><link rel="prefetch" href="/blog_publish/assets/js/165.bd4e5143.js"><link rel="prefetch" href="/blog_publish/assets/js/166.8a0fa0aa.js"><link rel="prefetch" href="/blog_publish/assets/js/167.259771b2.js"><link rel="prefetch" href="/blog_publish/assets/js/168.05230954.js"><link rel="prefetch" href="/blog_publish/assets/js/169.5380263d.js"><link rel="prefetch" href="/blog_publish/assets/js/17.42d472d5.js"><link rel="prefetch" href="/blog_publish/assets/js/170.c6cdc797.js"><link rel="prefetch" href="/blog_publish/assets/js/171.918b04c7.js"><link rel="prefetch" href="/blog_publish/assets/js/172.79f634bc.js"><link rel="prefetch" href="/blog_publish/assets/js/173.3f625a4e.js"><link rel="prefetch" href="/blog_publish/assets/js/174.8491eaf2.js"><link rel="prefetch" href="/blog_publish/assets/js/175.de17d114.js"><link rel="prefetch" href="/blog_publish/assets/js/176.a20b9200.js"><link rel="prefetch" href="/blog_publish/assets/js/177.426ac279.js"><link rel="prefetch" href="/blog_publish/assets/js/178.cd20fd4c.js"><link rel="prefetch" href="/blog_publish/assets/js/179.889398b5.js"><link rel="prefetch" href="/blog_publish/assets/js/18.31414965.js"><link rel="prefetch" href="/blog_publish/assets/js/180.23c4824d.js"><link rel="prefetch" href="/blog_publish/assets/js/181.39ca96e8.js"><link rel="prefetch" href="/blog_publish/assets/js/182.26a56448.js"><link rel="prefetch" href="/blog_publish/assets/js/183.e996f6d7.js"><link rel="prefetch" href="/blog_publish/assets/js/184.cafa62e3.js"><link rel="prefetch" href="/blog_publish/assets/js/185.d98f8f56.js"><link rel="prefetch" href="/blog_publish/assets/js/186.e4b550e9.js"><link rel="prefetch" href="/blog_publish/assets/js/187.6f415df4.js"><link rel="prefetch" href="/blog_publish/assets/js/188.a422de4d.js"><link rel="prefetch" href="/blog_publish/assets/js/189.e47e4573.js"><link rel="prefetch" href="/blog_publish/assets/js/19.7c22b6ed.js"><link rel="prefetch" href="/blog_publish/assets/js/190.0e79dfed.js"><link rel="prefetch" href="/blog_publish/assets/js/191.e5faefcf.js"><link rel="prefetch" href="/blog_publish/assets/js/192.82ec5764.js"><link rel="prefetch" href="/blog_publish/assets/js/193.b5049f31.js"><link rel="prefetch" href="/blog_publish/assets/js/194.c106b6dc.js"><link rel="prefetch" href="/blog_publish/assets/js/195.98b7cdc1.js"><link rel="prefetch" href="/blog_publish/assets/js/196.2665ab6c.js"><link rel="prefetch" href="/blog_publish/assets/js/197.024fbc7d.js"><link rel="prefetch" href="/blog_publish/assets/js/198.784c589e.js"><link rel="prefetch" href="/blog_publish/assets/js/199.abbe7592.js"><link rel="prefetch" href="/blog_publish/assets/js/20.df68fd1e.js"><link rel="prefetch" href="/blog_publish/assets/js/200.c2ef265a.js"><link rel="prefetch" href="/blog_publish/assets/js/201.6e006620.js"><link rel="prefetch" href="/blog_publish/assets/js/202.e1714285.js"><link rel="prefetch" href="/blog_publish/assets/js/203.0b11f14c.js"><link rel="prefetch" href="/blog_publish/assets/js/204.e0e106e1.js"><link rel="prefetch" href="/blog_publish/assets/js/205.065d4b72.js"><link rel="prefetch" href="/blog_publish/assets/js/206.83b6d19a.js"><link rel="prefetch" href="/blog_publish/assets/js/207.285fdd43.js"><link rel="prefetch" href="/blog_publish/assets/js/208.80ebafe4.js"><link rel="prefetch" href="/blog_publish/assets/js/209.6fb9da4d.js"><link rel="prefetch" href="/blog_publish/assets/js/21.58ffb29b.js"><link rel="prefetch" href="/blog_publish/assets/js/210.945ece1c.js"><link rel="prefetch" href="/blog_publish/assets/js/211.65653827.js"><link rel="prefetch" href="/blog_publish/assets/js/212.3251cd40.js"><link rel="prefetch" href="/blog_publish/assets/js/213.714d0cae.js"><link rel="prefetch" href="/blog_publish/assets/js/214.dd2e5123.js"><link rel="prefetch" href="/blog_publish/assets/js/215.dc6fa41c.js"><link rel="prefetch" href="/blog_publish/assets/js/216.4174da94.js"><link rel="prefetch" href="/blog_publish/assets/js/217.efff46b1.js"><link rel="prefetch" href="/blog_publish/assets/js/218.2caa7bbb.js"><link rel="prefetch" href="/blog_publish/assets/js/219.511b738a.js"><link rel="prefetch" href="/blog_publish/assets/js/22.fd13f710.js"><link rel="prefetch" href="/blog_publish/assets/js/220.d24f321e.js"><link rel="prefetch" href="/blog_publish/assets/js/221.3fc49705.js"><link rel="prefetch" href="/blog_publish/assets/js/222.3b622447.js"><link rel="prefetch" href="/blog_publish/assets/js/223.413a1ba5.js"><link rel="prefetch" href="/blog_publish/assets/js/224.8978d778.js"><link rel="prefetch" href="/blog_publish/assets/js/225.54c4afd3.js"><link rel="prefetch" href="/blog_publish/assets/js/226.fb993629.js"><link rel="prefetch" href="/blog_publish/assets/js/227.5a277d29.js"><link rel="prefetch" href="/blog_publish/assets/js/228.70f43a42.js"><link rel="prefetch" href="/blog_publish/assets/js/229.a4e642e5.js"><link rel="prefetch" href="/blog_publish/assets/js/23.c1c0be9e.js"><link rel="prefetch" href="/blog_publish/assets/js/230.51e70043.js"><link rel="prefetch" href="/blog_publish/assets/js/231.07cd3167.js"><link rel="prefetch" href="/blog_publish/assets/js/232.a9389a77.js"><link rel="prefetch" href="/blog_publish/assets/js/233.28b485b4.js"><link rel="prefetch" href="/blog_publish/assets/js/234.7dafad55.js"><link rel="prefetch" href="/blog_publish/assets/js/235.1cefe65d.js"><link rel="prefetch" href="/blog_publish/assets/js/236.73e3f816.js"><link rel="prefetch" href="/blog_publish/assets/js/237.cdb1aeb8.js"><link rel="prefetch" href="/blog_publish/assets/js/238.26b9d300.js"><link rel="prefetch" href="/blog_publish/assets/js/239.c34cd2db.js"><link rel="prefetch" href="/blog_publish/assets/js/24.ad4747b7.js"><link rel="prefetch" href="/blog_publish/assets/js/240.4f1c2fbe.js"><link rel="prefetch" href="/blog_publish/assets/js/241.dc3890c7.js"><link rel="prefetch" href="/blog_publish/assets/js/243.968110ef.js"><link rel="prefetch" href="/blog_publish/assets/js/244.f048c567.js"><link rel="prefetch" href="/blog_publish/assets/js/245.ca5fc01b.js"><link rel="prefetch" href="/blog_publish/assets/js/246.bbd7da8d.js"><link rel="prefetch" href="/blog_publish/assets/js/247.82adfcd3.js"><link rel="prefetch" href="/blog_publish/assets/js/248.e861afc9.js"><link rel="prefetch" href="/blog_publish/assets/js/249.03ca97ef.js"><link rel="prefetch" href="/blog_publish/assets/js/25.baf5cde7.js"><link rel="prefetch" href="/blog_publish/assets/js/250.dbef6867.js"><link rel="prefetch" href="/blog_publish/assets/js/251.e9dad53a.js"><link rel="prefetch" href="/blog_publish/assets/js/252.2c41b10e.js"><link rel="prefetch" href="/blog_publish/assets/js/253.8cb8f31c.js"><link rel="prefetch" href="/blog_publish/assets/js/254.d0228675.js"><link rel="prefetch" href="/blog_publish/assets/js/255.f8b40ba2.js"><link rel="prefetch" href="/blog_publish/assets/js/256.91f875fd.js"><link rel="prefetch" href="/blog_publish/assets/js/257.590e03df.js"><link rel="prefetch" href="/blog_publish/assets/js/258.9123cc22.js"><link rel="prefetch" href="/blog_publish/assets/js/259.122c7d10.js"><link rel="prefetch" href="/blog_publish/assets/js/26.f1c319a7.js"><link rel="prefetch" href="/blog_publish/assets/js/260.26975207.js"><link rel="prefetch" href="/blog_publish/assets/js/261.30a8a46e.js"><link rel="prefetch" href="/blog_publish/assets/js/262.45dc4d04.js"><link rel="prefetch" href="/blog_publish/assets/js/263.51ada0e5.js"><link rel="prefetch" href="/blog_publish/assets/js/264.c5253d4e.js"><link rel="prefetch" href="/blog_publish/assets/js/265.54bf1228.js"><link rel="prefetch" href="/blog_publish/assets/js/266.097689fa.js"><link rel="prefetch" href="/blog_publish/assets/js/267.25d49783.js"><link rel="prefetch" href="/blog_publish/assets/js/268.be7fe178.js"><link rel="prefetch" href="/blog_publish/assets/js/269.a3173603.js"><link rel="prefetch" href="/blog_publish/assets/js/27.c6f599d8.js"><link rel="prefetch" href="/blog_publish/assets/js/270.e8be0de0.js"><link rel="prefetch" href="/blog_publish/assets/js/271.a5b74287.js"><link rel="prefetch" href="/blog_publish/assets/js/272.04af6e3d.js"><link rel="prefetch" href="/blog_publish/assets/js/273.31940e87.js"><link rel="prefetch" href="/blog_publish/assets/js/274.ba74630e.js"><link rel="prefetch" href="/blog_publish/assets/js/275.587e67f0.js"><link rel="prefetch" href="/blog_publish/assets/js/276.d4251432.js"><link rel="prefetch" href="/blog_publish/assets/js/277.9000a557.js"><link rel="prefetch" href="/blog_publish/assets/js/278.53d962c1.js"><link rel="prefetch" href="/blog_publish/assets/js/279.633b83a8.js"><link rel="prefetch" href="/blog_publish/assets/js/28.cd0645b9.js"><link rel="prefetch" href="/blog_publish/assets/js/280.6ea2d75c.js"><link rel="prefetch" href="/blog_publish/assets/js/281.08539f7e.js"><link rel="prefetch" href="/blog_publish/assets/js/282.aedafa04.js"><link rel="prefetch" href="/blog_publish/assets/js/283.a50030f6.js"><link rel="prefetch" href="/blog_publish/assets/js/284.437af20e.js"><link rel="prefetch" href="/blog_publish/assets/js/285.9ec99e9b.js"><link rel="prefetch" href="/blog_publish/assets/js/286.96c8e9f6.js"><link rel="prefetch" href="/blog_publish/assets/js/287.0fd9c0e0.js"><link rel="prefetch" href="/blog_publish/assets/js/288.8adc3907.js"><link rel="prefetch" href="/blog_publish/assets/js/289.48a569e2.js"><link rel="prefetch" href="/blog_publish/assets/js/29.6285ff29.js"><link rel="prefetch" href="/blog_publish/assets/js/290.4733837b.js"><link rel="prefetch" href="/blog_publish/assets/js/291.bc7e2e8e.js"><link rel="prefetch" href="/blog_publish/assets/js/292.3f0d0f90.js"><link rel="prefetch" href="/blog_publish/assets/js/293.c1677291.js"><link rel="prefetch" href="/blog_publish/assets/js/294.f35c4de6.js"><link rel="prefetch" href="/blog_publish/assets/js/295.846b07d0.js"><link rel="prefetch" href="/blog_publish/assets/js/296.cadba1fb.js"><link rel="prefetch" href="/blog_publish/assets/js/297.0bc996b7.js"><link rel="prefetch" href="/blog_publish/assets/js/298.22e35617.js"><link rel="prefetch" href="/blog_publish/assets/js/299.d12750cd.js"><link rel="prefetch" href="/blog_publish/assets/js/3.12555b57.js"><link rel="prefetch" href="/blog_publish/assets/js/30.1d9bf1d6.js"><link rel="prefetch" href="/blog_publish/assets/js/300.697c12b1.js"><link rel="prefetch" href="/blog_publish/assets/js/301.b633ba54.js"><link rel="prefetch" href="/blog_publish/assets/js/302.c47e6ce1.js"><link rel="prefetch" href="/blog_publish/assets/js/303.30d5c8f6.js"><link rel="prefetch" href="/blog_publish/assets/js/304.59ff27da.js"><link rel="prefetch" href="/blog_publish/assets/js/305.e036da50.js"><link rel="prefetch" href="/blog_publish/assets/js/306.ea821b5b.js"><link rel="prefetch" href="/blog_publish/assets/js/307.b425642c.js"><link rel="prefetch" href="/blog_publish/assets/js/308.43fd864c.js"><link rel="prefetch" href="/blog_publish/assets/js/309.f1095ef3.js"><link rel="prefetch" href="/blog_publish/assets/js/31.a1309c3e.js"><link rel="prefetch" href="/blog_publish/assets/js/310.44181866.js"><link rel="prefetch" href="/blog_publish/assets/js/311.d285d7e7.js"><link rel="prefetch" href="/blog_publish/assets/js/312.f112b1a0.js"><link rel="prefetch" href="/blog_publish/assets/js/313.021ebcb6.js"><link rel="prefetch" href="/blog_publish/assets/js/314.c33ab454.js"><link rel="prefetch" href="/blog_publish/assets/js/315.f81fe31b.js"><link rel="prefetch" href="/blog_publish/assets/js/316.a9d6ee81.js"><link rel="prefetch" href="/blog_publish/assets/js/317.aeed95d8.js"><link rel="prefetch" href="/blog_publish/assets/js/318.5a671751.js"><link rel="prefetch" href="/blog_publish/assets/js/319.7b001b2b.js"><link rel="prefetch" href="/blog_publish/assets/js/32.55741b61.js"><link rel="prefetch" href="/blog_publish/assets/js/320.fee1fc72.js"><link rel="prefetch" href="/blog_publish/assets/js/321.4f899abb.js"><link rel="prefetch" href="/blog_publish/assets/js/322.ed6b24a6.js"><link rel="prefetch" href="/blog_publish/assets/js/323.8c54b457.js"><link rel="prefetch" href="/blog_publish/assets/js/324.797ffc13.js"><link rel="prefetch" href="/blog_publish/assets/js/325.014798bd.js"><link rel="prefetch" href="/blog_publish/assets/js/326.9354432d.js"><link rel="prefetch" href="/blog_publish/assets/js/327.691ffe00.js"><link rel="prefetch" href="/blog_publish/assets/js/328.d1c8add0.js"><link rel="prefetch" href="/blog_publish/assets/js/329.f5456617.js"><link rel="prefetch" href="/blog_publish/assets/js/33.0eeacbf9.js"><link rel="prefetch" href="/blog_publish/assets/js/330.21f094eb.js"><link rel="prefetch" href="/blog_publish/assets/js/331.acd92f11.js"><link rel="prefetch" href="/blog_publish/assets/js/332.1c2f0fe6.js"><link rel="prefetch" href="/blog_publish/assets/js/333.9329417f.js"><link rel="prefetch" href="/blog_publish/assets/js/334.a3d669e2.js"><link rel="prefetch" href="/blog_publish/assets/js/335.0928703e.js"><link rel="prefetch" href="/blog_publish/assets/js/336.2a38b30d.js"><link rel="prefetch" href="/blog_publish/assets/js/337.3877fb03.js"><link rel="prefetch" href="/blog_publish/assets/js/338.b8ff71e9.js"><link rel="prefetch" href="/blog_publish/assets/js/339.7c59e761.js"><link rel="prefetch" href="/blog_publish/assets/js/34.67310adf.js"><link rel="prefetch" href="/blog_publish/assets/js/340.5e473e8b.js"><link rel="prefetch" href="/blog_publish/assets/js/341.1eec288e.js"><link rel="prefetch" href="/blog_publish/assets/js/342.3984499e.js"><link rel="prefetch" href="/blog_publish/assets/js/343.67279c29.js"><link rel="prefetch" href="/blog_publish/assets/js/344.532d9834.js"><link rel="prefetch" href="/blog_publish/assets/js/345.0d689006.js"><link rel="prefetch" href="/blog_publish/assets/js/346.721451e8.js"><link rel="prefetch" href="/blog_publish/assets/js/347.b3080215.js"><link rel="prefetch" href="/blog_publish/assets/js/348.2bc3a868.js"><link rel="prefetch" href="/blog_publish/assets/js/349.20c3ebe7.js"><link rel="prefetch" href="/blog_publish/assets/js/35.aa5fe427.js"><link rel="prefetch" href="/blog_publish/assets/js/350.f6a398b5.js"><link rel="prefetch" href="/blog_publish/assets/js/351.725b13b2.js"><link rel="prefetch" href="/blog_publish/assets/js/352.8d7fe58b.js"><link rel="prefetch" href="/blog_publish/assets/js/353.ea5a781f.js"><link rel="prefetch" href="/blog_publish/assets/js/354.8cc77c76.js"><link rel="prefetch" href="/blog_publish/assets/js/355.63be724d.js"><link rel="prefetch" href="/blog_publish/assets/js/356.585e5f28.js"><link rel="prefetch" href="/blog_publish/assets/js/357.e5ee9bb5.js"><link rel="prefetch" href="/blog_publish/assets/js/358.2842a92c.js"><link rel="prefetch" href="/blog_publish/assets/js/359.fb967e25.js"><link rel="prefetch" href="/blog_publish/assets/js/36.489ae5f5.js"><link rel="prefetch" href="/blog_publish/assets/js/360.3cdd2359.js"><link rel="prefetch" href="/blog_publish/assets/js/361.4672717e.js"><link rel="prefetch" href="/blog_publish/assets/js/362.ee8a80fe.js"><link rel="prefetch" href="/blog_publish/assets/js/363.30b39c7d.js"><link rel="prefetch" href="/blog_publish/assets/js/364.310fa4b0.js"><link rel="prefetch" href="/blog_publish/assets/js/365.5512dab5.js"><link rel="prefetch" href="/blog_publish/assets/js/366.7c4b6324.js"><link rel="prefetch" href="/blog_publish/assets/js/367.5b547424.js"><link rel="prefetch" href="/blog_publish/assets/js/368.2a37f759.js"><link rel="prefetch" href="/blog_publish/assets/js/369.9db4fbe8.js"><link rel="prefetch" href="/blog_publish/assets/js/37.3cd2ef24.js"><link rel="prefetch" href="/blog_publish/assets/js/370.e305d3ef.js"><link rel="prefetch" href="/blog_publish/assets/js/38.688a5b03.js"><link rel="prefetch" href="/blog_publish/assets/js/39.874d4e0a.js"><link rel="prefetch" href="/blog_publish/assets/js/4.b0cb765d.js"><link rel="prefetch" href="/blog_publish/assets/js/40.be92ff93.js"><link rel="prefetch" href="/blog_publish/assets/js/41.5a0c51cb.js"><link rel="prefetch" href="/blog_publish/assets/js/42.9ac60e0e.js"><link rel="prefetch" href="/blog_publish/assets/js/43.1e1b61ef.js"><link rel="prefetch" href="/blog_publish/assets/js/44.152bf713.js"><link rel="prefetch" href="/blog_publish/assets/js/45.940a6bcc.js"><link rel="prefetch" href="/blog_publish/assets/js/46.3db58dc9.js"><link rel="prefetch" href="/blog_publish/assets/js/47.f6fabe74.js"><link rel="prefetch" href="/blog_publish/assets/js/48.4bcb63c0.js"><link rel="prefetch" href="/blog_publish/assets/js/49.63fff436.js"><link rel="prefetch" href="/blog_publish/assets/js/5.e723c1a9.js"><link rel="prefetch" href="/blog_publish/assets/js/50.312d7528.js"><link rel="prefetch" href="/blog_publish/assets/js/51.8c3db94b.js"><link rel="prefetch" href="/blog_publish/assets/js/52.ab9331d2.js"><link rel="prefetch" href="/blog_publish/assets/js/53.b3af665d.js"><link rel="prefetch" href="/blog_publish/assets/js/54.4ff4b7fd.js"><link rel="prefetch" href="/blog_publish/assets/js/55.d787c0fc.js"><link rel="prefetch" href="/blog_publish/assets/js/56.3744e41d.js"><link rel="prefetch" href="/blog_publish/assets/js/57.71a0db8e.js"><link rel="prefetch" href="/blog_publish/assets/js/58.342d438e.js"><link rel="prefetch" href="/blog_publish/assets/js/59.606ea721.js"><link rel="prefetch" href="/blog_publish/assets/js/6.43debd78.js"><link rel="prefetch" href="/blog_publish/assets/js/60.f1fd6283.js"><link rel="prefetch" href="/blog_publish/assets/js/61.76ba61eb.js"><link rel="prefetch" href="/blog_publish/assets/js/62.1e989829.js"><link rel="prefetch" href="/blog_publish/assets/js/63.9688d876.js"><link rel="prefetch" href="/blog_publish/assets/js/64.3e3daafa.js"><link rel="prefetch" href="/blog_publish/assets/js/65.f85ed5fa.js"><link rel="prefetch" href="/blog_publish/assets/js/66.deb1a5c1.js"><link rel="prefetch" href="/blog_publish/assets/js/67.57058e8c.js"><link rel="prefetch" href="/blog_publish/assets/js/68.69d976e5.js"><link rel="prefetch" href="/blog_publish/assets/js/69.bbddef12.js"><link rel="prefetch" href="/blog_publish/assets/js/7.23b88edf.js"><link rel="prefetch" href="/blog_publish/assets/js/70.7c2cda55.js"><link rel="prefetch" href="/blog_publish/assets/js/71.85d87299.js"><link rel="prefetch" href="/blog_publish/assets/js/72.b8d96a0a.js"><link rel="prefetch" href="/blog_publish/assets/js/73.d883841c.js"><link rel="prefetch" href="/blog_publish/assets/js/74.3e14bb1b.js"><link rel="prefetch" href="/blog_publish/assets/js/75.0e19b19b.js"><link rel="prefetch" href="/blog_publish/assets/js/76.87f5a574.js"><link rel="prefetch" href="/blog_publish/assets/js/77.11d342c9.js"><link rel="prefetch" href="/blog_publish/assets/js/78.0a97af90.js"><link rel="prefetch" href="/blog_publish/assets/js/79.ebef1770.js"><link rel="prefetch" href="/blog_publish/assets/js/8.7f7f7e95.js"><link rel="prefetch" href="/blog_publish/assets/js/80.04ea82b5.js"><link rel="prefetch" href="/blog_publish/assets/js/81.505c07a2.js"><link rel="prefetch" href="/blog_publish/assets/js/82.84a96f44.js"><link rel="prefetch" href="/blog_publish/assets/js/83.933e8858.js"><link rel="prefetch" href="/blog_publish/assets/js/84.e4cd38e9.js"><link rel="prefetch" href="/blog_publish/assets/js/85.b3c81e20.js"><link rel="prefetch" href="/blog_publish/assets/js/86.1b2a0a21.js"><link rel="prefetch" href="/blog_publish/assets/js/87.10e9541f.js"><link rel="prefetch" href="/blog_publish/assets/js/88.6b7c4aa8.js"><link rel="prefetch" href="/blog_publish/assets/js/89.16cdcfa9.js"><link rel="prefetch" href="/blog_publish/assets/js/9.735a327c.js"><link rel="prefetch" href="/blog_publish/assets/js/90.957da439.js"><link rel="prefetch" href="/blog_publish/assets/js/91.446112e0.js"><link rel="prefetch" href="/blog_publish/assets/js/92.0e9f77e8.js"><link rel="prefetch" href="/blog_publish/assets/js/93.3cf36712.js"><link rel="prefetch" href="/blog_publish/assets/js/94.3f10c4cd.js"><link rel="prefetch" href="/blog_publish/assets/js/95.abc85b2f.js"><link rel="prefetch" href="/blog_publish/assets/js/96.a62d815b.js"><link rel="prefetch" href="/blog_publish/assets/js/97.b28c67c5.js"><link rel="prefetch" href="/blog_publish/assets/js/98.c505fcb1.js"><link rel="prefetch" href="/blog_publish/assets/js/99.a1993169.js">
+    <link rel="stylesheet" href="/blog_publish/assets/css/0.styles.9a82886c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog_publish/" class="home-link router-link-active"><!----> <span class="site-name">小游</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog_publish/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/java/01_ProgrammingBasic/link.html" class="nav-link">
+  编程基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/02_DevelopmentTools/link.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/03_ApplicationFramework/link.html" class="nav-link">
+  应用框架
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/04_OperationAndMaintenance/" class="nav-link">
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/05_SourceCode/" class="nav-link">
+  源码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/web/01_vue/使用webpack打包一个简单的前端程序.html" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/tools/essay/04_SpringBoot中处理跨域的几种方式.html" class="nav-link">
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/installSoftware/01_jdk_linux.html" class="nav-link">
+  软件安装
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/bugRepository/03_MySQL主从复制Bug.html" class="nav-link">
+  bug库
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/other/07_打包插件maven-assembly-plugin.html" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog_publish/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/java/01_ProgrammingBasic/link.html" class="nav-link">
+  编程基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/02_DevelopmentTools/link.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/03_ApplicationFramework/link.html" class="nav-link">
+  应用框架
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/04_OperationAndMaintenance/" class="nav-link">
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/05_SourceCode/" class="nav-link">
+  源码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/web/01_vue/使用webpack打包一个简单的前端程序.html" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/tools/essay/04_SpringBoot中处理跨域的几种方式.html" class="nav-link">
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/installSoftware/01_jdk_linux.html" class="nav-link">
+  软件安装
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/bugRepository/03_MySQL主从复制Bug.html" class="nav-link">
+  bug库
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/other/07_打包插件maven-assembly-plugin.html" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/01_在Centos7下安装Docker.html" class="sidebar-link">在Centos7下安装Docker</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/02_Docker常用命令.html" class="sidebar-link">Docker 常用命令</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/03_在Idea中使用Docker部署SpringBoot.html" class="sidebar-link">在 Idea 中使用 Docker 部署 SpringBoot.md</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/04_Docker部署Vue项目.html" class="sidebar-link">Docker部署Vue项目</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/05_Docker运行Tomcat-404.html" class="sidebar-link">Docker运行Tomcat_404</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/06_安装docker-compose.html" class="sidebar-link">安装docker-compose</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/07_Docker-Compose.html" class="sidebar-link">Docker Compose</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/08_搭建HarBor.html" class="sidebar-link">搭建HarBor</a></li><li><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/09_Docker命令自动补全.html" class="active sidebar-link">Docker命令自动补全</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>K8s</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker命令自动补全"><a href="#docker命令自动补全" class="header-anchor">#</a> Docker命令自动补全</h1> <ol><li><p>安装bash-completion</p> <div class="language-bash extra-class"><pre class="language-bash"><code> yum <span class="token function">install</span> -y bash-completion
+</code></pre></div></li> <li><p>配置</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">curl</span> -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+</code></pre></div><p>如果不能下载，直接复制下面的shell脚本</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">source</span> /etc/bash_completion.d/docker-compose
+</code></pre></div><p>/etc/bash_completion.d/docker-compose 的完整配置</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#</span>
+<span class="token comment"># bash completion for docker-compose</span>
+<span class="token comment">#</span>
+<span class="token comment"># This work is based on the completion for the docker command.</span>
+<span class="token comment">#</span>
+<span class="token comment"># This script provides completion of:</span>
+<span class="token comment">#  - commands and their options</span>
+<span class="token comment">#  - service names</span>
+<span class="token comment">#  - filepaths</span>
+<span class="token comment">#</span>
+<span class="token comment"># To enable the completions either:</span>
+<span class="token comment">#  - place this file in /etc/bash_completion.d</span>
+<span class="token comment">#  or</span>
+<span class="token comment">#  - copy this file to e.g. ~/.docker-compose-completion.sh and add the line</span>
+<span class="token comment">#    below to your .bashrc after bash completion features are loaded</span>
+<span class="token comment">#    . ~/.docker-compose-completion.sh</span>
+
+<span class="token assign-left variable">__docker_compose_previous_extglob_setting</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">shopt</span> -p extglob<span class="token variable">)</span></span>
+<span class="token builtin class-name">shopt</span> -s extglob
+
+<span class="token function-name function">__docker_compose_q</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        docker-compose <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null <span class="token string">&quot;<span class="token variable">${top_level_options<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>&quot;</span> <span class="token string">&quot;<span class="token variable">$@</span>&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># Transforms a multiline list of strings into a single line string</span>
+<span class="token comment"># with the words separated by &quot;|&quot;.</span>
+<span class="token function-name function">__docker_compose_to_alternatives</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">parts</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable">$1</span> <span class="token punctuation">)</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable"><span class="token environment constant">IFS</span></span><span class="token operator">=</span><span class="token string">'|'</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">${parts<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># Transforms a multiline list of options into an extglob pattern</span>
+<span class="token comment"># suitable for use in case statements.</span>
+<span class="token function-name function">__docker_compose_to_extglob</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">extglob</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span> __docker_compose_to_alternatives <span class="token string">&quot;<span class="token variable">$1</span>&quot;</span> <span class="token variable">)</span></span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;@(<span class="token variable">$extglob</span>)&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># Determines whether the option passed as the first argument exist on</span>
+<span class="token comment"># the commandline. The option may be a pattern, e.g. `--force|-f`.</span>
+<span class="token function-name function">__docker_compose_has_option</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">pattern</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">$1</span>&quot;</span>
+        <span class="token keyword">for</span> <span class="token variable"><span class="token punctuation">((</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> $cword<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">))</span></span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+                <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">${words<span class="token punctuation">[</span>$i<span class="token punctuation">]</span>}</span> <span class="token operator">=</span>~ ^<span class="token punctuation">(</span><span class="token variable">$pattern</span><span class="token punctuation">)</span>$ <span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>
+                        <span class="token builtin class-name">return</span> <span class="token number">0</span>
+                <span class="token keyword">fi</span>
+        <span class="token keyword">done</span>
+        <span class="token builtin class-name">return</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># Returns `key` if we are currently completing the value of a map option (`key=value`)</span>
+<span class="token comment"># which matches the extglob passed in as an argument.</span>
+<span class="token comment"># This function is needed for key-specific completions.</span>
+<span class="token function-name function">__docker_compose_map_key_of_current_option</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">glob</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">$1</span>&quot;</span>
+
+        <span class="token builtin class-name">local</span> key glob_pos
+        <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token operator">=</span> <span class="token string">&quot;=&quot;</span> <span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>        <span class="token comment"># key= case</span>
+                <span class="token assign-left variable">key</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span>
+                <span class="token assign-left variable">glob_pos</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span>cword <span class="token operator">-</span> <span class="token number">2</span><span class="token variable">))</span></span>
+        <span class="token keyword">elif</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$cur</span> <span class="token operator">==</span> *<span class="token operator">=</span>* <span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>     <span class="token comment"># key=value case (OSX)</span>
+                <span class="token assign-left variable">key</span><span class="token operator">=</span><span class="token variable">${cur<span class="token operator">%</span>=*}</span>
+                <span class="token assign-left variable">glob_pos</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span>cword <span class="token operator">-</span> <span class="token number">1</span><span class="token variable">))</span></span>
+        <span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token operator">=</span> <span class="token string">&quot;=&quot;</span> <span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>
+                <span class="token assign-left variable">key</span><span class="token operator">=</span><span class="token variable">${words<span class="token punctuation">[</span>$cword - 2<span class="token punctuation">]</span>}</span>  <span class="token comment"># key=value case</span>
+                <span class="token assign-left variable">glob_pos</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span>cword <span class="token operator">-</span> <span class="token number">3</span><span class="token variable">))</span></span>
+        <span class="token keyword">else</span>
+                <span class="token builtin class-name">return</span>
+        <span class="token keyword">fi</span>
+
+        <span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">${words<span class="token punctuation">[</span>$glob_pos<span class="token punctuation">]</span>}</span>&quot;</span> <span class="token operator">=</span> <span class="token string">&quot;=&quot;</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token variable"><span class="token punctuation">((</span>glob_pos<span class="token operator">--</span><span class="token punctuation">))</span></span>  <span class="token comment"># --option=key=value syntax</span>
+
+        <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">${words<span class="token punctuation">[</span>$glob_pos<span class="token punctuation">]</span>}</span> <span class="token operator">==</span> @<span class="token punctuation">(</span><span class="token variable">$glob</span><span class="token punctuation">)</span> <span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$key</span>&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># suppress trailing whitespace</span>
+<span class="token function-name function">__docker_compose_nospace</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment"># compopt is not available in ancient bash versions</span>
+        <span class="token builtin class-name">type</span> compopt <span class="token operator">&amp;&gt;</span>/dev/null <span class="token operator">&amp;&amp;</span> compopt -o nospace
+<span class="token punctuation">}</span>
+
+
+<span class="token comment"># Outputs a list of all defined services, regardless of their running state.</span>
+<span class="token comment"># Arguments for `docker-compose ps` may be passed in order to filter the service list,</span>
+<span class="token comment"># e.g. `status=running`.</span>
+<span class="token function-name function">__docker_compose_services</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        __docker_compose_q <span class="token function">ps</span> --services <span class="token string">&quot;<span class="token variable">$@</span>&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># Applies completion of services based on the current value of `$cur`.</span>
+<span class="token comment"># Arguments for `docker-compose ps` may be passed in order to filter the service list,</span>
+<span class="token comment"># see `__docker_compose_services`.</span>
+<span class="token function-name function">__docker_compose_complete_services</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span>compgen -W <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>__docker_compose_services <span class="token string">&quot;<span class="token variable">$@</span>&quot;</span><span class="token variable">)</span></span>&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># The services for which at least one running container exists</span>
+<span class="token function-name function">__docker_compose_complete_running_services</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">names</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>__docker_compose_services --filter <span class="token assign-left variable">status</span><span class="token operator">=</span>running<span class="token variable">)</span></span>
+        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span>compgen -W <span class="token string">&quot;<span class="token variable">$names</span>&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_build</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --build-arg<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -e -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        __docker_compose_nospace
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--build-arg --compress --force-rm --help --memory --no-cache --pull --parallel&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services --filter <span class="token assign-left variable">source</span><span class="token operator">=</span>build
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_bundle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --output<span class="token operator">|</span>-o<span class="token punctuation">)</span>
+                        _filedir
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--push-images --help --output -o&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_config</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --hash<span class="token punctuation">)</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$cur</span> <span class="token operator">==</span> <span class="token punctuation">\</span><span class="token punctuation">\</span>* <span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>
+                                <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token string">'\*'</span> <span class="token punctuation">)</span>
+                        <span class="token keyword">else</span>
+                                <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span>compgen -W <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>__docker_compose_services<span class="token variable">)</span></span> <span class="token entity" title="\\">\\</span>\* &quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token keyword">fi</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--hash --help --quiet -q --resolve-image-digests --services --volumes&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--build --force-recreate --help --no-build --no-recreate&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_docker_compose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --tlscacert<span class="token operator">|</span>--tlscert<span class="token operator">|</span>--tlskey<span class="token punctuation">)</span>
+                        _filedir
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --file<span class="token operator">|</span>-f<span class="token punctuation">)</span>
+                        _filedir <span class="token string">&quot;y?(a)ml&quot;</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --log-level<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;debug info warning error critical&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --project-directory<span class="token punctuation">)</span>
+                        _filedir -d
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                <span class="token variable"><span class="token variable">$(</span>__docker_compose_to_extglob <span class="token string">&quot;<span class="token variable">$daemon_options_with_args</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;<span class="token variable">$daemon_boolean_options</span> <span class="token variable">$daemon_options_with_args</span> <span class="token variable">$top_level_options_with_args</span> --help -h --no-ansi --verbose --version -v&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;<span class="token variable">${commands<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_down</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --rmi<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;all local&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --timeout<span class="token operator">|</span>-t<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --rmi --timeout -t --volumes -v --remove-orphans&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_events</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --json<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --json&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --index<span class="token operator">|</span>--user<span class="token operator">|</span>-u<span class="token operator">|</span>--workdir<span class="token operator">|</span>-w<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;-d --detach --help --index --privileged -T --user -u --workdir -w&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_running_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_help</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;<span class="token variable">${commands<span class="token punctuation">[</span>*<span class="token punctuation">]</span>}</span>&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function-name function">_docker_compose_images</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --quiet -q&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+<span class="token function-name function">_docker_compose_kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                -s<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;SIGHUP SIGINT SIGKILL SIGUSR1 SIGUSR2&quot;</span> -- <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">echo</span> $cur <span class="token operator">|</span> <span class="token function">tr</span> <span class="token string">'[:lower:]'</span> <span class="token string">'[:upper:]'</span><span class="token variable">)</span></span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help -s&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_running_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_logs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --tail<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--follow -f --help --no-color --tail --timestamps -t&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_running_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_port</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --protocol<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;tcp udp&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --index<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --index --protocol&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_ps</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">key</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>__docker_compose_map_key_of_current_option <span class="token string">'--filter'</span><span class="token variable">)</span></span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$key</span>&quot;</span> <span class="token keyword">in</span>
+                <span class="token builtin class-name">source</span><span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;build image&quot;</span> -- <span class="token string">&quot;<span class="token variable">${cur<span class="token operator">##</span>*=}</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                status<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;paused restarting running stopped&quot;</span> -- <span class="token string">&quot;<span class="token variable">${cur<span class="token operator">##</span>*=}</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --filter<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;source status&quot;</span> -S <span class="token string">&quot;=&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        __docker_compose_nospace
+                        <span class="token builtin class-name">return</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--all -a --filter --help --quiet -q --services&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_pull</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --ignore-pull-failures --include-deps --no-parallel --quiet -q&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services --filter <span class="token assign-left variable">source</span><span class="token operator">=</span>image
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_push</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --ignore-push-failures&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --timeout<span class="token operator">|</span>-t<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --timeout -t&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_running_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_rm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--force -f --help --stop -s -v&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        <span class="token keyword">if</span> __docker_compose_has_option <span class="token string">&quot;--stop|-s&quot;</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>
+                                __docker_compose_complete_services
+                        <span class="token keyword">else</span>
+                                __docker_compose_complete_services --filter <span class="token assign-left variable">status</span><span class="token operator">=</span>stopped
+                        <span class="token keyword">fi</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                -e<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -e -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        __docker_compose_nospace
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --entrypoint<span class="token operator">|</span>--label<span class="token operator">|</span>-l<span class="token operator">|</span>--name<span class="token operator">|</span>--user<span class="token operator">|</span>-u<span class="token operator">|</span>--volume<span class="token operator">|</span>-v<span class="token operator">|</span>--workdir<span class="token operator">|</span>-w<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--detach -d --entrypoint -e --help --label -l --name --no-deps --publish -p --rm --service-ports -T --use-aliases --user -u --volume -v --workdir -w&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_scale</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                <span class="token operator">=</span><span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span><span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --timeout<span class="token operator">|</span>-t<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --timeout -t&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span>compgen -S <span class="token string">&quot;=&quot;</span> -W <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>__docker_compose_services<span class="token variable">)</span></span>&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        __docker_compose_nospace
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services --filter <span class="token assign-left variable">status</span><span class="token operator">=</span>stopped
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                --timeout<span class="token operator">|</span>-t<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help --timeout -t&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_running_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_top</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_running_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_unpause</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--help&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services --filter <span class="token assign-left variable">status</span><span class="token operator">=</span>paused
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_up</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$prev</span>&quot;</span> <span class="token keyword">in</span>
+                <span class="token operator">=</span><span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span><span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --exit-code-from<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --scale<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span>compgen -S <span class="token string">&quot;=&quot;</span> -W <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span>__docker_compose_services<span class="token variable">)</span></span>&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        __docker_compose_nospace
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                --timeout<span class="token operator">|</span>-t<span class="token punctuation">)</span>
+                        <span class="token builtin class-name">return</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--abort-on-container-exit --always-recreate-deps --build -d --detach --exit-code-from --force-recreate --help --no-build --no-color --no-deps --no-recreate --no-start --renew-anon-volumes -V --remove-orphans --scale --timeout -t&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                *<span class="token punctuation">)</span>
+                        __docker_compose_complete_services
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose_version</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token keyword">in</span>
+                -*<span class="token punctuation">)</span>
+                        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span> <span class="token variable"><span class="token variable">$(</span> compgen -W <span class="token string">&quot;--short&quot;</span> -- <span class="token string">&quot;<span class="token variable">$cur</span>&quot;</span> <span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">esac</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token function-name function">_docker_compose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">previous_extglob_setting</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">shopt</span> -p extglob<span class="token variable">)</span></span>
+        <span class="token builtin class-name">shopt</span> -s extglob
+
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">commands</span><span class="token operator">=</span><span class="token punctuation">(</span>
+                build
+                bundle
+                config
+                create
+                down
+                events
+                <span class="token builtin class-name">exec</span>
+                <span class="token builtin class-name">help</span>
+                images
+                <span class="token function">kill</span>
+                logs
+                pause
+                port
+                <span class="token function">ps</span>
+                pull
+                push
+                restart
+                <span class="token function">rm</span>
+                run
+                scale
+                start
+                stop
+                <span class="token function">top</span>
+                unpause
+                up
+                version
+        <span class="token punctuation">)</span>
+
+        <span class="token comment"># Options for the docker daemon that have to be passed to secondary calls to</span>
+        <span class="token comment"># docker-compose executed by this script.</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">daemon_boolean_options</span><span class="token operator">=</span><span class="token string">&quot;
+                --skip-hostname-check
+                --tls
+                --tlsverify
+        &quot;</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">daemon_options_with_args</span><span class="token operator">=</span><span class="token string">&quot;
+                --file -f
+                --host -H
+                --project-directory
+                --project-name -p
+                --tlscacert
+                --tlscert
+                --tlskey
+        &quot;</span>
+
+        <span class="token comment"># These options are require special treatment when searching the command.</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">top_level_options_with_args</span><span class="token operator">=</span><span class="token string">&quot;
+                --log-level
+        &quot;</span>
+
+        <span class="token assign-left variable">COMPREPLY</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token builtin class-name">local</span> cur prev words cword
+        _get_comp_words_by_ref -n <span class="token builtin class-name">:</span> cur prev words cword
+
+        <span class="token comment"># search subcommand and invoke its handler.</span>
+        <span class="token comment"># special treatment of some top-level options</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">command</span><span class="token operator">=</span><span class="token string">'docker_compose'</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">top_level_options</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">counter</span><span class="token operator">=</span><span class="token number">1</span>
+
+        <span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$counter</span> -lt <span class="token variable">$cword</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+                <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">${words<span class="token punctuation">[</span>$counter<span class="token punctuation">]</span>}</span>&quot;</span> <span class="token keyword">in</span>
+                        <span class="token variable"><span class="token variable">$(</span>__docker_compose_to_extglob <span class="token string">&quot;<span class="token variable">$daemon_boolean_options</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                                <span class="token builtin class-name">local</span> <span class="token assign-left variable">opt</span><span class="token operator">=</span><span class="token variable">${words<span class="token punctuation">[</span>counter<span class="token punctuation">]</span>}</span>
+                                <span class="token assign-left variable">top_level_options</span><span class="token operator">+=</span><span class="token punctuation">(</span><span class="token variable">$opt</span><span class="token punctuation">)</span>
+                                <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                        <span class="token variable"><span class="token variable">$(</span>__docker_compose_to_extglob <span class="token string">&quot;<span class="token variable">$daemon_options_with_args</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                                <span class="token builtin class-name">local</span> <span class="token assign-left variable">opt</span><span class="token operator">=</span><span class="token variable">${words<span class="token punctuation">[</span>counter<span class="token punctuation">]</span>}</span>
+                                <span class="token builtin class-name">local</span> <span class="token assign-left variable">arg</span><span class="token operator">=</span><span class="token variable">${words<span class="token punctuation">[</span>++counter<span class="token punctuation">]</span>}</span>
+                                <span class="token assign-left variable">top_level_options</span><span class="token operator">+=</span><span class="token punctuation">(</span><span class="token variable">$opt</span> <span class="token variable">$arg</span><span class="token punctuation">)</span>
+                                <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                        <span class="token variable"><span class="token variable">$(</span>__docker_compose_to_extglob <span class="token string">&quot;<span class="token variable">$top_level_options_with_args</span>&quot;</span><span class="token variable">)</span></span> <span class="token punctuation">)</span>
+                                <span class="token variable"><span class="token punctuation">((</span> counter<span class="token operator">++</span> <span class="token punctuation">))</span></span>
+                                <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                        -*<span class="token punctuation">)</span>
+                                <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                        *<span class="token punctuation">)</span>
+                                <span class="token assign-left variable">command</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${words<span class="token punctuation">[</span>$counter<span class="token punctuation">]</span>}</span>&quot;</span>
+                                <span class="token builtin class-name">break</span>
+                                <span class="token punctuation">;</span><span class="token punctuation">;</span>
+                <span class="token keyword">esac</span>
+                <span class="token variable"><span class="token punctuation">((</span> counter<span class="token operator">++</span> <span class="token punctuation">))</span></span>
+        <span class="token keyword">done</span>
+
+        <span class="token builtin class-name">local</span> <span class="token assign-left variable">completions_func</span><span class="token operator">=</span>_docker_compose_<span class="token variable">${command<span class="token operator">/</span><span class="token operator">/</span>-<span class="token operator">/</span>_}</span>
+        <span class="token builtin class-name">declare</span> -F <span class="token variable">$completions_func</span> <span class="token operator">&gt;</span>/dev/null <span class="token operator">&amp;&amp;</span> <span class="token variable">$completions_func</span>
+
+        <span class="token builtin class-name">eval</span> <span class="token string">&quot;<span class="token variable">$previous_extglob_setting</span>&quot;</span>
+        <span class="token builtin class-name">return</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+
+<span class="token builtin class-name">eval</span> <span class="token string">&quot;<span class="token variable">$__docker_compose_previous_extglob_setting</span>&quot;</span>
+<span class="token builtin class-name">unset</span> __docker_compose_previous_extglob_setting
+
+complete -F _docker_compose docker-compose docker-compose.exe
+
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/01_Docker/08_搭建HarBor.html" class="prev">
+        搭建HarBor
+      </a></span> <span class="next"><a href="/blog_publish/java/03_ApplicationFramework/07_VirtualizationAndContainerization/02_k8s/01_K8s介绍.html">
+        k8s介绍
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog_publish/assets/js/app.0051f6c0.js" defer></script><script src="/blog_publish/assets/js/2.92f2819f.js" defer></script><script src="/blog_publish/assets/js/242.d008ab10.js" defer></script>
+  </body>
+</html>
