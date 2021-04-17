@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Class文件结构 | 小游</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon1" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-02-18/d687f535b564447e82a3178a4e9b2f8c.jpg">
+    <link rel="icon2" href="https://you-blog.oss-cn-shenzhen.aliyuncs.com/typora/2021-02-18/icon.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="知行合一">
+    <link rel="preload" href="/blog_publish/assets/css/0.styles.9a82886c.css" as="style"><link rel="preload" href="/blog_publish/assets/js/app.e9f73273.js" as="script"><link rel="preload" href="/blog_publish/assets/js/2.92f2819f.js" as="script"><link rel="preload" href="/blog_publish/assets/js/46.3db58dc9.js" as="script"><link rel="prefetch" href="/blog_publish/assets/js/10.43a4635a.js"><link rel="prefetch" href="/blog_publish/assets/js/100.de5bf98c.js"><link rel="prefetch" href="/blog_publish/assets/js/101.a1eec209.js"><link rel="prefetch" href="/blog_publish/assets/js/102.b91d6ba3.js"><link rel="prefetch" href="/blog_publish/assets/js/103.25a2781d.js"><link rel="prefetch" href="/blog_publish/assets/js/104.dff1579f.js"><link rel="prefetch" href="/blog_publish/assets/js/105.5a821edb.js"><link rel="prefetch" href="/blog_publish/assets/js/106.612bd10d.js"><link rel="prefetch" href="/blog_publish/assets/js/107.f0abecd3.js"><link rel="prefetch" href="/blog_publish/assets/js/108.6662ae92.js"><link rel="prefetch" href="/blog_publish/assets/js/109.63368ef6.js"><link rel="prefetch" href="/blog_publish/assets/js/11.20553c69.js"><link rel="prefetch" href="/blog_publish/assets/js/110.14ff9021.js"><link rel="prefetch" href="/blog_publish/assets/js/111.a26492e3.js"><link rel="prefetch" href="/blog_publish/assets/js/112.f79fcc28.js"><link rel="prefetch" href="/blog_publish/assets/js/113.8d9dc557.js"><link rel="prefetch" href="/blog_publish/assets/js/114.0440bb9c.js"><link rel="prefetch" href="/blog_publish/assets/js/115.f79ba2f4.js"><link rel="prefetch" href="/blog_publish/assets/js/116.0a53c1e4.js"><link rel="prefetch" href="/blog_publish/assets/js/117.12d45698.js"><link rel="prefetch" href="/blog_publish/assets/js/118.fc9949f8.js"><link rel="prefetch" href="/blog_publish/assets/js/119.beb324ca.js"><link rel="prefetch" href="/blog_publish/assets/js/12.5ba20854.js"><link rel="prefetch" href="/blog_publish/assets/js/120.647d8af7.js"><link rel="prefetch" href="/blog_publish/assets/js/121.39fd9117.js"><link rel="prefetch" href="/blog_publish/assets/js/122.2651ddaa.js"><link rel="prefetch" href="/blog_publish/assets/js/123.2c9708b5.js"><link rel="prefetch" href="/blog_publish/assets/js/124.d62a946a.js"><link rel="prefetch" href="/blog_publish/assets/js/125.61217238.js"><link rel="prefetch" href="/blog_publish/assets/js/126.f4d173cc.js"><link rel="prefetch" href="/blog_publish/assets/js/127.e1616907.js"><link rel="prefetch" href="/blog_publish/assets/js/128.59e9b9bc.js"><link rel="prefetch" href="/blog_publish/assets/js/129.0b25326d.js"><link rel="prefetch" href="/blog_publish/assets/js/13.6201bcbf.js"><link rel="prefetch" href="/blog_publish/assets/js/130.b0f7c196.js"><link rel="prefetch" href="/blog_publish/assets/js/131.a4aa12f9.js"><link rel="prefetch" href="/blog_publish/assets/js/132.4c1294ca.js"><link rel="prefetch" href="/blog_publish/assets/js/133.716f6352.js"><link rel="prefetch" href="/blog_publish/assets/js/134.47f617c9.js"><link rel="prefetch" href="/blog_publish/assets/js/135.4ae7b491.js"><link rel="prefetch" href="/blog_publish/assets/js/136.1968a73c.js"><link rel="prefetch" href="/blog_publish/assets/js/137.3c299294.js"><link rel="prefetch" href="/blog_publish/assets/js/138.2926eb8f.js"><link rel="prefetch" href="/blog_publish/assets/js/139.9c0731ca.js"><link rel="prefetch" href="/blog_publish/assets/js/14.02e4d7e8.js"><link rel="prefetch" href="/blog_publish/assets/js/140.610956b7.js"><link rel="prefetch" href="/blog_publish/assets/js/141.ec69973d.js"><link rel="prefetch" href="/blog_publish/assets/js/142.c1b8375b.js"><link rel="prefetch" href="/blog_publish/assets/js/143.b89f01fb.js"><link rel="prefetch" href="/blog_publish/assets/js/144.4c59efc3.js"><link rel="prefetch" href="/blog_publish/assets/js/145.7d5cf177.js"><link rel="prefetch" href="/blog_publish/assets/js/146.178392e7.js"><link rel="prefetch" href="/blog_publish/assets/js/147.896bc309.js"><link rel="prefetch" href="/blog_publish/assets/js/148.e271c433.js"><link rel="prefetch" href="/blog_publish/assets/js/149.ff140aed.js"><link rel="prefetch" href="/blog_publish/assets/js/15.4893f488.js"><link rel="prefetch" href="/blog_publish/assets/js/150.62b21cc8.js"><link rel="prefetch" href="/blog_publish/assets/js/151.99fb14b0.js"><link rel="prefetch" href="/blog_publish/assets/js/152.54ddc166.js"><link rel="prefetch" href="/blog_publish/assets/js/153.e6885cc3.js"><link rel="prefetch" href="/blog_publish/assets/js/154.9e340011.js"><link rel="prefetch" href="/blog_publish/assets/js/155.ff86cd63.js"><link rel="prefetch" href="/blog_publish/assets/js/156.f4ed1a46.js"><link rel="prefetch" href="/blog_publish/assets/js/157.3ac56b71.js"><link rel="prefetch" href="/blog_publish/assets/js/158.cf346dd4.js"><link rel="prefetch" href="/blog_publish/assets/js/159.0068556f.js"><link rel="prefetch" href="/blog_publish/assets/js/16.8846169c.js"><link rel="prefetch" href="/blog_publish/assets/js/160.db7081e7.js"><link rel="prefetch" href="/blog_publish/assets/js/161.d93316de.js"><link rel="prefetch" href="/blog_publish/assets/js/162.403dd944.js"><link rel="prefetch" href="/blog_publish/assets/js/163.98406fd7.js"><link rel="prefetch" href="/blog_publish/assets/js/164.b4a7a898.js"><link rel="prefetch" href="/blog_publish/assets/js/165.f6f2d967.js"><link rel="prefetch" href="/blog_publish/assets/js/166.128e85af.js"><link rel="prefetch" href="/blog_publish/assets/js/167.f7247a72.js"><link rel="prefetch" href="/blog_publish/assets/js/168.05bfba1b.js"><link rel="prefetch" href="/blog_publish/assets/js/169.f83db172.js"><link rel="prefetch" href="/blog_publish/assets/js/17.55e72157.js"><link rel="prefetch" href="/blog_publish/assets/js/170.a6323669.js"><link rel="prefetch" href="/blog_publish/assets/js/171.bd8b7c56.js"><link rel="prefetch" href="/blog_publish/assets/js/172.a80e82af.js"><link rel="prefetch" href="/blog_publish/assets/js/173.96f7cd3f.js"><link rel="prefetch" href="/blog_publish/assets/js/174.71f0f83f.js"><link rel="prefetch" href="/blog_publish/assets/js/175.28dfe229.js"><link rel="prefetch" href="/blog_publish/assets/js/176.a6547cd6.js"><link rel="prefetch" href="/blog_publish/assets/js/177.e1bb6450.js"><link rel="prefetch" href="/blog_publish/assets/js/178.eaa950a5.js"><link rel="prefetch" href="/blog_publish/assets/js/179.54fe0ddb.js"><link rel="prefetch" href="/blog_publish/assets/js/18.c928c493.js"><link rel="prefetch" href="/blog_publish/assets/js/180.4df5c23c.js"><link rel="prefetch" href="/blog_publish/assets/js/181.21e14d5f.js"><link rel="prefetch" href="/blog_publish/assets/js/182.229de909.js"><link rel="prefetch" href="/blog_publish/assets/js/183.2ba587c1.js"><link rel="prefetch" href="/blog_publish/assets/js/184.019e7b2d.js"><link rel="prefetch" href="/blog_publish/assets/js/185.2e9a42ca.js"><link rel="prefetch" href="/blog_publish/assets/js/186.44f670ac.js"><link rel="prefetch" href="/blog_publish/assets/js/187.6d9f92a3.js"><link rel="prefetch" href="/blog_publish/assets/js/188.ea46513b.js"><link rel="prefetch" href="/blog_publish/assets/js/189.26128001.js"><link rel="prefetch" href="/blog_publish/assets/js/19.7c22b6ed.js"><link rel="prefetch" href="/blog_publish/assets/js/190.0c5a8585.js"><link rel="prefetch" href="/blog_publish/assets/js/191.ce7de326.js"><link rel="prefetch" href="/blog_publish/assets/js/192.088ee007.js"><link rel="prefetch" href="/blog_publish/assets/js/193.25b645bd.js"><link rel="prefetch" href="/blog_publish/assets/js/194.95abf19b.js"><link rel="prefetch" href="/blog_publish/assets/js/195.a1362250.js"><link rel="prefetch" href="/blog_publish/assets/js/196.224ffbeb.js"><link rel="prefetch" href="/blog_publish/assets/js/197.1cd51195.js"><link rel="prefetch" href="/blog_publish/assets/js/198.72748521.js"><link rel="prefetch" href="/blog_publish/assets/js/199.65d6952f.js"><link rel="prefetch" href="/blog_publish/assets/js/20.e0c8bc0f.js"><link rel="prefetch" href="/blog_publish/assets/js/200.a02f9122.js"><link rel="prefetch" href="/blog_publish/assets/js/201.fcccc05f.js"><link rel="prefetch" href="/blog_publish/assets/js/202.00a9b930.js"><link rel="prefetch" href="/blog_publish/assets/js/203.cd0c9269.js"><link rel="prefetch" href="/blog_publish/assets/js/204.694e6d1e.js"><link rel="prefetch" href="/blog_publish/assets/js/205.5fdaf7c6.js"><link rel="prefetch" href="/blog_publish/assets/js/206.429a58ae.js"><link rel="prefetch" href="/blog_publish/assets/js/207.60e15733.js"><link rel="prefetch" href="/blog_publish/assets/js/208.49847840.js"><link rel="prefetch" href="/blog_publish/assets/js/209.ec102045.js"><link rel="prefetch" href="/blog_publish/assets/js/21.58ffb29b.js"><link rel="prefetch" href="/blog_publish/assets/js/210.c96da4bf.js"><link rel="prefetch" href="/blog_publish/assets/js/211.4d98d3d6.js"><link rel="prefetch" href="/blog_publish/assets/js/212.0e37778b.js"><link rel="prefetch" href="/blog_publish/assets/js/213.1daf2a59.js"><link rel="prefetch" href="/blog_publish/assets/js/214.6abb9168.js"><link rel="prefetch" href="/blog_publish/assets/js/215.999e35ed.js"><link rel="prefetch" href="/blog_publish/assets/js/216.54f6ce91.js"><link rel="prefetch" href="/blog_publish/assets/js/217.98de30cc.js"><link rel="prefetch" href="/blog_publish/assets/js/218.5f8ca4c2.js"><link rel="prefetch" href="/blog_publish/assets/js/219.f618c0c1.js"><link rel="prefetch" href="/blog_publish/assets/js/22.fd13f710.js"><link rel="prefetch" href="/blog_publish/assets/js/220.618ba814.js"><link rel="prefetch" href="/blog_publish/assets/js/221.83de49a2.js"><link rel="prefetch" href="/blog_publish/assets/js/222.bc533958.js"><link rel="prefetch" href="/blog_publish/assets/js/223.4c200ee3.js"><link rel="prefetch" href="/blog_publish/assets/js/224.cb093d51.js"><link rel="prefetch" href="/blog_publish/assets/js/225.1ec21dcf.js"><link rel="prefetch" href="/blog_publish/assets/js/226.5a4d6253.js"><link rel="prefetch" href="/blog_publish/assets/js/227.b7314984.js"><link rel="prefetch" href="/blog_publish/assets/js/228.1a2a9c9c.js"><link rel="prefetch" href="/blog_publish/assets/js/229.6b7c04ed.js"><link rel="prefetch" href="/blog_publish/assets/js/23.c1c0be9e.js"><link rel="prefetch" href="/blog_publish/assets/js/230.9164eb46.js"><link rel="prefetch" href="/blog_publish/assets/js/231.9041f55a.js"><link rel="prefetch" href="/blog_publish/assets/js/232.c2cd31a6.js"><link rel="prefetch" href="/blog_publish/assets/js/233.c35d9a28.js"><link rel="prefetch" href="/blog_publish/assets/js/234.d517982a.js"><link rel="prefetch" href="/blog_publish/assets/js/235.1a7ee5a2.js"><link rel="prefetch" href="/blog_publish/assets/js/236.1c367e4a.js"><link rel="prefetch" href="/blog_publish/assets/js/237.2d3e54cd.js"><link rel="prefetch" href="/blog_publish/assets/js/238.9452b391.js"><link rel="prefetch" href="/blog_publish/assets/js/239.c745fb8e.js"><link rel="prefetch" href="/blog_publish/assets/js/24.ad4747b7.js"><link rel="prefetch" href="/blog_publish/assets/js/240.41dfa756.js"><link rel="prefetch" href="/blog_publish/assets/js/241.a9f7ff2c.js"><link rel="prefetch" href="/blog_publish/assets/js/242.6e457d08.js"><link rel="prefetch" href="/blog_publish/assets/js/243.b9c0aef1.js"><link rel="prefetch" href="/blog_publish/assets/js/244.73922524.js"><link rel="prefetch" href="/blog_publish/assets/js/245.18ec2edf.js"><link rel="prefetch" href="/blog_publish/assets/js/246.cdadb561.js"><link rel="prefetch" href="/blog_publish/assets/js/247.fbc336ed.js"><link rel="prefetch" href="/blog_publish/assets/js/248.e3d56b61.js"><link rel="prefetch" href="/blog_publish/assets/js/249.0bc069cc.js"><link rel="prefetch" href="/blog_publish/assets/js/25.5e69c47c.js"><link rel="prefetch" href="/blog_publish/assets/js/250.30fd4b86.js"><link rel="prefetch" href="/blog_publish/assets/js/251.7e0e7eb5.js"><link rel="prefetch" href="/blog_publish/assets/js/252.7faeaa9d.js"><link rel="prefetch" href="/blog_publish/assets/js/253.2b125735.js"><link rel="prefetch" href="/blog_publish/assets/js/254.e3c6e477.js"><link rel="prefetch" href="/blog_publish/assets/js/255.3b020c58.js"><link rel="prefetch" href="/blog_publish/assets/js/256.78eb6dc5.js"><link rel="prefetch" href="/blog_publish/assets/js/257.5cd036b7.js"><link rel="prefetch" href="/blog_publish/assets/js/258.09bc5d4d.js"><link rel="prefetch" href="/blog_publish/assets/js/259.5073b45d.js"><link rel="prefetch" href="/blog_publish/assets/js/26.dce3c8d0.js"><link rel="prefetch" href="/blog_publish/assets/js/260.6179fe6b.js"><link rel="prefetch" href="/blog_publish/assets/js/261.1775f4ff.js"><link rel="prefetch" href="/blog_publish/assets/js/262.843e3bda.js"><link rel="prefetch" href="/blog_publish/assets/js/263.0898899d.js"><link rel="prefetch" href="/blog_publish/assets/js/264.40e72f17.js"><link rel="prefetch" href="/blog_publish/assets/js/265.6914b261.js"><link rel="prefetch" href="/blog_publish/assets/js/266.c44f3dce.js"><link rel="prefetch" href="/blog_publish/assets/js/267.f7d0fcde.js"><link rel="prefetch" href="/blog_publish/assets/js/268.5af5a268.js"><link rel="prefetch" href="/blog_publish/assets/js/269.19cdfdc7.js"><link rel="prefetch" href="/blog_publish/assets/js/27.c6f599d8.js"><link rel="prefetch" href="/blog_publish/assets/js/270.fb0ab094.js"><link rel="prefetch" href="/blog_publish/assets/js/271.467a82f1.js"><link rel="prefetch" href="/blog_publish/assets/js/272.0de27920.js"><link rel="prefetch" href="/blog_publish/assets/js/273.d8977f33.js"><link rel="prefetch" href="/blog_publish/assets/js/274.49e79caa.js"><link rel="prefetch" href="/blog_publish/assets/js/275.58fd1634.js"><link rel="prefetch" href="/blog_publish/assets/js/276.77a0a255.js"><link rel="prefetch" href="/blog_publish/assets/js/277.4b78c82d.js"><link rel="prefetch" href="/blog_publish/assets/js/278.0c29ee61.js"><link rel="prefetch" href="/blog_publish/assets/js/279.93627701.js"><link rel="prefetch" href="/blog_publish/assets/js/28.d5d53f60.js"><link rel="prefetch" href="/blog_publish/assets/js/280.f80ca7b0.js"><link rel="prefetch" href="/blog_publish/assets/js/281.14a33ba7.js"><link rel="prefetch" href="/blog_publish/assets/js/282.b7ef9b9d.js"><link rel="prefetch" href="/blog_publish/assets/js/283.ad6b4712.js"><link rel="prefetch" href="/blog_publish/assets/js/284.560ba89a.js"><link rel="prefetch" href="/blog_publish/assets/js/285.7297bf40.js"><link rel="prefetch" href="/blog_publish/assets/js/286.4cc87443.js"><link rel="prefetch" href="/blog_publish/assets/js/287.20aeab9a.js"><link rel="prefetch" href="/blog_publish/assets/js/288.83c071a4.js"><link rel="prefetch" href="/blog_publish/assets/js/289.f545f9e6.js"><link rel="prefetch" href="/blog_publish/assets/js/29.f8dc1511.js"><link rel="prefetch" href="/blog_publish/assets/js/290.1b346ffa.js"><link rel="prefetch" href="/blog_publish/assets/js/291.ed942de2.js"><link rel="prefetch" href="/blog_publish/assets/js/292.65db48dd.js"><link rel="prefetch" href="/blog_publish/assets/js/293.6a9585be.js"><link rel="prefetch" href="/blog_publish/assets/js/294.69ccc91f.js"><link rel="prefetch" href="/blog_publish/assets/js/295.47b879b3.js"><link rel="prefetch" href="/blog_publish/assets/js/296.92c0bfc1.js"><link rel="prefetch" href="/blog_publish/assets/js/297.d5a414c9.js"><link rel="prefetch" href="/blog_publish/assets/js/298.17733c67.js"><link rel="prefetch" href="/blog_publish/assets/js/299.b564e11c.js"><link rel="prefetch" href="/blog_publish/assets/js/3.7b5be556.js"><link rel="prefetch" href="/blog_publish/assets/js/30.b3063b77.js"><link rel="prefetch" href="/blog_publish/assets/js/300.f6fdbbe4.js"><link rel="prefetch" href="/blog_publish/assets/js/301.e9730793.js"><link rel="prefetch" href="/blog_publish/assets/js/302.3167cf18.js"><link rel="prefetch" href="/blog_publish/assets/js/303.9326b257.js"><link rel="prefetch" href="/blog_publish/assets/js/304.b0dda1f5.js"><link rel="prefetch" href="/blog_publish/assets/js/305.20c411f2.js"><link rel="prefetch" href="/blog_publish/assets/js/306.ff53cc94.js"><link rel="prefetch" href="/blog_publish/assets/js/307.4b4a3361.js"><link rel="prefetch" href="/blog_publish/assets/js/308.79184800.js"><link rel="prefetch" href="/blog_publish/assets/js/309.9d6e4598.js"><link rel="prefetch" href="/blog_publish/assets/js/31.ca39c57a.js"><link rel="prefetch" href="/blog_publish/assets/js/310.b6869506.js"><link rel="prefetch" href="/blog_publish/assets/js/311.83bac133.js"><link rel="prefetch" href="/blog_publish/assets/js/312.b77764d2.js"><link rel="prefetch" href="/blog_publish/assets/js/313.efb89f66.js"><link rel="prefetch" href="/blog_publish/assets/js/314.7bd7d236.js"><link rel="prefetch" href="/blog_publish/assets/js/315.0fc75aec.js"><link rel="prefetch" href="/blog_publish/assets/js/316.024e7c1c.js"><link rel="prefetch" href="/blog_publish/assets/js/317.ab16994d.js"><link rel="prefetch" href="/blog_publish/assets/js/318.cdbb87d0.js"><link rel="prefetch" href="/blog_publish/assets/js/319.b619a68c.js"><link rel="prefetch" href="/blog_publish/assets/js/32.8a11ea47.js"><link rel="prefetch" href="/blog_publish/assets/js/320.935abf2b.js"><link rel="prefetch" href="/blog_publish/assets/js/321.125ca37c.js"><link rel="prefetch" href="/blog_publish/assets/js/322.671cab90.js"><link rel="prefetch" href="/blog_publish/assets/js/323.c629dc39.js"><link rel="prefetch" href="/blog_publish/assets/js/324.4d5e53ab.js"><link rel="prefetch" href="/blog_publish/assets/js/325.8cd8ffcf.js"><link rel="prefetch" href="/blog_publish/assets/js/326.7da3900e.js"><link rel="prefetch" href="/blog_publish/assets/js/327.ce18dd03.js"><link rel="prefetch" href="/blog_publish/assets/js/328.83dc9555.js"><link rel="prefetch" href="/blog_publish/assets/js/329.d0a07170.js"><link rel="prefetch" href="/blog_publish/assets/js/33.0eeacbf9.js"><link rel="prefetch" href="/blog_publish/assets/js/330.70c54f3e.js"><link rel="prefetch" href="/blog_publish/assets/js/331.e4b1065e.js"><link rel="prefetch" href="/blog_publish/assets/js/332.0ae2564f.js"><link rel="prefetch" href="/blog_publish/assets/js/333.42fd8b0e.js"><link rel="prefetch" href="/blog_publish/assets/js/334.c1831045.js"><link rel="prefetch" href="/blog_publish/assets/js/335.1d8c0f76.js"><link rel="prefetch" href="/blog_publish/assets/js/336.16fd5b41.js"><link rel="prefetch" href="/blog_publish/assets/js/337.bc696878.js"><link rel="prefetch" href="/blog_publish/assets/js/338.1ebb1595.js"><link rel="prefetch" href="/blog_publish/assets/js/339.1dfb9045.js"><link rel="prefetch" href="/blog_publish/assets/js/34.bad15237.js"><link rel="prefetch" href="/blog_publish/assets/js/340.17e7f57d.js"><link rel="prefetch" href="/blog_publish/assets/js/341.105fb22f.js"><link rel="prefetch" href="/blog_publish/assets/js/342.1ce4ccdb.js"><link rel="prefetch" href="/blog_publish/assets/js/343.8f1b68d1.js"><link rel="prefetch" href="/blog_publish/assets/js/344.def69ab4.js"><link rel="prefetch" href="/blog_publish/assets/js/345.b51d638b.js"><link rel="prefetch" href="/blog_publish/assets/js/346.91452ae7.js"><link rel="prefetch" href="/blog_publish/assets/js/347.fb376c1b.js"><link rel="prefetch" href="/blog_publish/assets/js/348.2e62b6aa.js"><link rel="prefetch" href="/blog_publish/assets/js/349.c7709a5f.js"><link rel="prefetch" href="/blog_publish/assets/js/35.ecfbe002.js"><link rel="prefetch" href="/blog_publish/assets/js/350.24d2a3f3.js"><link rel="prefetch" href="/blog_publish/assets/js/351.c4f208ae.js"><link rel="prefetch" href="/blog_publish/assets/js/352.f657528d.js"><link rel="prefetch" href="/blog_publish/assets/js/353.cc6f77a1.js"><link rel="prefetch" href="/blog_publish/assets/js/354.edb96131.js"><link rel="prefetch" href="/blog_publish/assets/js/355.3cb19ed7.js"><link rel="prefetch" href="/blog_publish/assets/js/356.31b46eab.js"><link rel="prefetch" href="/blog_publish/assets/js/357.c63530cb.js"><link rel="prefetch" href="/blog_publish/assets/js/358.68a66f46.js"><link rel="prefetch" href="/blog_publish/assets/js/359.aa53f936.js"><link rel="prefetch" href="/blog_publish/assets/js/36.47566dac.js"><link rel="prefetch" href="/blog_publish/assets/js/360.39208478.js"><link rel="prefetch" href="/blog_publish/assets/js/361.4894f627.js"><link rel="prefetch" href="/blog_publish/assets/js/362.fa042d89.js"><link rel="prefetch" href="/blog_publish/assets/js/363.49e1452e.js"><link rel="prefetch" href="/blog_publish/assets/js/364.2f485742.js"><link rel="prefetch" href="/blog_publish/assets/js/365.5a1e07b4.js"><link rel="prefetch" href="/blog_publish/assets/js/366.3a4f087b.js"><link rel="prefetch" href="/blog_publish/assets/js/367.06ebd8a0.js"><link rel="prefetch" href="/blog_publish/assets/js/368.49d45174.js"><link rel="prefetch" href="/blog_publish/assets/js/369.6f54de99.js"><link rel="prefetch" href="/blog_publish/assets/js/37.ee13059e.js"><link rel="prefetch" href="/blog_publish/assets/js/370.d1dec056.js"><link rel="prefetch" href="/blog_publish/assets/js/371.53c7ba18.js"><link rel="prefetch" href="/blog_publish/assets/js/372.07f46c4e.js"><link rel="prefetch" href="/blog_publish/assets/js/373.5f051e9b.js"><link rel="prefetch" href="/blog_publish/assets/js/374.300496f7.js"><link rel="prefetch" href="/blog_publish/assets/js/38.c6d156e2.js"><link rel="prefetch" href="/blog_publish/assets/js/39.c4942ba1.js"><link rel="prefetch" href="/blog_publish/assets/js/4.b0cb765d.js"><link rel="prefetch" href="/blog_publish/assets/js/40.3c3b852e.js"><link rel="prefetch" href="/blog_publish/assets/js/41.7961d999.js"><link rel="prefetch" href="/blog_publish/assets/js/42.703a40d4.js"><link rel="prefetch" href="/blog_publish/assets/js/43.1e1b61ef.js"><link rel="prefetch" href="/blog_publish/assets/js/44.e0fd4b34.js"><link rel="prefetch" href="/blog_publish/assets/js/45.01f8140d.js"><link rel="prefetch" href="/blog_publish/assets/js/47.f6fabe74.js"><link rel="prefetch" href="/blog_publish/assets/js/48.a231176d.js"><link rel="prefetch" href="/blog_publish/assets/js/49.6417fcf5.js"><link rel="prefetch" href="/blog_publish/assets/js/5.e723c1a9.js"><link rel="prefetch" href="/blog_publish/assets/js/50.d87b0611.js"><link rel="prefetch" href="/blog_publish/assets/js/51.50baa302.js"><link rel="prefetch" href="/blog_publish/assets/js/52.ab9331d2.js"><link rel="prefetch" href="/blog_publish/assets/js/53.b256aa1c.js"><link rel="prefetch" href="/blog_publish/assets/js/54.06dccf04.js"><link rel="prefetch" href="/blog_publish/assets/js/55.10eee97c.js"><link rel="prefetch" href="/blog_publish/assets/js/56.494e1260.js"><link rel="prefetch" href="/blog_publish/assets/js/57.8f8e8c73.js"><link rel="prefetch" href="/blog_publish/assets/js/58.342d438e.js"><link rel="prefetch" href="/blog_publish/assets/js/59.606ea721.js"><link rel="prefetch" href="/blog_publish/assets/js/6.43debd78.js"><link rel="prefetch" href="/blog_publish/assets/js/60.af33dc60.js"><link rel="prefetch" href="/blog_publish/assets/js/61.a9fa3797.js"><link rel="prefetch" href="/blog_publish/assets/js/62.ce20d10d.js"><link rel="prefetch" href="/blog_publish/assets/js/63.63ad730b.js"><link rel="prefetch" href="/blog_publish/assets/js/64.2e0b7e4d.js"><link rel="prefetch" href="/blog_publish/assets/js/65.f85ed5fa.js"><link rel="prefetch" href="/blog_publish/assets/js/66.deb1a5c1.js"><link rel="prefetch" href="/blog_publish/assets/js/67.ca349b07.js"><link rel="prefetch" href="/blog_publish/assets/js/68.69d976e5.js"><link rel="prefetch" href="/blog_publish/assets/js/69.bbddef12.js"><link rel="prefetch" href="/blog_publish/assets/js/7.23b88edf.js"><link rel="prefetch" href="/blog_publish/assets/js/70.7c2cda55.js"><link rel="prefetch" href="/blog_publish/assets/js/71.85d87299.js"><link rel="prefetch" href="/blog_publish/assets/js/72.b8d96a0a.js"><link rel="prefetch" href="/blog_publish/assets/js/73.63e1c01e.js"><link rel="prefetch" href="/blog_publish/assets/js/74.0fccbeb8.js"><link rel="prefetch" href="/blog_publish/assets/js/75.7353b526.js"><link rel="prefetch" href="/blog_publish/assets/js/76.88951533.js"><link rel="prefetch" href="/blog_publish/assets/js/77.95b68684.js"><link rel="prefetch" href="/blog_publish/assets/js/78.09c3bef7.js"><link rel="prefetch" href="/blog_publish/assets/js/79.914a823d.js"><link rel="prefetch" href="/blog_publish/assets/js/8.786386d2.js"><link rel="prefetch" href="/blog_publish/assets/js/80.8e3db83d.js"><link rel="prefetch" href="/blog_publish/assets/js/81.b022b19d.js"><link rel="prefetch" href="/blog_publish/assets/js/82.31de2df7.js"><link rel="prefetch" href="/blog_publish/assets/js/83.a2f84810.js"><link rel="prefetch" href="/blog_publish/assets/js/84.5a9d6138.js"><link rel="prefetch" href="/blog_publish/assets/js/85.653959e6.js"><link rel="prefetch" href="/blog_publish/assets/js/86.2b67b925.js"><link rel="prefetch" href="/blog_publish/assets/js/87.f5855c23.js"><link rel="prefetch" href="/blog_publish/assets/js/88.03ec0f84.js"><link rel="prefetch" href="/blog_publish/assets/js/89.cd89102c.js"><link rel="prefetch" href="/blog_publish/assets/js/9.e8b3a48d.js"><link rel="prefetch" href="/blog_publish/assets/js/90.8171bd61.js"><link rel="prefetch" href="/blog_publish/assets/js/91.a72bfd91.js"><link rel="prefetch" href="/blog_publish/assets/js/92.8ff96830.js"><link rel="prefetch" href="/blog_publish/assets/js/93.5d35bb2d.js"><link rel="prefetch" href="/blog_publish/assets/js/94.0b3baef9.js"><link rel="prefetch" href="/blog_publish/assets/js/95.f485e21e.js"><link rel="prefetch" href="/blog_publish/assets/js/96.a68dd3b6.js"><link rel="prefetch" href="/blog_publish/assets/js/97.fdf1f34f.js"><link rel="prefetch" href="/blog_publish/assets/js/98.1a25454b.js"><link rel="prefetch" href="/blog_publish/assets/js/99.4f973974.js">
+    <link rel="stylesheet" href="/blog_publish/assets/css/0.styles.9a82886c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog_publish/" class="home-link router-link-active"><!----> <span class="site-name">小游</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog_publish/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/java/01_ProgrammingBasic/link.html" class="nav-link">
+  编程基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/02_DevelopmentTools/link.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/03_ApplicationFramework/link.html" class="nav-link">
+  应用框架
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/04_OperationAndMaintenance/" class="nav-link">
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/05_SourceCode/" class="nav-link">
+  源码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/web/01_vue/使用webpack打包一个简单的前端程序.html" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/tools/essay/04_SpringBoot中处理跨域的几种方式.html" class="nav-link">
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/installSoftware/01_jdk_linux.html" class="nav-link">
+  软件安装
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/bugRepository/03_MySQL主从复制Bug.html" class="nav-link">
+  bug库
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/other/07_打包插件maven-assembly-plugin.html" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog_publish/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/java/01_ProgrammingBasic/link.html" class="nav-link">
+  编程基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/02_DevelopmentTools/link.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/03_ApplicationFramework/link.html" class="nav-link">
+  应用框架
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/04_OperationAndMaintenance/" class="nav-link">
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/05_SourceCode/" class="nav-link">
+  源码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/web/01_vue/使用webpack打包一个简单的前端程序.html" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/tools/essay/04_SpringBoot中处理跨域的几种方式.html" class="nav-link">
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/installSoftware/01_jdk_linux.html" class="nav-link">
+  软件安装
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/bugRepository/03_MySQL主从复制Bug.html" class="nav-link">
+  bug库
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/other/07_打包插件maven-assembly-plugin.html" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>编程基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JVM</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/01_jvm.html" class="sidebar-link">JVM</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/01_JVM与Java体系结构.html" class="sidebar-link">JVM与Java体系结构</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/02_类加载子系统.html" class="sidebar-link">类加载子系统</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/03_运行时数据区概述及线程.html" class="sidebar-link">运行时数据区概述及线程</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/04_程序计数器.html" class="sidebar-link">程序计数器</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/05_虚拟机栈.html" class="sidebar-link">虚拟机栈</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/06_本地方法接口.html" class="sidebar-link">本地方法接口</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/07_本地方法栈.html" class="sidebar-link">本地方法栈</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/08_堆.html" class="sidebar-link">堆</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/09_方法区.html" class="sidebar-link">方法区</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/10_对象的实例化内存布局与访问定位.html" class="sidebar-link">对象的实例化内存布局与访问定位</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/11_直接内存.html" class="sidebar-link">直接内存</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/12_执行引擎.html" class="sidebar-link">执行引擎</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/13_StringTable.html" class="sidebar-link">StringTable</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/14_垃圾回收概述.html" class="sidebar-link">垃圾回收概述</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/15_垃圾回收相关算法.html" class="sidebar-link">垃圾回收相关算法</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/16_垃圾回收相关概念.html" class="sidebar-link">垃圾回收相关概念</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/17_垃圾回收器.html" class="sidebar-link">垃圾回收器</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/18_Class文件结构.html" class="active sidebar-link">Class文件结构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/18_Class文件结构.html#一、概述" class="sidebar-link">一、概述</a></li><li class="sidebar-sub-header"><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/18_Class文件结构.html#二、虚拟机的基石：class文件" class="sidebar-link">二、虚拟机的基石：Class文件</a></li><li class="sidebar-sub-header"><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/18_Class文件结构.html#三、class文件结构" class="sidebar-link">三、Class文件结构</a></li><li class="sidebar-sub-header"><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/18_Class文件结构.html#四、使用javap指令解析class文件" class="sidebar-link">四、使用javap指令解析Class文件</a></li></ul></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/19_字节码指令集与解析举例.html" class="sidebar-link">字节码指令集与解析举例</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/20_类的加载过程.html" class="sidebar-link">类的加载过程</a></li><li><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/21_类的加载器.html" class="sidebar-link">类的加载器</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>多线程&amp;高并发</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JDK_Tools</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="class文件结构"><a href="#class文件结构" class="header-anchor">#</a> Class文件结构</h1> <p>java虚拟机</p> <p><a data-fancybox="" title="image-20210321181236380" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/56116cfea2bd4da38e169187d4272de2.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/56116cfea2bd4da38e169187d4272de2.png" alt="image-20210321181236380"></a></p> <p><a data-fancybox="" title="image-20210321181300291" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/35e1fd0e2a4340108f9dc53b1fcb4ce8.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/35e1fd0e2a4340108f9dc53b1fcb4ce8.png" alt="image-20210321181300291"></a></p> <h2 id="一、概述"><a href="#一、概述" class="header-anchor">#</a> 一、概述</h2> <h3 id="_1-1-字节码文件的跨平台性"><a href="#_1-1-字节码文件的跨平台性" class="header-anchor">#</a> 1.1 字节码文件的跨平台性</h3> <ol><li><p><strong>Java语言：跨平台的语言(write once ,run anywhere)</strong></p> <ul><li>当Java源代码成功编译为字节码后，如果想在不同的平台上运行，则无须再次编译</li> <li>这个优势不再那么吸引人了。Python、PHP、Perl、Ruby、Lisp等有强大的解释器</li> <li>跨平台似乎已经快成为一门语言必选的特性</li></ul></li> <li><p><strong>Java虚拟机：跨语言的平台</strong> <strong>Java 虚拟机不和包括Java在内的任何语言绑定,它只与&quot;Class文件&quot;这种特定的二进制文件格式所关联。</strong>
+无论使用何种语言进行软件开发,只要将源文件编译为正确的Class文件,那么这种语言就可以在Java虚拟机上执行。
+可以说, 统一而强大的Class文件结构,就是Java虚拟机的基石、桥梁。
+所有的JVM全部遵守Java虚拟机规范,也就是说所有的JVM环境都是一样的,这样一来字节码文件可以在各种JVM上运行。</p> <p><a data-fancybox="" title="image-20210321181759133" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/ee67e78fd4a3467b8f3c55136cd0e5f9.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/ee67e78fd4a3467b8f3c55136cd0e5f9.png" alt="image-20210321181759133"></a></p> <p>思考: 为什么jdk每次发布新版本都会发布两种规范？
+原因: java虚拟机是跨平台的,不止java语言使用,其他语言只要符合规范都可以使用</p> <p><a data-fancybox="" title="image-20210321181815631" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/19ee8a04d8e540d5823913ca2e396c97.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/19ee8a04d8e540d5823913ca2e396c97.png" alt="image-20210321181815631"></a></p> <p><a href="https://docs.oracle.com/javase/specs/index.html" target="_blank" rel="noopener noreferrer">Java官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://docs.oracle.com/javase/specs/jvms/se8/html/index.html" target="_blank" rel="noopener noreferrer">java8官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>想要让一个Java程序正确地运行在JVM中, Java源码就必须要编译为符合JVM规范的字节码。</p> <ul><li><p><strong>前端编译器</strong>的主要任务就是负责<strong>将符合Java语法规范的Java代码转换为符合JVM规范的字节码文件。</strong></p></li> <li><p><strong>javac</strong>是一种能够将Java源码编译为字节码的前端编译器</p></li> <li><p><strong>javac</strong>编译器在将Java源码编译为一个有效的字节码文件过程中经历了4个步骤:</p> <p>分别是： 词法解析 --&gt; 语法解析 --&gt; 语义解析 --&gt; 生成字节码</p></li></ul></li> <li><p>Oracle的JDK软件包括两部分内容:</p> <ul><li>一部分是将<strong>Java源代码编译成Java虚拟机的指令集</strong>的<strong>编译器</strong>(<strong>前端编译器不包含在jvm中</strong>)</li> <li>另一部分是用于实现<strong>Java虚拟机的运行时环境</strong>（JRE）</li></ul></li></ol> <h3 id="_1-2-java的前端编译器"><a href="#_1-2-java的前端编译器" class="header-anchor">#</a> 1.2 Java的前端编译器</h3> <p><a data-fancybox="" title="image-20210321211611603" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/3c8048252be14e08812b2d6c25ec310b.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-21/3c8048252be14e08812b2d6c25ec310b.png" alt="image-20210321211611603"></a></p> <p>前端编译器 vs 后端编译器</p> <p>Java源代码的编译结果是字节码,需要有一种编译器能够将Java源码编译为字节码。
+承担这个重要责任的就是配置在path环境变量中的<strong>javac编译器,</strong> <strong>它是一种能够将Java源码编译为字节码的前端编译器。</strong></p> <p>HotSpot VM并没有强制要求前端编译器只能使用javac来编译字节码,其实只要编译结果符合JVM规范都可以被JVM所识别即可。
+在Java的前端编译器领域,除了javac之外,还有一种被大家经常用到的前端编译器,那就是内置在Eclipse中的<strong>ECJ(Eclipse Compiler for Java)<strong>编译器。和</strong>javac的全量式编译不同,ECJ是一种增量式编译器。</strong></p> <ul><li>在Eclipse中,当开发人员编写完代码后,使用&quot;Ctrl+S&quot;快捷键时,ECJ编译器所采取的编译方案是把未编译部分的源代码逐行进行编译,
+而非每次都全量编译。因此ECJ的编译效率会比javac更加迅速和高效,而编译质量和javac相比大致还是一样的。</li> <li>ECJ不仅是Eclipse的默认内置前端编译器,在Tomcat中同样也是使用ECJ编译器来编译jsp文件。</li> <li>由于ECJ编译器是采用GPLv2的开源协议进行源代码公开,所以大家可以登录Eclipse官网下载ECJ编译器的源码进行二次开发。</li> <li>默认情况下,IntelliJ IDEA使用javac编译器。(可自行设置为AspectJ编译器 ajc)</li></ul> <p>前端编译器并不会直接涉及编译优化等方面的技术, 而是将这些具体优化细节移交给HotSpot的JIT编译器负责。
+(相关补充:AOT Compiler(Ahead Of Time Compiler),静态提前编译器,程序运行之前将字节码文件直接翻译成字节指令)</p> <h3 id="_1-3-透过字节码指令看代码细节"><a href="#_1-3-透过字节码指令看代码细节" class="header-anchor">#</a> 1.3 透过字节码指令看代码细节</h3> <p><strong>举例一：</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IntegerTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Integer</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+        <span class="token comment">// true</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">==</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Integer</span> i1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token class-name">Integer</span> i2 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token comment">// true</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i1 <span class="token operator">==</span> i2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+        <span class="token class-name">Integer</span> i3 <span class="token operator">=</span> <span class="token number">128</span><span class="token punctuation">;</span>
+        <span class="token class-name">Integer</span> i4 <span class="token operator">=</span> <span class="token number">128</span><span class="token punctuation">;</span>
+        <span class="token comment">// false</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i3 <span class="token operator">==</span> i4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">/**
+         *      定义一个常量，并将常量存入操作数栈（Integer x = 5;）
+         *  0 iconst_5
+         *      自动装箱，调用Integer.valueOf方法，如果传入的值在[-128,127]之间，返回缓存中的数据，否则，返回一个新的Integer对象
+         *  1 invokestatic #2 &lt;java/lang/Integer.valueOf&gt;
+         *      将数据从操作数栈出栈，并存储到局部变量表索引为 1 的位置（引用类型）
+         *  4 astore_1
+         *      定义一个常量，并将常量存入操作数栈
+         *  5 iconst_5 （ int y = 5;）
+         *      将数据从操作数栈出栈，并存储到局部变量表所以为 2 的位置（基本类型：int）
+         *  6 istore_2
+         *
+         *  7 getstatic #3 &lt;java/lang/System.out&gt;
+         *      将数据从局部变量表加载到操作数栈中（引用类型）
+         * 10 aload_1
+         *      自动拆箱，调用Integer.intValue方法
+         * 11 invokevirtual #4 &lt;java/lang/Integer.intValue&gt;
+         *      将数据从局部变量表加载到操作数栈中（基本类型：int）
+         * 14 iload_2
+         *      比较两个数是否相等（内存地址）
+         * 15 if_icmpne 22 (+7)
+         *
+         * 18 iconst_1
+         * 19 goto 23 (+4)
+         * 22 iconst_0
+         * 23 invokevirtual #5 &lt;java/io/PrintStream.println&gt;
+         *
+         *
+         *      将一个常量加载到操作数栈
+         * 26 bipush 10
+         *      自动装箱，调用Integer.valueOf方法，如果传入的值在[-128,127]之间，返回缓存中的数据，否则，返回一个新的Integer对象
+         * 28 invokestatic #2 &lt;java/lang/Integer.valueOf&gt;
+         *      将数据从操作数栈出栈，并存储到局部变量表索引为 3 的位置（引用类型）
+         * 31 astore_3
+         *      将一个常量加载到操作数栈
+         * 32 bipush 10
+         *      自动装箱，调用Integer.valueOf方法，如果传入的值在[-128,127]之间，返回缓存中的数据，否则，返回一个新的Integer对象
+         * 34 invokestatic #2 &lt;java/lang/Integer.valueOf&gt;
+         *      将数据从操作数栈出栈，并存储到局部变量表索引为 4 的位置（引用类型）
+         * 37 astore 4
+         * 39 getstatic #3 &lt;java/lang/System.out&gt;
+         *      将数据从局部变量表加载到操作数栈中（引用类型）
+         * 42 aload_3
+         *      将数据从局部变量表加载到操作数栈中（引用类型）
+         * 43 aload 4
+         *      比较两个数是否相等（内存地址）
+         * 45 if_acmpne 52 (+7)
+         * 48 iconst_1
+         * 49 goto 53 (+4)
+         * 52 iconst_0
+         * 53 invokevirtual #5 &lt;java/io/PrintStream.println&gt;
+         *
+         *
+         *      将一个常量加载到操作数栈（数据值：128）
+         * 56 sipush 128
+         *      自动装箱，调用Integer.valueOf方法，如果传入的值在[-128,127]之间，返回缓存中的数据，否则，返回一个新的Integer对象
+         * 59 invokestatic #2 &lt;java/lang/Integer.valueOf&gt;
+         *      将数据从操作数栈出栈，并存储到局部变量表索引为 5 的位置（引用类型）
+         * 62 astore 5
+         *      将一个常量加载到操作数栈（数据值：128）
+         * 64 sipush 128
+         *      自动装箱，调用Integer.valueOf方法，如果传入的值在[-128,127]之间，返回缓存中的数据，否则，返回一个新的Integer对象
+         * 67 invokestatic #2 &lt;java/lang/Integer.valueOf&gt;
+         *      将数据从操作数栈出栈，并存储到局部变量表索引为 6 的位置（引用类型）
+         * 70 astore 6
+         * 72 getstatic #3 &lt;java/lang/System.out&gt;
+         *      将数据从局部变量表加载到操作数栈中（引用类型）
+         * 75 aload 5
+         *      将数据从局部变量表加载到操作数栈中（引用类型）
+         * 77 aload 6
+         *      比较两个数是否相等（内存地址）
+         * 79 if_acmpne 86 (+7)
+         * 82 iconst_1
+         * 83 goto 87 (+4)
+         * 86 iconst_0
+         * 87 invokevirtual #5 &lt;java/io/PrintStream.println&gt;
+         * 90 return
+         */</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>举例二：</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IntegerTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> str1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">&quot;world&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> str2 <span class="token operator">=</span> <span class="token string">&quot;helloworld&quot;</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str1 <span class="token operator">==</span> str2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">/**
+         *      创建一个StringBuilder对象
+         *  0 new #2 &lt;java/lang/StringBuilder&gt;
+         *  3 dup
+         *      调用StringBuilder的构造方法
+         *  4 invokespecial #3 &lt;java/lang/StringBuilder.&lt;init&gt;&gt;
+         *      创建一个String对象
+         *  7 new #4 &lt;java/lang/String&gt;
+         * 10 dup
+         *      将常量 hello 加载到操作数栈
+         * 11 ldc #5 &lt;hello&gt;
+         *     调用String类的构造方法
+         * 13 invokespecial #6 &lt;java/lang/String.&lt;init&gt;&gt;
+         *     调用StringBuilder的append方法（builder.append(&quot;hello&quot;)）
+         * 16 invokevirtual #7 &lt;java/lang/StringBuilder.append&gt;
+         *     创建一个String对象
+         * 19 new #4 &lt;java/lang/String&gt;
+         * 22 dup
+         *     将常量 world 加载到操作数栈
+         * 23 ldc #8 &lt;world&gt;
+         *     调用String的构造方法
+         * 25 invokespecial #6 &lt;java/lang/String.&lt;init&gt;&gt;
+         *     调用StringBuilder的append方法（builder.append(&quot;world&quot;)）
+         * 28 invokevirtual #7 &lt;java/lang/StringBuilder.append&gt;
+         *     调用StringBuilder的toString方法，此方法会返回一个String对象，字符串内容会存储到堆中，但是字符串不会存入常量池中
+         * 31 invokevirtual #9 &lt;java/lang/StringBuilder.toString&gt;
+         *
+         *     将toString返回的数据存储到局部变量表中
+         * 34 astore_1
+         *      将常量 helloworld 加载到操作数栈
+         * 35 ldc #10 &lt;helloworld&gt;
+         *     将常量 helloworld 从操作数栈出栈，并加载到局部变量表中
+         * 37 astore_2
+         * 38 getstatic #11 &lt;java/lang/System.out&gt;
+         *     从局部变量表中加载数据到操作数栈中
+         * 41 aload_1
+         *     从局部变量表中加载数据到操作数栈中
+         * 42 aload_2
+         *      比较两个常量是否相等（内存地址）
+         * 43 if_acmpne 50 (+7)
+         * 46 iconst_1
+         * 47 goto 51 (+4)
+         * 50 iconst_0
+         * 51 invokevirtual #12 &lt;java/io/PrintStream.println&gt;
+         * 54 return
+         */</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>举例三：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ *  0 new #2 &lt;com/it/thread/Father&gt;
+ *  3 dup
+ *  4 invokespecial #3 &lt;com/it/thread/Father.&lt;init&gt;&gt;
+ *  7 astore_1
+ *  8 getstatic #4 &lt;java/lang/System.out&gt;
+ * 11 aload_1
+ * 12 getfield #5 &lt;com/it/thread/Father.x&gt;
+ * 15 invokevirtual #6 &lt;java/io/PrintStream.println&gt;
+ * 18 return
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SonTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Father</span> father <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Son</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>father<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">class</span> <span class="token class-name">Father</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 成员变量的赋值过程：
+     * 1、默认初始化
+     * 2、显示初始化 或代码块中初始化
+     * 3、构造器初始化
+     * 4、对象设置
+     */</span>
+    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     *  0 aload_0
+     *      调用Object类的构造方法进行初始化
+     *  1 invokespecial #1 &lt;java/lang/Object.&lt;init&gt;&gt;
+     *  4 aload_0
+     *  5 bipush 10
+     *      为x显示赋值
+     *  7 putfield #2 &lt;com/it/thread/Father.x&gt;
+     * 10 aload_0
+     *      调用print方法，由于该方法在son类中被重写，所以会调用子类的print方法
+     * 11 invokevirtual #3 &lt;com/it/thread/Father.print&gt;
+     * 14 aload_0
+     * 15 bipush 20
+     * 17 putfield #2 &lt;com/it/thread/Father.x&gt;
+     * 20 return
+     */</span>
+    <span class="token keyword">public</span> <span class="token class-name">Father</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        x <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Father.x = &quot;</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Son</span> <span class="token keyword">extends</span> <span class="token class-name">Father</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     *  0 aload_0
+     *      调用父类的构造方法进行初始化
+     *  1 invokespecial #1 &lt;com/it/thread/Father.&lt;init&gt;&gt;
+     *
+     *  4 aload_0
+     *      为x显示赋值，值等于30
+     *  5 bipush 30
+     *  7 putfield #2 &lt;com/it/thread/Son.x&gt;
+     * 10 aload_0
+     *      调用print方法，输出x
+     * 11 invokevirtual #3 &lt;com/it/thread/Son.print&gt;
+     * 14 aload_0
+     * 15 bipush 40
+     * 17 putfield #2 &lt;com/it/thread/Son.x&gt;
+     * 20 return
+     */</span>
+    <span class="token keyword">public</span> <span class="token class-name">Son</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        x <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Son.x = &quot;</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="二、虚拟机的基石：class文件"><a href="#二、虚拟机的基石：class文件" class="header-anchor">#</a> 二、虚拟机的基石：Class文件</h2> <p>字节码文件：源代码经过编译器编译之后会生成一个或多个字节码文件，字节码是一种二进制的类文件，内容是 <code>JVM</code> 指令，而不像 C、C++ 经由编译器直接生成机器码。</p> <p>字节码指令：<code>Java</code>虚拟机的指令由 一个字节长度的、代表着某种特定操作含义的 <strong>操作码（opcode）</strong> 以及跟随其后的 0个至多个 代表此操作所需参数的 <strong>操作数（operand）</strong> 所构成。
+虚拟机中许多指令并不包含操作数，只有一个操作码。</p> <h2 id="三、class文件结构"><a href="#三、class文件结构" class="header-anchor">#</a> 三、Class文件结构</h2> <p><a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html" target="_blank" rel="noopener noreferrer">官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>**Class类的本质：**任何一个 <code>Class</code> 文件都对应着唯一一个类或接口的定义信息。但是，Class 文件实际上并不一定以磁盘文件的形式存在（也可以是网络）。<strong>Class 文件是一组以 字节为基础单位的 二进制流。</strong></p> <p>**Class文件格式：**Class文件中的内容，没有任何的分隔符。Class文件中的数据项，都是被严格限定的，其字节内容和顺序都不允许被修改。</p> <p>Class 文件格式采用一种类似于 C 语言结构体的方式进行数据存储，这种结构中只有两种数据类型：<strong>无符号数和表</strong></p> <ul><li>无符号数：属于基本数据类型，以<code>u1、u2、u4、u8</code> 类分别代表 1 个字节、2 个字节、4 个字节、8 个字节的无符号数
+无符号数可以用来描述数字、索引引用、数量值或按照 UTF-8 编码构成字符串值。</li> <li>表：由多个无符号数或者其他表作为数据项构成的复合数据类型，所有表都习惯地以 “_info” 结尾。
+表用于描述有层次关系的复合结构的数据，整个 <code>Class</code>文件本质上就是一张表。由于表没有固定长度，所以通常会在其前面加上个数说明。</li></ul> <p><code>Class</code> 文件的结构并不是一成不变的，随着 Java 虚拟机的不断发展，总是不可避免地会对 <code>Class</code>文件结构做出一些调整，但是其基本结构和框架是非常稳定的。</p> <p><code>Class</code>文件的总体结构：</p> <div class="language-cpp extra-class"><pre class="language-cpp"><code>ClassFile <span class="token punctuation">{</span>
+    u4             magic<span class="token punctuation">;</span>	<span class="token comment">//魔数</span>
+    u2             minor_version<span class="token punctuation">;</span> <span class="token comment">//副版本</span>
+    u2             major_version<span class="token punctuation">;</span> <span class="token comment">//主版本</span>
+    u2             constant_pool_count<span class="token punctuation">;</span> <span class="token comment">//常量池计数器</span>
+    cp_info        constant_pool<span class="token punctuation">[</span>constant_pool_count<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//常量池表集合</span>
+    u2             access_flags<span class="token punctuation">;</span> <span class="token comment">//访问标志</span>
+    u2             this_class<span class="token punctuation">;</span> <span class="token comment">//类索引</span>
+    u2             super_class<span class="token punctuation">;</span>	<span class="token comment">//父类索引</span>
+    u2             interfaces_count<span class="token punctuation">;</span> <span class="token comment">//接口计数器</span>
+    u2             interfaces<span class="token punctuation">[</span>interfaces_count<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//接口表集合</span>
+    u2             fields_count<span class="token punctuation">;</span> <span class="token comment">//字段计数器</span>
+    field_info     fields<span class="token punctuation">[</span>fields_count<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//字段表集合</span>
+    u2             methods_count<span class="token punctuation">;</span> <span class="token comment">//方法计数器</span>
+    method_info    methods<span class="token punctuation">[</span>methods_count<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//方法表集合</span>
+    u2             attributes_count<span class="token punctuation">;</span> <span class="token comment">//属性计数器</span>
+    attribute_info attributes<span class="token punctuation">[</span>attributes_count<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//属性表集合</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><a data-fancybox="" title="image-20210325195640233" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/bab30c9a23cd4df68d9c462a29bd46d7.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/bab30c9a23cd4df68d9c462a29bd46d7.png" alt="image-20210325195640233"></a></p> <ul><li>魔数</li> <li><code>Class</code>文件版本</li> <li>常量池</li> <li>访问标志</li> <li>类索引，父类索引，接口索引集合</li> <li>字段表集合</li> <li>方法表集合</li> <li>属性表集合</li></ul> <h3 id="_3-1-魔数-class文件的标志"><a href="#_3-1-魔数-class文件的标志" class="header-anchor">#</a> 3.1 魔数——Class文件的标志</h3> <p><code>Magic Number</code>（魔数）</p> <ul><li><p>每个 <code>Class</code>文件开头的 4 个字节的无符号整数称为魔数。</p></li> <li><p>它的唯一作用是校验这个文件是否为一个能被虚拟机接受的有效合法的 Class 文件。即:魔数是 <code>Class</code> 文件的标识符。魔数值固定为 0xCAFEBABE，不会改变。</p></li> <li><p>如果一个 <code>Class</code>文件不以 <code>0xCAFEBABE</code>开头，虚拟机在进行文件校验的时候就会直接抛出以下错误：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">Error</span><span class="token operator">:</span> <span class="token class-name">A</span> JNI error has occurred<span class="token punctuation">,</span> please check your installation and <span class="token keyword">try</span> again
+<span class="token class-name">Exeption</span> in thread <span class="token string">&quot;main&quot;</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">ClassFormatError</span><span class="token operator">:</span> <span class="token class-name">Incompatible</span> magic value <span class="token number">1885430635</span> in <span class="token keyword">class</span> file <span class="token class-name">Demo</span>
+</code></pre></div></li> <li><p>使用魔数而不是扩展名来进行识别主要是基于安全方面的考虑，扩展名可随意改动。</p></li></ul> <h3 id="_3-2-class文件版本号"><a href="#_3-2-class文件版本号" class="header-anchor">#</a> 3.2 Class文件版本号</h3> <p>紧接着魔数的 4 个字节存储的是 Class 文件的版本号，同样也是 4 个字节。第 5 个和第 6 个字节所代表的含义就是编译的副版本号 <code>minor_version</code>，而第 7 个和第 8 个字节是编译的主版本号 <code>major_version</code>。
+它们共同构成了 <code>Class</code>文件的格式版本号。如，某个 Class 文件的主版本号为 <code>M</code>，副版本号为<code>m</code>，那么这个 <code>Class</code>文件的格式版本号为 <code>M.m</code>。</p> <p>版本号和 Java 编译器的对应关系如下表：</p> <p><a data-fancybox="" title="image-20210325201152330" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/d679a2c0e19d4d84868ddc2f941a76a1.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/d679a2c0e19d4d84868ddc2f941a76a1.png" alt="image-20210325201152330"></a></p> <p>Java 的版本号是从 45 开始，JDK 1.1 之后的每个 JDK 大版本发布主版本号向上加 1。</p> <p>不同版本的 Java 编译器编译的 Class 文件对应的版本是不一样的。目前，高版本的 Java 虚拟机可以执行由低版本编译器生成的 Class 文件。但是低版本的 Java 虚拟机不能执行由高版本编译器生成的 Class 文件。否则 JVM 会抛出 java.lang.UnsupportedClassVersionError异常。</p> <p>在实际应用中，由于开发环境和生产环境不同，可能会导致该问题的发生。因此需要在开发时，特别注意开发编译的 JDK 版本和生产环境中的 JDK 版本是否一致。
+虚拟机 JDK 版本为 1.k（k &gt;= 2）时，对应的 Class 文件格式版本号的范围为 45.0 - 44 + k.0（含两端）。</p> <h3 id="_3-3-常量池：存放所有常量"><a href="#_3-3-常量池：存放所有常量" class="header-anchor">#</a> 3.3 常量池：存放所有常量</h3> <p>常量池是 <code>Class</code>文件中内容最为丰富的区域之一。常量池对于 <code>Class</code>文件中的字段和方法解析也有着至关重要的作用。
+随着 <code>Java</code>虚拟机的不断发展，常量池的内容也日渐丰富。可以说，常量池是整个 <code>Class</code>文件的基石。</p> <p>在版本号之后，紧跟着的是常量池的数量，以及若干个常量池表项。</p> <p>常量池中常量的数量是不固定的，所以在常量池的入口需要放置一项 u2 类型的无符号数，代表常量池容量计数值。</p> <p>(constant_pool_count),与 Java 中语言习惯不一样的是，这个容量计数器是从 1 而不是 0 开始的。</p> <p><a data-fancybox="" title="image-20210325201726547" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/dad909caea7b435e89d0534c5c9c467c.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/dad909caea7b435e89d0534c5c9c467c.png" alt="image-20210325201726547"></a></p> <p>cpu_info的通用结构：</p> <div class="language-java extra-class"><pre class="language-java"><code>cp_info <span class="token punctuation">{</span>
+    u1 tag<span class="token punctuation">;</span> 	<span class="token comment">//标签字节</span>
+    u1 info<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  
+<span class="token punctuation">}</span>
+</code></pre></div><p>由上表可见，Class文件使用了一个前置的容量计数器(constant_pool_count)加若干个连续的数据项（constant_pool)的形式来描述常量池内容。我们把这一系列连续常量池数据称为常量池集合。
+常量池表项中，用于存放编译时期生成的各种<strong>字面量和符号引用</strong>，这部分内容<strong>将在类加载后进入方法区的运行时常量池中存放。</strong></p> <h4 id="_3-3-1-常量池计数器"><a href="#_3-3-1-常量池计数器" class="header-anchor">#</a> 3.3.1 常量池计数器</h4> <p>constant_pool_count（常量池计数器）
+由于常量池的数量不固定，时长时短，所以需要放置两个字节来表示常量池容量计数值。
+常量池容量计数值（u2 类型）：从 1 开始，表示常量池中有多少项常量。
+如 constant_pool_count = 1 表示常量池中有 0 个常量项。</p> <p><a data-fancybox="" title="image-20210325202004085" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/a91f7d140c7d466b82fbf387b44bb789.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/a91f7d140c7d466b82fbf387b44bb789.png" alt="image-20210325202004085"></a></p> <p>其值为 0x0033，对应的十进制为 51。
+需要注意的是，实际上只有 50 项常量。所以索引范围时 1 ~ 50。</p> <p>为什么索引是从 1 开始？
+常量池索引从 1 开始，因为把第 0 项常量空出来了。这是为了满足后面某些指向常量池的索引值的数据在特定情况下需要表达“不引用任何一个常量池项目”的含义，这种情况可用索引 0 来表示。</p> <h4 id="_3-3-2-常量池"><a href="#_3-3-2-常量池" class="header-anchor">#</a> 3.3.2 常量池</h4> <p><code>constant_pool []</code>（常量池）
+<code>constant_pool</code>是一种表结构，以 <code>1 ~ (constant_pool_count - 1)</code> 为索引。表明了后面有多少个常量项。
+常量池主要存放两大类常量：字面量（<code>Literal</code>）和符号引用（<code>Symbolic References</code>），
+它包含了 <code>Class</code>文件结构及其子结构中引用的所有字符串常量、类或接口名、字段名和其他常量。常量池中的每一项都具备相同的特征。第 1 个字节作为类型标记，用于确定该项的格式，这个字节称为<code>tag byte</code>（标记字节、标签字节）。</p> <p><a data-fancybox="" title="image-20210325202400187" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/e00b4c8f2edf469e8f8ec78e56363fc5.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/e00b4c8f2edf469e8f8ec78e56363fc5.png" alt="image-20210325202400187"></a></p> <h4 id="_3-3-3-字面量和符号引用"><a href="#_3-3-3-字面量和符号引用" class="header-anchor">#</a> 3.3.3 字面量和符号引用</h4> <p>常量池主要存放两大类型常量：字面量和符号引用。</p> <p><strong>字面量：</strong></p> <ul><li>文本字符串</li> <li>声明为final的常量值</li></ul> <p><strong>符号引用：</strong></p> <ul><li>类和接口的全限定名</li> <li>字段的名称和描述符</li> <li>方法的名称和描述符</li></ul> <p><strong>全限定名：</strong> 如，com/test/Demo 就是类的全限定名，仅仅是把包名的 “ . ” 替换成了 “ / ”，为了使连续的多个全限定名之间不混淆产生，使用时最后一般会加入一个“ ; ”表示全限定名结束。</p> <p><strong>简单名称:</strong> 指没有类型和参数修饰的方法或字段名称</p> <p><strong>描述符：</strong>
+用来描述字段的<strong>数据类型、方法的参数列表（包括数量、类型及顺序）和返回值。</strong>
+根据描述符规则，基本数据类型（byte、char、double、float、int、long、short、boolean）以及代表无返回值的 void 类型都用一个大写字符来表示，而对象类型则用字符 L 加对象的全限定名来表示：</p> <p><a data-fancybox="" title="image-20210325203935192" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/c49ec9ff157a46688b568d53f636eba7.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/c49ec9ff157a46688b568d53f636eba7.png" alt="image-20210325203935192"></a></p> <p>用描述符来描述方法时,按照先参数列表,后返回值的顺序描述，参数列表按照参数的严格顺序放在一组小括号“()”之内。
+如：
+方法 java.lang.String.toString() 的描述符为()Ljava/lang/String;
+方法 int abc(int[] x, int y) 的描述符为([II)I。</p> <p><strong>补充说明：</strong>
+虚拟机在加载 Class 文件时才会进行动态链接，也就是说，Class 文件中不会保存各个方法和字段的最终内存布局信息。因此，这些字段和方法的符号引用不经过转换是无法直接被虚拟机使用。
+当虚拟机运行时，需要从常量池中获得对应的符号引用，再在类加载过程中的解析阶段将其替换为直接引用，并翻译到具体的内存地址中。</p> <p><strong>符号引用和直接引用的区别与关联：</strong>
+**符号引用：**以一组符号来描述所引用的目标，符号可以是任何形式的字面量，只要使用时能无歧义地定位到目标即可。<strong>符号引用与虚拟机实现的内存布局无关，引用的目标不一定已经加载到了内存中。</strong>
+**直接引用：**可以是直接指向目标的指针、相对偏移量或是一个能间接定位到目标的句柄。直接引用时与虚拟机实现的内存布局相关的，同一个符号引用在不同虚拟机实例上翻译出来的直接引用一般不会相同。<strong>如果有了直接引用，那说明引用的目标必定已经存在于内存之中了。</strong></p> <h4 id="_3-3-4-常量类型和结构"><a href="#_3-3-4-常量类型和结构" class="header-anchor">#</a> 3.3.4 常量类型和结构</h4> <p>常量池中每一项常量都是一个表，JDK 1.7 之后（9 和 11 有增加）共有 14 种不同的表结构数据，如下表：</p> <p><a data-fancybox="" title="image-20210325205347402" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/d652458af9c442c182376d7ddbb9e5d7.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/d652458af9c442c182376d7ddbb9e5d7.png" alt="image-20210325205347402"></a></p> <p><a data-fancybox="" title="image-20210325205610782" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/bcf3d2e261f847c78e140db9b1a57384.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/bcf3d2e261f847c78e140db9b1a57384.png" alt="image-20210325205610782"></a></p> <p><strong>索引:</strong> 指向字符串常量池的某一项</p> <p>标志为 15、16、18 的常量项类型是用来支持动态语言调用的（jdk 1.7 时加入）
+jdk 9 增加了模块化相关的两项类型，而 jdk 11 增加了动态常量。</p> <p><a data-fancybox="" title="image-20210325205757331" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/26062aabe6b74a3e8177ca49985a7150.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/26062aabe6b74a3e8177ca49985a7150.png" alt="image-20210325205757331"></a></p> <p><strong>细节说明：</strong></p> <ul><li>CONSTANT_Class_info 结构用于表示类或接口</li> <li>CONSTANT_Fieldref_info、CONSTANT_Methodref_info 和 CONSTANT_InterfaceMehodref_info 结构表示字段、方法和接口方法</li> <li>CONSTANT_String_info 结构用于表示 String 类型的常量对象</li> <li>CONSTANT_Integer_info 和 CONSTANT_Float_info表示 4 字节（int 和 float）的数值常量</li> <li>CONSTANT_Long_info 和 CONSTANT_Double_info结构表示 8 字节（long 和 double）的数值常量在 Class 文件的常量池表中，所有的 8 字节常量均占两个表成员（项）的空间。如果一个 CONSTANT_Long_info 或   CONSTANT_Double_info 结构的项在常量池表中的索引位为 n，则常量池表中下一个可用项的索引位为 n + 2，此时常量池表中索引为 n + 1 的项仍然有效但必须视为不可用的。</li> <li>CONSTANT_NameAndType_info 结构用于表示字段或方法，但是和之前的 3 个结构不同，它没有指明该字段或方法所属的类或接口。</li> <li>CONSTANT_Utf8_info 用于表示字符常量的值</li> <li>CONSTANT_MethodHandle_info 结构用于表示方法句柄</li> <li>CONSTANT_MethodType_info 结构表示方法类型</li> <li>CONSTANT_InvokeDynamic_info 结构用于表示 invokedynamic 指令所用到的引导方法（bootstrap method）、引导方法所用到的动态调用名称（dynamic invocation name）、参数和返回类型，并可以给引导方法传入一系列称为静态参数（static argument）的常量。</li></ul> <p><strong>解析方式：</strong></p> <ul><li>一个字节一个字节地解析</li> <li>使用 javap 命令解析：javap -verbose Demo.class 或 jclasslib 工具</li></ul> <p><strong>总结1:</strong>
+这 14 中表（或者常量项结构）的共同点是：
+表开始的第一位是一个 u1 类型的标志位（tag），代表当前这个常量项使用的是哪种表结构，即哪种常量类型。
+在常量池列表中，CONSTANT_Utf8_info 常量项是一种使用改进过的 UTF-8 编码格式来存储诸如文字字符串、类或接口的全限定名、字段或方法的简单名称以及描述符等常量字符串信息。
+这 14 中常量项结构还有一个特点是，其中 13 个常量项占用的字节固定，只有 CONSTANT_Utf8_info 占用字节不固定，其大小由 length 决定。
+因为从常量池存放的内容可知，其存放的是字面量和符号引用，最终这些内容都会是一个字符串，这些字符串的大小是在编写程序时才确定。
+比如定义一个类，类名可以取长取短，在没编译前，大小不固定，编译后，通过 utf-8 编码，就可以知道其长度。</p> <p><strong>总结2:</strong>
+常量池：可以理解为 Class 文件之中的资源仓库，它是 Class 文件结构中与其他项目关联最多的数据类型（后面的很多数据类型都会指向此处），也是占用 Class 文件空间最大的数据项目之一。</p> <p><strong>常量池中为什么要包含这些内容？</strong>
+Java 代码在进行 <code>javac</code>编译时，并不像 <code>C / C++</code> 那样有“连接”这一步骤，而是在虚拟机加载 <code>Class</code> 文件的时候进行动态链接。
+也就是说，在 <code>Class</code> 文件中不会保存各个方法、字段的最终内存布局信息，因此这些字段、方法的符号引用不经过运行期转换的话无法得到真正的内存入口地址，也就无法直接被虚拟机使用。
+当虚拟机运行时，需要从常量池获得对应的符号引用，再在类创建时或运行时解析、翻译到具体的内存地址中。（关于类的创建和动态链接内容，在后续虚拟机类加载过程时再细讲。）</p> <h3 id="_3-4-访问标志"><a href="#_3-4-访问标志" class="header-anchor">#</a> 3.4 访问标志</h3> <p>访问标识（<code>access_flag</code>、访问标志、访问标记）
+在常量池后，紧跟着访问标记。该标记使用两个字节 <code>u2</code> 表示，用于识别一些类或接口层次的访问信息。包括：该 <code>Class</code>是类还是接口；是否定义为 public 类型；是否定义为 <code>abstract</code>类型；如果是类的话，是否被声明为 <code>final</code>等，各种访问标记如下表所示：</p> <p>（所有类的标志值都是一个相加的十六进制数，如果标记值是21，说明该标志是<code>public</code>类型的）</p> <p><a data-fancybox="" title="image-20210325212829220" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/ffba2152b1b4491c8088e50efbf983bb.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/ffba2152b1b4491c8088e50efbf983bb.png" alt="image-20210325212829220"></a></p> <ul><li>类的访问权限通常为 <code>ACC_</code>开头的常量</li> <li>每一种类型的表示都是通过设置访问标记的 32 位中的特定位来实现的。如，若是 <code>public final</code>的类，则该标记位<code>ACC_PUBLIC | ACC_FINAL</code>。</li> <li>使用 <code>ACC_SUPER</code>可以让类更准确地定位到父类的方法 <code>super.method()</code>，现代编译器都会设置并使用这个标记。</li></ul> <p>补充说明:</p> <ol><li><p>带有 <code>ACC_INTERFACE</code>标志的 <code>Class</code>文件表示的是接口，没有被<code>ACC_INTERFACE</code>标记的<code>Class</code>文件表示的是类。</p> <ol><li>如果一个 <code>Class</code>文件被设置了 <code>ACC_INTERFACE</code>标志，那么同时也得设置 <code>ACC_ABSTRACT</code>标志。并且不能再设置 <code>ACC_FINAL</code>、<code>ACC_SUPER</code>或 <code>ACC_ENUM</code>标志。</li> <li>如果没有设置 <code>ACC_INTERFACE</code>标志，那么这个 <code>Class</code>文件可以具有上表中除 <code>ACC_ANNOTATION</code>外的其他所有标志。当然，<code>ACC_FINAL</code>和 <code>ACC_ABSTRACT</code>这类互斥的标志除外。这两个标志不能同时设置。</li></ol></li> <li><p><code>ACC_SUPER</code>标志用于确定类或接口里面的 <code>invokespecial</code>指令使用的是哪一种执行语义。针对 <code>Java</code>虚拟机指令集的编译器都应当设置这个标志。
+对于 <code>Java SE 8</code> 及后续版本来说，无论 <code>Class</code> 文件中这个标志的实际值是什么，也不管 <code>Class</code>文件的版本号是多少，<code>Java</code> 虚拟机都认为每个 <code>Class</code>文件均设置了 <code>ACC_SUPER</code>标志。</p> <ol><li><code>ACC_SUPER</code> 标志是为了向后兼容由旧 <code>Java</code>编译器所编译的代码而设计的。目前的 <code>ACC_SUPER</code>标志在由<code>JDK 1.0.2</code> 之前的编译器所生成的 <code>access_flags</code>中是没有确定含义的，如果设置了该标志，那么 <code>Oracle</code>的 <code>Java</code>虚拟机实现会将其忽略。</li></ol></li> <li><p><code>ACC_SYNTHETIC</code>标志意味着该类或接口是由编译器生成的，而不是由源代码生成的。</p></li> <li><p>注解类型必须设置 <code>ACC_ANNOTATION</code>标志。如果设置了 <code>ACC_ANNOTATION</code>标志，那么也必须设置 <code>ACC_INTERFACE</code>标志。</p></li> <li><p><code>ACC_ENUM</code>标志表明该类或其父类为枚举类型。</p></li> <li><p>表中没有使用的<code>access_flags</code>标志是为未来扩充而预留的，这些预留的标志在编译器中应该设置为0，<code>Java</code>虚拟机实现也应该忽略它们。</p></li></ol> <h3 id="_3-5-类、父类、接口索引"><a href="#_3-5-类、父类、接口索引" class="header-anchor">#</a> 3.5 类、父类、接口索引</h3> <p>在访问标记后，会指定该类的类别、父类类别以及实现的接口，格式如下:</p> <p><a data-fancybox="" title="image-20210325224955281" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/9fbd6c7e92c649248daf4168d7b3a03b.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/9fbd6c7e92c649248daf4168d7b3a03b.png" alt="image-20210325224955281"></a></p> <p>这三项数据来确定这个类的<strong>继承关系</strong></p> <ul><li>类索引用于确定这个类的全限定名</li> <li>父类索引用于确定这个类的父类的全限定名。由于 <code>Java</code>语言不允许多重继承，所以父类索引只有一个，除了 <code>java.lang.Object</code>之外，所有的 <code>Java</code>类都有父类，因此除了 <code>java.lang.Object</code>外，所有 <code>Java</code>类的父类索引都不为 0。</li> <li>接口索引集合就用来描述这个类实现了哪些接口，这些被实现的接口将按 <code>implements</code>语句（如果该类本身是一个接口，则是 <code>extends</code>语句）后的接口顺序从左到右排列在接口索引集合中。</li></ul> <p><strong>this_class（类索引）</strong>
+2 字节无符号整数，指向常量池的索引。它提供了类的全限定类名，如 com/java/Demo。<code>this_class</code>的值必须是对常量池表中某项的一个有效索引值。常量池在这个索引处的成员必须为 <code>CONSTANT_Class_info</code> 类型结构体，该结构体表示这个 <code>Class</code>文件所定义的类或接口。</p> <p><strong>super_class（父类索引）</strong>
+2 字节无符号整数，指向常量池的索引。它提供了当前类的父类的全限定名。如果没有继承任何类，其默认继承的是 <code>java/lang/Object</code> 类。同时，由于 <code>Java</code>不支持多继承，所以其父类只有一个。
+<code>super_class</code>指向的父类不能是 <code>final</code></p> <p><strong>interfaces</strong>
+指向常量池索引集合，它提供了一个符号引用到所有已实现的接口
+由于一个类可以实现多个接口，因此需要以数组形式保存多个接口的索引，表示接口的每个索引也是一个指向常量池的 <code>CONSTANT_Class</code>（必须是接口）</p> <p><code>interfaces_count</code>（接口计数器）
+<code>interfaces_count</code>项的值表示当前类或接口的直接父接口数量。</p> <p><code>interfaces [ ]</code>（接口索引集合）
+<code>interfaces [ ]</code> 中每个成员的值必须是对常量池表中某项的有效索引值，它的长度为<code>interfaces_count</code>。
+每个成员 <code>interfaces [i]</code> 必须为 <code>CONSTANT_Class_info</code>结构，其中<code>0 &lt;= i &lt; interfaces_count</code>。
+在 <code>interfaces [ ]</code> 中，各成员所表示的接口顺序和对应的源代码中给定的接口顺序（左至右）一样，即<code>interfaces[0]</code> 对应的是源代码中最左边的接口。</p> <h3 id="_3-6-字段表集合"><a href="#_3-6-字段表集合" class="header-anchor">#</a> 3.6 字段表集合</h3> <p><strong>fields</strong> <strong>用于描述接口或类中声明的变量</strong>。<strong>字段（<code>field</code>）包括类级变量及实例级变量，但不包括方法内部、代码块内部声明的局部变量(<code>local variables</code>)。</strong>
+字段的名字、字段被定义的数据类型，这些都是无法固定的，只能引用常量池中的常量来描述。
+它指向常量池索引集合，它描述了每个字段的完整信息。比如字段的标识符、访问修饰符（<code>public</code>、<code>private</code> 或 <code>protected</code>）、是类变量还是实例变量（<code>static</code>修饰符）、是否是常量（<code>final</code>修饰符）等。</p> <p>注意事项：
+字段表集合中不会列出从父类或实现的接口中继承而来的字段，但有可能列出原本 <code>Java</code>代码中不存在的字段。<strong>比如在内部类中为了保持对外部类的访问性，会自动添加指向外部类实例的字段。</strong>
+在 <code>Java</code>语言中字段是无法重载的，两个字段的数据类型、修饰符不管是否相同，都必须使用不一样的名称，<strong>但对于字节码来讲，如果两个字段的描述符不一样，那字段重名就是合法的。</strong></p> <p><strong>字段计数器</strong> <code>fields_count</code>（字段计数器）
+<code>fields_count</code>的值表示当前 <code>Class</code> 文件 <code>fields</code>表的成员个数，使用两个字节来表示。
+<code>fields</code>表中每个成员都是一个 <code>field_info</code>结构，用于表示该类或接口所声明的所有类字段或者实例字段，
+<strong>不包括方法内部声明的变量，也不包括从父类或父接口继承的字段。</strong></p> <p><strong>fields []（字段表）</strong></p> <ul><li><code>fields</code>表中的每个成员都必须是一个 <code>fields_info</code>结构的数据项，用于表示当前类或接口中某个字段的完整描述。</li> <li>一个字段的信息包括如下这些信息，这些信息中，各个修饰符都是布尔值，要么有，要么没有。</li> <li>作用域（<code>public</code>、<code>private</code>、<code>protected</code>修饰符）</li> <li>是实例变量还是类变量（<code>static</code>修饰符）</li> <li>可变性（<code>final</code>）</li> <li>并发可见性（<code>volatile</code>修饰符，是否强制从主内存读写）</li> <li>可否序列化（<code>transient</code>修饰符）</li> <li>字段数据类型（基本数据类型、对象、数组）</li> <li>字段名称</li></ul> <p><strong>字段表结构：</strong>
+字段表作为一个表，同样拥有自己的结构</p> <p><a data-fancybox="" title="image-20210325225928431" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/ba5dee211efe43498ce66e9aa0d30d40.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/ba5dee211efe43498ce66e9aa0d30d40.png" alt="image-20210325225928431"></a></p> <p><strong>字段表访问标识:</strong>
+一个字段可以被各种关键字去修饰，比如：作用域修饰符（<code>public</code>、<code>private</code>、<code>protected</code>）、<code>static</code>修饰符、<code>final</code>修饰符、<code>volatile</code>修饰符等等。
+因此，其可像类的访问标志那样，使用一些标志来标记字段。
+字段的访问标志有如下这些：</p> <p><a data-fancybox="" title="image-20210325230017606" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/5eb9653f42c248e6892d56720aaf0a8f.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/5eb9653f42c248e6892d56720aaf0a8f.png" alt="image-20210325230017606"></a></p> <p><strong>字段名索引:</strong>
+根据字段名索引的值，查询常量池中的指定索引项即可。</p> <p><strong>描述符索引:</strong>
+描述符的作用是用来描述字段的数据类型、方法的参数列表（包括数量、类型以及顺序）和返回值。
+根据描述符规则，基本数据类型（<code>byte、char、double、float、int、long、short、boolean</code>）
+及代表无返回值的 <code>void</code>类型都用一个大写字符来表示，而对象则用字符<code>L</code> 加对象的全限定名来表示，
+如下所示</p> <p><a data-fancybox="" title="image-20210325230124051" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/95c218a2c48945068bad580dd7095ecf.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/95c218a2c48945068bad580dd7095ecf.png" alt="image-20210325230124051"></a></p> <p><strong>属性表集合</strong>
+一个字段还可能拥有一些属性，用于存储更多的额外信息。比如<strong>初始化值、一些注释信息</strong>等。属性个数存放在 <code>attribute_count</code> 中，属性具体内容存放在 <code>attributes</code>数组中
+以常量属性为例，结构为：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">ConstantValue_attribute</span> <span class="token punctuation">{</span>
+    u2 attribute_name_index<span class="token punctuation">;</span>
+    u4 attribute_length<span class="token punctuation">;</span>
+    u2 constantvalue_index<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>说明：对于常量属性而言，<code>attribute_length</code>值恒为 2</strong></p> <p><a data-fancybox="" title="image-20210325230258968" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/cc30215065c144f481d1f38b372a2cba.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/cc30215065c144f481d1f38b372a2cba.png" alt="image-20210325230258968"></a></p> <h3 id="_3-7-方法表集合"><a href="#_3-7-方法表集合" class="header-anchor">#</a> 3.7 方法表集合</h3> <p><strong>methods:</strong> <strong>指向常量池索引集合，它完整描述了每个方法的签名</strong></p> <ul><li>在字节码文件中，每一个 <code>method_info</code>项都对应着一个类或者接口中的方法信息。
+比如方法的访问修饰符（<code>public</code>、<code>private</code>或 <code>protected</code>），方法的返回值类型以及方法的参数信息等</li> <li>如果这个方法不是抽象的或者不是 <code>native</code>的，那么字节码中会体现出来</li> <li>一方面，<code>methods</code>表只描述当前类或接口中声明的方法，不包括从父类或父接口继承的方法。
+另一方面，<code>methods</code>表有<strong>可能会出现由编译器自动添加的方法</strong>，最典型的便是编译器产生的方法信息
+(比如：类（接口）初始化方法 <code>&lt;clinit&gt;()</code> 和实例初始化方法<code>&lt;init&gt;()</code>）</li></ul> <p><strong>使用注意事项</strong>
+在 <code>Java</code>语言中，要重载（<code>Overload</code>）一个方法，除了要与原方法具有<strong>相同的简单名称</strong>之外，还要求必须拥有一个与<strong>原方法不同的特征签名</strong>。
+<strong>特征签名</strong> 就是<strong>一个方法中各个参数在常量池中的字段符号引用的集合</strong>，也就是因为<strong>返回值不会包含在特征签名之中</strong>，因此 <code>Java</code>语言里无法仅仅依靠返回值的不同来对一个已有方法进行重载。但在 <code>Class</code>文件格式中，特征签名的范围更大一些，只要描述符不是完全一致的两个方法就可以共存。也就是说，如果两个方法有相同的名称和特征签名，但返回值不同，那么也是可以合法共存于同一个 <code>Class</code>文件中。
+也就是说，尽管 <code>Java</code>语法规范并不允许在一个类或者接口中声明多个方法签名相同的方法，但是和 <code>Java</code>语法规范相反，字节码文件中却恰恰允许存放多个方法签名相同的方法，唯一的条件就是这些方法之间的返回值不能相同。</p> <p><strong>方法计数器</strong> <code>methods_count</code>（方法计数器）</p> <p><code>methods_count</code>的值表示当前 <code>Class</code>文件 <code>methods</code>表的成员个数，使用两个字节来表示。
+<code>methods</code>表中每个成员都是一个 <code>method_info</code>结构</p> <p><strong>methods []（方法表）</strong> <code>methods</code>表中的每个成员都必须是一个 <code>method_info</code>结构，用于表示当前类或接口中某个方法的完整描述。如果某个 <code>method_info</code>结构的 <code>access_flags</code>项既没有设置 <code>ACC_NATIVE</code> 标志也没有设置 <code>ACC_ABSTRACT</code>标志，那么该结构中也应包含实现这个方法所有的 <code>Java</code>虚拟机指令。
+<code>method_info</code>结构可以表示类和接口中定义的所有方法，包括实例方法、类方法、实例初始化方法和类或接口初始化方法
+方法表的结构实际跟字段表是一样的，方法表结构如下：</p> <p><a data-fancybox="" title="image-20210325231238047" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/10bedbd130fa4ce68584149ffc923926.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/10bedbd130fa4ce68584149ffc923926.png" alt="image-20210325231238047"></a></p> <p>方法表访问标志
+跟字段表一样，方法表也有访问标志，而且他们的标志有部分相同，部分则不同，方法表的具体访问标志如下：</p> <p><a data-fancybox="" title="image-20210325231301897" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/08f28a3bda22479c8b26541f185bbc19.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/08f28a3bda22479c8b26541f185bbc19.png" alt="image-20210325231301897"></a></p> <h3 id="_3-8-属性表集合"><a href="#_3-8-属性表集合" class="header-anchor">#</a> 3.8 属性表集合</h3> <p><strong>属性表集合(attributes)</strong>
+方法表集合之后的属性表集合，<strong>指的是 <code>Class</code>文件所携带的辅助信息</strong>。比如该 <code>Class</code>文件的源文件的名称，
+以及任何带有 <code>RetentionPolicy.CLASS</code> 或者 <code>RetentionPolicy.RUNTIME</code>的注解。
+这类信息通常被用于 <code>Java</code>虚拟机的验证和运行，以及 <code>Java</code>程序的调试，一般无需深入了解。</p> <p>此外，字段表、方法表都可以有自己的属性表。用于描述某些场景专有的信息。</p> <p>属性表集合的限制没有那么严格，不再要求各个属性表具有严格的顺序，并且只要不与已有的属性名重复，任何人实现的编译器都可以向属性表中写入自己定义的属性信息，但 <code>Java</code>虚拟机运行时会忽略掉它不认识的属性。</p> <p><strong>attributes_count（属性计数器）</strong></p> <p><code>attributes_count</code>的值表示当前 <code>Class</code>文件属性表的成员个数。属性表中每一项都是一个<code>attribute_info</code>结构。</p> <p><strong>attributes [ ]（属性表）</strong>
+属性表的每个项的值必须是 <code>attribute_info</code>结构。属性表的结构比较灵活，各种不同的属性只要满足以下结构即可。</p> <p>属性的通用格式:</p> <p><a data-fancybox="" title="image-20210325231653783" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/82915fb6d6d14de28f5ddd62e5ec7cf8.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/82915fb6d6d14de28f5ddd62e5ec7cf8.png" alt="image-20210325231653783"></a></p> <p>即只需说明属性的名称以及占用位数的长度即可，属性表具体的结构可以去自定义。</p> <p><strong>属性类型</strong>
+属性表实际上可以有很多类型，上面看到的 <code>Code</code>属性只是其中一种， <code>Java 8</code> 里面定义了23种属性
+下面这些是虚拟机中预定义的属性：</p> <p><a data-fancybox="" title="image-20210325231743847" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/ffb0da85a2a2442b8f8b2400d30030c9.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/ffb0da85a2a2442b8f8b2400d30030c9.png" alt="image-20210325231743847"></a></p> <p><a data-fancybox="" title="image-20210325231814390" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/3c8e496eaa1b416084378d099f3c76df.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/3c8e496eaa1b416084378d099f3c76df.png" alt="image-20210325231814390"></a></p> <p><strong>部分属性详解：</strong> <strong><code>ConstantValue</code>属性</strong> <code>ConstantValue</code>属性表示一个常量字段的值。位于 <code>field_info</code>结构的属性表中。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">ConstantValue_attribute</span> <span class="token punctuation">{</span>
+    u2 attribute_name_index<span class="token punctuation">;</span>
+    u4 attribute_length<span class="token punctuation">;</span>
+    u2 constantvalue_index<span class="token punctuation">;</span> <span class="token comment">//字段值在常量池中的索引，常量池在该索引处的项给出该属性表示的常量值。</span>
+<span class="token comment">//(例如，值是 long 型的，在常量池中便是 CONSTANT_Long)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>Deprecated 属性</strong> <code>Deprecated</code> 属性是在 <code>JDK 1.1</code> 为了支持注释中的关键词 <code>@deprecated</code> 而引入的。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">Deprecated_attribute</span> <span class="token punctuation">{</span>
+    u2 attribute_name_index<span class="token punctuation">;</span>
+    u4 attribute_length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>Code 属性</strong> <code>Code</code>属性就是存放方法体里面的代码，但是，并非所有方法表都有 <code>Code</code>属性，像接口或者抽象方法，
+他们没有具体的方法体，因此也就不会有 <code>Code</code>属性了。
+<code>Code</code>属性表的结构，如下：</p> <p><a data-fancybox="" title="image-20210325232019467" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/d31f14309ba840828228da56a194b3d4.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/d31f14309ba840828228da56a194b3d4.png" alt="image-20210325232019467"></a></p> <p>可以看到：<code>Code</code>属性表的前两项跟属性表是一致的，即 <code>Code</code>属性表遵循属性表的结构，后面那些则是他自定义的结构。</p> <p><strong>InnerClasses 属性</strong>
+为了方便说明特别定义一个表示类或接口的 <code>Class</code>格式为 C。如果 C 的常量池中包含某个 <code>CONSTANT_Class_info</code>成员，且这个成员所表示的类或接口不属于任何一个包，那么 C 的 <code>ClassFile</code>结构的属性表中就必须含有对应的 <code>InnerClasses</code>属性。
+<code>InnerClasses</code>属性是在 <code>JDK 1.1</code> 中为了支持内部类和内部接口而引入的，位于 <code>ClassFile</code>结构的属性表。</p> <p><strong>LineNumberTable 属性</strong> <code>LineNumberTable</code>属性是可选变长属性，位于 <code>Code</code>结构的属性表。
+<code>LineNumberTable</code>属性是用来描述 <code>Java</code>源码行号与字节码行号之间的对应关系，这个属性可以用来在调试的时候定位代码执行的行数。
+<strong>start_pc，即字节码行号；line_number，即 Java 源代码行号</strong></p> <p>在 <code>Code</code>属性的属性表中，<code>LineNumberTable</code>属性可以按照任意顺序出现，此外，多个 <code>LineNumberTable</code>属性可以共同表示一个行号在源文件中表示的内容，即 <code>LineNumberTable</code>属性不需要与源文件的行一一对应。
+<code>LineNumberTable</code>属性表结构：</p> <p><a data-fancybox="" title="image-20210325232540552" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/4cd9da56035d47328740d568a8279056.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/4cd9da56035d47328740d568a8279056.png" alt="image-20210325232540552"></a></p> <p><strong><code>LocalVariableTable</code>属性</strong> <code>LocalVariableTable</code>是可选变长属性，位于 <code>Code</code>属性的属性表中。它被调试器用于确定方法在执行过程中局部变量的信息。
+在 <code>Code</code>属性的属性中，<code>LocalVariableTable</code>属性可以按照任意顺序出现。<code>Code</code>属性中的每个局部变量最多只能有一个 <code>LocalVariableTable</code>属性。
+<code>start_pc</code>+ <code>length</code>表示这个变量在字节码中的生命周期起始和结束的偏移位置（<code>this</code>生命周期从头 0 到结尾 10）
+<code>index</code>就是这个变量在局部变量表中的槽位（槽位可复用）
+<code>name</code> 就是变量名称
+<code>Descriptor</code>表示局部变量类型描述</p> <p><strong><code>LocalVariableTable</code>属性表结构：</strong></p> <p><a data-fancybox="" title="image-20210325232805221" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/47b785d67e2943708ca8a6dd17d5a006.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/47b785d67e2943708ca8a6dd17d5a006.png" alt="image-20210325232805221"></a></p> <p><strong>Signature 属性</strong> <code>Signature</code>属性是可选的定长属性，位于 <code>ClassFile</code>，<code>field_info</code>或 <code>method_info</code>结构的属性表中。
+在 <code>Java</code>语言中，任何类、接口、初始化方法或成员的泛型签名如果包含了类型变量（<code>Type Variables</code>）或参数化类型（<code>Parameterized Types</code>），则 <code>Signature</code>属性会为它记录泛型签名信息。</p> <p><strong>SourceFile 属性</strong> <strong>SourceFile 属性结构</strong></p> <p><a data-fancybox="" title="image-20210325232850657" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/eb72d18465ec4efa861aa8e48c4bc9a3.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-25/eb72d18465ec4efa861aa8e48c4bc9a3.png" alt="image-20210325232850657"></a></p> <h3 id="_3-9-小结"><a href="#_3-9-小结" class="header-anchor">#</a> 3.9 小结</h3> <p>随着 <code>Java</code>平台的不断发展，在将来，<code>Class</code>文件的内容也一定会做进一步的扩充，但是其基本的格式和结构不会做重大调整。从 <code>Java</code>虚拟机的角度看，通过 <code>Class</code>文件，可以让更多的计算机语言支持 <code>Java</code> 虚拟机平台。因此，<code>Class</code>文件结构不仅仅是 <code>Java</code>虚拟机的执行入口，更是 <code>Java</code>生态圈的基础和核心。</p> <h2 id="四、使用javap指令解析class文件"><a href="#四、使用javap指令解析class文件" class="header-anchor">#</a> 四、使用javap指令解析Class文件</h2> <h3 id="_4-1-解析字节码的作用"><a href="#_4-1-解析字节码的作用" class="header-anchor">#</a> 4.1 解析字节码的作用</h3> <p>通过反编译生成的字节码文件，我们可以深入的了解 Java 代码的工作机制。但是，自己分析类文件结构太麻烦了，除了使用第三方的 jclasslib 工具之外，Oracle 官方也提供了工具：javap。</p> <p>javap 是 JDK 自带的反解析工具。它的作用就是根据 Class 字节码文件，反解析出当前类对应的 Code 区（字节码指令）、局部变量表、异常表和代码行偏移量映射表、常量池等信息。</p> <p>通过局部变量表，我们可以查看局部变量的作用域范围、所在槽位等信息，甚至可以看到槽位复用等信息。</p> <h3 id="_4-2-javac-g"><a href="#_4-2-javac-g" class="header-anchor">#</a> 4.2 <code>javac -g</code></h3> <p>解析字节码文件得到的信息中，有些信息（如局部变量表、指令和代码行偏移量映射表、常量池中方法的参数名称等等）
+需要在使用 <code>javac</code>编译成 <code>Class</code>文件时，指定参数才能输出。</p> <p>比如，直接 <code>javac xx.java</code>，就不会在生成对应的局部变量表等信息，如果使用<code>javac -g xx.java</code>就可以生成所有相关信息了。
+如果使用的 <code>Eclipse</code>或 <code>IDEA</code>，则默认情况下，<code>Eclipse</code>、<code>IDEA</code>在编译时会帮你生成局部变量表、指令和代码行偏移量映射表等信息。</p> <h3 id="_4-3-javap"><a href="#_4-3-javap" class="header-anchor">#</a> 4.3 javap</h3> <p><strong><code>javap</code>的用法格式</strong> <strong><code>javap &lt;options&gt; &lt;classes&gt;</code></strong>
+其中，<code>classes</code>就是你要反编译的<code>Class</code>文件
+在命令行中直接输入 <code>javap</code>或 <code>javap -help</code> 可以看到 <code>javap</code>的 <code>options</code> 有如下选项：</p> <p><a data-fancybox="" title="image-20210326162808521" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-26/9f53cf8e2efd42a1838c47063a435f6a.png"><img src="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-03-26/9f53cf8e2efd42a1838c47063a435f6a.png" alt="image-20210326162808521"></a></p> <p>注意：</p> <ul><li><code>-version</code> 版本信息,其实是当前<code>javap</code>所在<code>jdk</code>的版本信息，不是<code>class</code>在哪个<code>jdk</code>生成的</li> <li><code>-v -verbose</code> 输出附加信息、(包括行号、本地变量表，反汇编等详细信息）</li></ul> <p><strong>一般常用的是 -v -l -c 三个选项</strong></p> <ul><li><code>javap -l</code> 会输出行号和本地变量表信息。</li> <li><code>javap -c</code> 会对当前 <code>Class</code>字节码进行反编译生成汇编代码。</li> <li><code>javap -v xxx.class</code> 除了包含 <code>-c</code> 内容外，还会输出行号、局部变量表信息、常量池等信息。</li></ul> <p>由于-v是不包含私有的，如果想反编译时带上私有的结构，指令加上<code>-p</code> <code>javap -v -p xxx.class</code></p> <h3 id="_4-4-使用示例"><a href="#_4-4-使用示例" class="header-anchor">#</a> 4.4 使用示例</h3> <p>java源代码：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>it<span class="token punctuation">.</span>thread</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IntegerTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> num<span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> flag<span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token keyword">char</span> gender<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> info<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> COUNTS <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">static</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string">&quot;www.baidu.com&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token punctuation">{</span>
+        info <span class="token operator">=</span> <span class="token string">&quot;java&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">IntegerTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">IntegerTest</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>flag <span class="token operator">=</span> flag<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">methodPrivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> <span class="token function">getNum</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> num <span class="token operator">+</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">protected</span> <span class="token keyword">char</span> <span class="token function">showGender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> gender<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">showInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>info <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>使用javap反编译class文件：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">Classfile</span> <span class="token operator">/</span><span class="token class-name">C</span><span class="token operator">:</span><span class="token operator">/</span><span class="token class-name">Users</span><span class="token operator">/</span>ue<span class="token operator">/</span><span class="token class-name">IdeaProjects</span><span class="token operator">/</span>asynctask<span class="token operator">/</span>target<span class="token operator">/</span>classes<span class="token operator">/</span>com<span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">.</span><span class="token keyword">class</span>
+  <span class="token class-name">Last</span> modified <span class="token number">2021</span><span class="token operator">-</span><span class="token number">3</span><span class="token operator">-</span><span class="token number">26</span><span class="token punctuation">;</span> size <span class="token number">1356</span> bytes
+  MD5 checksum <span class="token number">43246605509f</span><span class="token number">6</span>baf8bdf355bfcfee78d
+  <span class="token class-name">Compiled</span> from <span class="token string">&quot;IntegerTest.java&quot;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> com<span class="token punctuation">.</span>it<span class="token punctuation">.</span>thread<span class="token punctuation">.</span><span class="token class-name">IntegerTest</span>
+  minor version<span class="token operator">:</span> <span class="token number">0</span>
+  major version<span class="token operator">:</span> <span class="token number">52</span>
+  flags<span class="token operator">:</span> ACC_PUBLIC<span class="token punctuation">,</span> ACC_SUPER
+<span class="token class-name">Constant</span> pool<span class="token operator">:</span>
+   #<span class="token number">1</span> <span class="token operator">=</span> <span class="token class-name">Methodref</span>          #<span class="token number">16.</span>#<span class="token number">46</span>        <span class="token comment">// java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span>
+   #<span class="token number">2</span> <span class="token operator">=</span> <span class="token class-name">String</span>             #<span class="token number">47</span>            <span class="token comment">// java</span>
+   #<span class="token number">3</span> <span class="token operator">=</span> <span class="token class-name">Fieldref</span>           #<span class="token number">15.</span>#<span class="token number">48</span>        <span class="token comment">// com/it/thread/IntegerTest.info:Ljava/lang/String;</span>
+   #<span class="token number">4</span> <span class="token operator">=</span> <span class="token class-name">Fieldref</span>           #<span class="token number">15.</span>#<span class="token number">49</span>        <span class="token comment">// com/it/thread/IntegerTest.flag:Z</span>
+   #<span class="token number">5</span> <span class="token operator">=</span> <span class="token class-name">Fieldref</span>           #<span class="token number">15.</span>#<span class="token number">50</span>        <span class="token comment">// com/it/thread/IntegerTest.num:I</span>
+   #<span class="token number">6</span> <span class="token operator">=</span> <span class="token class-name">Fieldref</span>           #<span class="token number">15.</span>#<span class="token number">51</span>        <span class="token comment">// com/it/thread/IntegerTest.gender:C</span>
+   #<span class="token number">7</span> <span class="token operator">=</span> <span class="token class-name">Fieldref</span>           #<span class="token number">52.</span>#<span class="token number">53</span>        <span class="token comment">// java/lang/System.out:Ljava/io/PrintStream;</span>
+   #<span class="token number">8</span> <span class="token operator">=</span> <span class="token class-name">Class</span>              #<span class="token number">54</span>            <span class="token comment">// java/lang/StringBuilder</span>
+   #<span class="token number">9</span> <span class="token operator">=</span> <span class="token class-name">Methodref</span>          #<span class="token number">8.</span>#<span class="token number">46</span>         <span class="token comment">// java/lang/StringBuilder.&quot;&lt;init&gt;&quot;:()V</span>
+  #<span class="token number">10</span> <span class="token operator">=</span> <span class="token class-name">Methodref</span>          #<span class="token number">8.</span>#<span class="token number">55</span>         <span class="token comment">// java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span>
+  #<span class="token number">11</span> <span class="token operator">=</span> <span class="token class-name">Methodref</span>          #<span class="token number">8.</span>#<span class="token number">56</span>         <span class="token comment">// java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;</span>
+  #<span class="token number">12</span> <span class="token operator">=</span> <span class="token class-name">Methodref</span>          #<span class="token number">8.</span>#<span class="token number">57</span>         <span class="token comment">// java/lang/StringBuilder.toString:()Ljava/lang/String;</span>
+  #<span class="token number">13</span> <span class="token operator">=</span> <span class="token class-name">Methodref</span>          #<span class="token number">58.</span>#<span class="token number">59</span>        <span class="token comment">// java/io/PrintStream.println:(Ljava/lang/String;)V</span>
+  #<span class="token number">14</span> <span class="token operator">=</span> <span class="token class-name">String</span>             #<span class="token number">60</span>            <span class="token comment">// www.atguigu.com</span>
+  #<span class="token number">15</span> <span class="token operator">=</span> <span class="token class-name">Class</span>              #<span class="token number">61</span>            <span class="token comment">// com/it/thread/IntegerTest</span>
+  #<span class="token number">16</span> <span class="token operator">=</span> <span class="token class-name">Class</span>              #<span class="token number">62</span>            <span class="token comment">// java/lang/Object</span>
+  #<span class="token number">17</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               num
+  #<span class="token number">18</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">I</span>
+  #<span class="token number">19</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               flag
+  #<span class="token number">20</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">Z</span>
+  #<span class="token number">21</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               gender
+  #<span class="token number">22</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">C</span>
+  #<span class="token number">23</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               info
+  #<span class="token number">24</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">Ljava</span><span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">String</span><span class="token punctuation">;</span>
+  #<span class="token number">25</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               COUNTS
+  #<span class="token number">26</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">ConstantValue</span>
+  #<span class="token number">27</span> <span class="token operator">=</span> <span class="token class-name">Integer</span>            <span class="token number">1</span>
+  #<span class="token number">28</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token generics"><span class="token punctuation">&lt;</span>init<span class="token punctuation">&gt;</span></span>
+  #<span class="token number">29</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+  #<span class="token number">30</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">Code</span>
+  #<span class="token number">31</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">LineNumberTable</span>
+  #<span class="token number">32</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">LocalVariableTable</span>
+  #<span class="token number">33</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token keyword">this</span>
+  #<span class="token number">34</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">Lcom</span><span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">;</span>
+  #<span class="token number">35</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token class-name">Z</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+  #<span class="token number">36</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               methodPrivate
+  #<span class="token number">37</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               getNum
+  #<span class="token number">38</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token class-name">I</span><span class="token punctuation">)</span><span class="token class-name">I</span>
+  #<span class="token number">39</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               i
+  #<span class="token number">40</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               showGender
+  #<span class="token number">41</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">C</span>
+  #<span class="token number">42</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               showInfo
+  #<span class="token number">43</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token generics"><span class="token punctuation">&lt;</span>clinit<span class="token punctuation">&gt;</span></span>
+  #<span class="token number">44</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">SourceFile</span>
+  #<span class="token number">45</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">IntegerTest</span><span class="token punctuation">.</span>java
+  #<span class="token number">46</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">28</span><span class="token operator">:</span>#<span class="token number">29</span>        <span class="token comment">// &quot;&lt;init&gt;&quot;:()V</span>
+  #<span class="token number">47</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               java
+  #<span class="token number">48</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">23</span><span class="token operator">:</span>#<span class="token number">24</span>        <span class="token comment">// info:Ljava/lang/String;</span>
+  #<span class="token number">49</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">19</span><span class="token operator">:</span>#<span class="token number">20</span>        <span class="token comment">// flag:Z</span>
+  #<span class="token number">50</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">17</span><span class="token operator">:</span>#<span class="token number">18</span>        <span class="token comment">// num:I</span>
+  #<span class="token number">51</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">21</span><span class="token operator">:</span>#<span class="token number">22</span>        <span class="token comment">// gender:C</span>
+  #<span class="token number">52</span> <span class="token operator">=</span> <span class="token class-name">Class</span>              #<span class="token number">63</span>            <span class="token comment">// java/lang/System</span>
+  #<span class="token number">53</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">64</span><span class="token operator">:</span>#<span class="token number">65</span>        <span class="token comment">// out:Ljava/io/PrintStream;</span>
+  #<span class="token number">54</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               java<span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">StringBuilder</span>
+  #<span class="token number">55</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">66</span><span class="token operator">:</span>#<span class="token number">67</span>        <span class="token comment">// append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span>
+  #<span class="token number">56</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">66</span><span class="token operator">:</span>#<span class="token number">68</span>        <span class="token comment">// append:(I)Ljava/lang/StringBuilder;</span>
+  #<span class="token number">57</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">69</span><span class="token operator">:</span>#<span class="token number">70</span>        <span class="token comment">// toString:()Ljava/lang/String;</span>
+  #<span class="token number">58</span> <span class="token operator">=</span> <span class="token class-name">Class</span>              #<span class="token number">71</span>            <span class="token comment">// java/io/PrintStream</span>
+  #<span class="token number">59</span> <span class="token operator">=</span> <span class="token class-name">NameAndType</span>        #<span class="token number">72</span><span class="token operator">:</span>#<span class="token number">73</span>        <span class="token comment">// println:(Ljava/lang/String;)V</span>
+  #<span class="token number">60</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               www<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>com
+  #<span class="token number">61</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               com<span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span>
+  #<span class="token number">62</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               java<span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">Object</span>
+  #<span class="token number">63</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               java<span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">System</span>
+  #<span class="token number">64</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               out
+  #<span class="token number">65</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token class-name">Ljava</span><span class="token operator">/</span>io<span class="token operator">/</span><span class="token class-name">PrintStream</span><span class="token punctuation">;</span>
+  #<span class="token number">66</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               append
+  #<span class="token number">67</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token class-name">Ljava</span><span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">String</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token class-name">Ljava</span><span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">StringBuilder</span><span class="token punctuation">;</span>
+  #<span class="token number">68</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token class-name">I</span><span class="token punctuation">)</span><span class="token class-name">Ljava</span><span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">StringBuilder</span><span class="token punctuation">;</span>
+  #<span class="token number">69</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               toString
+  #<span class="token number">70</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">Ljava</span><span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">String</span><span class="token punctuation">;</span>
+  #<span class="token number">71</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               java<span class="token operator">/</span>io<span class="token operator">/</span><span class="token class-name">PrintStream</span>
+  #<span class="token number">72</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               println
+  #<span class="token number">73</span> <span class="token operator">=</span> <span class="token class-name">Utf8</span>               <span class="token punctuation">(</span><span class="token class-name">Ljava</span><span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">String</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> num<span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token class-name">I</span>
+    flags<span class="token operator">:</span> ACC_PRIVATE
+
+  <span class="token keyword">boolean</span> flag<span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token class-name">Z</span>
+    flags<span class="token operator">:</span>
+
+  <span class="token keyword">protected</span> <span class="token keyword">char</span> gender<span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token class-name">C</span>
+    flags<span class="token operator">:</span> ACC_PROTECTED
+
+  <span class="token keyword">public</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span><span class="token class-name">String</span> info<span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token class-name">Ljava</span><span class="token operator">/</span>lang<span class="token operator">/</span><span class="token class-name">String</span><span class="token punctuation">;</span>
+    flags<span class="token operator">:</span> ACC_PUBLIC
+
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> COUNTS<span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token class-name">I</span>
+    flags<span class="token operator">:</span> ACC_PUBLIC<span class="token punctuation">,</span> ACC_STATIC<span class="token punctuation">,</span> ACC_FINAL
+    <span class="token class-name">ConstantValue</span><span class="token operator">:</span> <span class="token keyword">int</span> <span class="token number">1</span>
+
+  <span class="token keyword">public</span> com<span class="token punctuation">.</span>it<span class="token punctuation">.</span>thread<span class="token punctuation">.</span><span class="token class-name">IntegerTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+    flags<span class="token operator">:</span> ACC_PUBLIC
+    <span class="token class-name">Code</span><span class="token operator">:</span>
+      stack<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> locals<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> args_size<span class="token operator">=</span><span class="token number">1</span>
+         <span class="token number">0</span><span class="token operator">:</span> aload_0
+         <span class="token number">1</span><span class="token operator">:</span> invokespecial #<span class="token number">1</span>                  <span class="token comment">// Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span>
+         <span class="token number">4</span><span class="token operator">:</span> aload_0
+         <span class="token number">5</span><span class="token operator">:</span> ldc           #<span class="token number">2</span>                  <span class="token comment">// String java</span>
+         <span class="token number">7</span><span class="token operator">:</span> putfield      #<span class="token number">3</span>                  <span class="token comment">// Field info:Ljava/lang/String;</span>
+        <span class="token number">10</span><span class="token operator">:</span> <span class="token keyword">return</span>
+      <span class="token class-name">LineNumberTable</span><span class="token operator">:</span>
+        line <span class="token number">16</span><span class="token operator">:</span> <span class="token number">0</span>
+        line <span class="token number">14</span><span class="token operator">:</span> <span class="token number">4</span>
+        line <span class="token number">18</span><span class="token operator">:</span> <span class="token number">10</span>
+      <span class="token class-name">LocalVariableTable</span><span class="token operator">:</span>
+        <span class="token class-name">Start</span>  <span class="token class-name">Length</span>  <span class="token class-name">Slot</span>  <span class="token class-name">Name</span>   <span class="token class-name">Signature</span>
+            <span class="token number">0</span>      <span class="token number">11</span>     <span class="token number">0</span>  <span class="token keyword">this</span>   <span class="token class-name">Lcom</span><span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">private</span> com<span class="token punctuation">.</span>it<span class="token punctuation">.</span>thread<span class="token punctuation">.</span><span class="token class-name">IntegerTest</span><span class="token punctuation">(</span><span class="token keyword">boolean</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token class-name">Z</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+    flags<span class="token operator">:</span> ACC_PRIVATE
+    <span class="token class-name">Code</span><span class="token operator">:</span>
+      stack<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> locals<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> args_size<span class="token operator">=</span><span class="token number">2</span>
+         <span class="token number">0</span><span class="token operator">:</span> aload_0
+         <span class="token number">1</span><span class="token operator">:</span> invokespecial #<span class="token number">1</span>                  <span class="token comment">// Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span>
+         <span class="token number">4</span><span class="token operator">:</span> aload_0
+         <span class="token number">5</span><span class="token operator">:</span> ldc           #<span class="token number">2</span>                  <span class="token comment">// String java</span>
+         <span class="token number">7</span><span class="token operator">:</span> putfield      #<span class="token number">3</span>                  <span class="token comment">// Field info:Ljava/lang/String;</span>
+        <span class="token number">10</span><span class="token operator">:</span> aload_0
+        <span class="token number">11</span><span class="token operator">:</span> iload_1
+        <span class="token number">12</span><span class="token operator">:</span> putfield      #<span class="token number">4</span>                  <span class="token comment">// Field flag:Z</span>
+        <span class="token number">15</span><span class="token operator">:</span> <span class="token keyword">return</span>
+      <span class="token class-name">LineNumberTable</span><span class="token operator">:</span>
+        line <span class="token number">19</span><span class="token operator">:</span> <span class="token number">0</span>
+        line <span class="token number">14</span><span class="token operator">:</span> <span class="token number">4</span>
+        line <span class="token number">20</span><span class="token operator">:</span> <span class="token number">10</span>
+        line <span class="token number">21</span><span class="token operator">:</span> <span class="token number">15</span>
+      <span class="token class-name">LocalVariableTable</span><span class="token operator">:</span>
+        <span class="token class-name">Start</span>  <span class="token class-name">Length</span>  <span class="token class-name">Slot</span>  <span class="token class-name">Name</span>   <span class="token class-name">Signature</span>
+            <span class="token number">0</span>      <span class="token number">16</span>     <span class="token number">0</span>  <span class="token keyword">this</span>   <span class="token class-name">Lcom</span><span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">;</span>
+            <span class="token number">0</span>      <span class="token number">16</span>     <span class="token number">1</span>  flag   <span class="token class-name">Z</span>
+
+  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">methodPrivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+    flags<span class="token operator">:</span> ACC_PRIVATE
+    <span class="token class-name">Code</span><span class="token operator">:</span>
+      stack<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> locals<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> args_size<span class="token operator">=</span><span class="token number">1</span>
+         <span class="token number">0</span><span class="token operator">:</span> <span class="token keyword">return</span>
+      <span class="token class-name">LineNumberTable</span><span class="token operator">:</span>
+        line <span class="token number">24</span><span class="token operator">:</span> <span class="token number">0</span>
+      <span class="token class-name">LocalVariableTable</span><span class="token operator">:</span>
+        <span class="token class-name">Start</span>  <span class="token class-name">Length</span>  <span class="token class-name">Slot</span>  <span class="token class-name">Name</span>   <span class="token class-name">Signature</span>
+            <span class="token number">0</span>       <span class="token number">1</span>     <span class="token number">0</span>  <span class="token keyword">this</span>   <span class="token class-name">Lcom</span><span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">int</span> <span class="token function">getNum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token class-name">I</span><span class="token punctuation">)</span><span class="token class-name">I</span>
+    flags<span class="token operator">:</span>
+    <span class="token class-name">Code</span><span class="token operator">:</span>
+      stack<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> locals<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> args_size<span class="token operator">=</span><span class="token number">2</span>
+         <span class="token number">0</span><span class="token operator">:</span> aload_0
+         <span class="token number">1</span><span class="token operator">:</span> getfield      #<span class="token number">5</span>                  <span class="token comment">// Field num:I</span>
+         <span class="token number">4</span><span class="token operator">:</span> iload_1
+         <span class="token number">5</span><span class="token operator">:</span> iadd
+         <span class="token number">6</span><span class="token operator">:</span> ireturn
+      <span class="token class-name">LineNumberTable</span><span class="token operator">:</span>
+        line <span class="token number">26</span><span class="token operator">:</span> <span class="token number">0</span>
+      <span class="token class-name">LocalVariableTable</span><span class="token operator">:</span>
+        <span class="token class-name">Start</span>  <span class="token class-name">Length</span>  <span class="token class-name">Slot</span>  <span class="token class-name">Name</span>   <span class="token class-name">Signature</span>
+            <span class="token number">0</span>       <span class="token number">7</span>     <span class="token number">0</span>  <span class="token keyword">this</span>   <span class="token class-name">Lcom</span><span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">;</span>
+            <span class="token number">0</span>       <span class="token number">7</span>     <span class="token number">1</span>     i   <span class="token class-name">I</span>
+
+  <span class="token keyword">protected</span> <span class="token keyword">char</span> <span class="token function">showGender</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">C</span>
+    flags<span class="token operator">:</span> ACC_PROTECTED
+    <span class="token class-name">Code</span><span class="token operator">:</span>
+      stack<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> locals<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> args_size<span class="token operator">=</span><span class="token number">1</span>
+         <span class="token number">0</span><span class="token operator">:</span> aload_0
+         <span class="token number">1</span><span class="token operator">:</span> getfield      #<span class="token number">6</span>                  <span class="token comment">// Field gender:C</span>
+         <span class="token number">4</span><span class="token operator">:</span> ireturn
+      <span class="token class-name">LineNumberTable</span><span class="token operator">:</span>
+        line <span class="token number">29</span><span class="token operator">:</span> <span class="token number">0</span>
+      <span class="token class-name">LocalVariableTable</span><span class="token operator">:</span>
+        <span class="token class-name">Start</span>  <span class="token class-name">Length</span>  <span class="token class-name">Slot</span>  <span class="token class-name">Name</span>   <span class="token class-name">Signature</span>
+            <span class="token number">0</span>       <span class="token number">5</span>     <span class="token number">0</span>  <span class="token keyword">this</span>   <span class="token class-name">Lcom</span><span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">showInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+    flags<span class="token operator">:</span> ACC_PUBLIC
+    <span class="token class-name">Code</span><span class="token operator">:</span>
+      stack<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> locals<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> args_size<span class="token operator">=</span><span class="token number">1</span>
+         <span class="token number">0</span><span class="token operator">:</span> bipush        <span class="token number">10</span>
+         <span class="token number">2</span><span class="token operator">:</span> istore_1
+         <span class="token number">3</span><span class="token operator">:</span> getstatic     #<span class="token number">7</span>                  <span class="token comment">// Field java/lang/System.out:Ljava/io/PrintStream;</span>
+         <span class="token number">6</span><span class="token operator">:</span> <span class="token keyword">new</span>           #<span class="token number">8</span>                  <span class="token comment">// class java/lang/StringBuilder</span>
+         <span class="token number">9</span><span class="token operator">:</span> dup
+        <span class="token number">10</span><span class="token operator">:</span> invokespecial #<span class="token number">9</span>                  <span class="token comment">// Method java/lang/StringBuilder.&quot;&lt;init&gt;&quot;:()V</span>
+        <span class="token number">13</span><span class="token operator">:</span> aload_0
+        <span class="token number">14</span><span class="token operator">:</span> getfield      #<span class="token number">3</span>                  <span class="token comment">// Field info:Ljava/lang/String;</span>
+        <span class="token number">17</span><span class="token operator">:</span> invokevirtual #<span class="token number">10</span>                 <span class="token comment">// Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;</span>
+        <span class="token number">20</span><span class="token operator">:</span> iload_1
+        <span class="token number">21</span><span class="token operator">:</span> invokevirtual #<span class="token number">11</span>                 <span class="token comment">// Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;</span>
+        <span class="token number">24</span><span class="token operator">:</span> invokevirtual #<span class="token number">12</span>                 <span class="token comment">// Method java/lang/StringBuilder.toString:()Ljava/lang/String;</span>
+        <span class="token number">27</span><span class="token operator">:</span> invokevirtual #<span class="token number">13</span>                 <span class="token comment">// Method java/io/PrintStream.println:(Ljava/lang/String;)V</span>
+        <span class="token number">30</span><span class="token operator">:</span> <span class="token keyword">return</span>
+      <span class="token class-name">LineNumberTable</span><span class="token operator">:</span>
+        line <span class="token number">32</span><span class="token operator">:</span> <span class="token number">0</span>
+        line <span class="token number">33</span><span class="token operator">:</span> <span class="token number">3</span>
+        line <span class="token number">34</span><span class="token operator">:</span> <span class="token number">30</span>
+      <span class="token class-name">LocalVariableTable</span><span class="token operator">:</span>
+        <span class="token class-name">Start</span>  <span class="token class-name">Length</span>  <span class="token class-name">Slot</span>  <span class="token class-name">Name</span>   <span class="token class-name">Signature</span>
+            <span class="token number">0</span>      <span class="token number">31</span>     <span class="token number">0</span>  <span class="token keyword">this</span>   <span class="token class-name">Lcom</span><span class="token operator">/</span>it<span class="token operator">/</span>thread<span class="token operator">/</span><span class="token class-name">IntegerTest</span><span class="token punctuation">;</span>
+            <span class="token number">3</span>      <span class="token number">28</span>     <span class="token number">1</span>     i   <span class="token class-name">I</span>
+
+  <span class="token keyword">static</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    descriptor<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token class-name">V</span>
+    flags<span class="token operator">:</span> ACC_STATIC
+    <span class="token class-name">Code</span><span class="token operator">:</span>
+      stack<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> locals<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> args_size<span class="token operator">=</span><span class="token number">0</span>
+         <span class="token number">0</span><span class="token operator">:</span> ldc           #<span class="token number">14</span>                 <span class="token comment">// String www.atguigu.com</span>
+         <span class="token number">2</span><span class="token operator">:</span> astore_0
+         <span class="token number">3</span><span class="token operator">:</span> <span class="token keyword">return</span>
+      <span class="token class-name">LineNumberTable</span><span class="token operator">:</span>
+        line <span class="token number">11</span><span class="token operator">:</span> <span class="token number">0</span>
+        line <span class="token number">12</span><span class="token operator">:</span> <span class="token number">3</span>
+      <span class="token class-name">LocalVariableTable</span><span class="token operator">:</span>
+        <span class="token class-name">Start</span>  <span class="token class-name">Length</span>  <span class="token class-name">Slot</span>  <span class="token class-name">Name</span>   <span class="token class-name">Signature</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">SourceFile</span><span class="token operator">:</span> <span class="token string">&quot;IntegerTest.java&quot;</span>
+
+</code></pre></div><h3 id="_4-5-总结"><a href="#_4-5-总结" class="header-anchor">#</a> 4.5 总结</h3> <ol><li><p>通过 <code>javap</code>命令可以查看一个 <code>Java</code>类反汇编得到的 <code>Class</code>文件版本号、常量池、访问标识、变量表、指令代码行号表等信息。
+不显式类索引、父类索引、接口索引集合、<code>&lt;clinit&gt;()、&lt;init&gt;()</code> 等结构。</p></li> <li><p>一个方法的执行通常会涉及下面几块内存的操作
+<code>Java</code>栈中：局部变量表、操作数栈
+<code>Java</code>堆： 通过对象的地址引用去操作
+常量池
+其他如帧数据区、方法区的剩余部分等情况</p></li> <li><p><code>Java</code>类中每个方法的反汇编中的指令操作过程，都是顺序执行的，<a href="https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-6.html" target="_blank" rel="noopener noreferrer">官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/17_垃圾回收器.html" class="prev">
+        垃圾回收器
+      </a></span> <span class="next"><a href="/blog_publish/java/01_ProgrammingBasic/01_JavaLanguage/02_JVM/19_字节码指令集与解析举例.html">
+        字节码指令集与解析举例
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog_publish/assets/js/app.e9f73273.js" defer></script><script src="/blog_publish/assets/js/2.92f2819f.js" defer></script><script src="/blog_publish/assets/js/46.3db58dc9.js" defer></script>
+  </body>
+</html>

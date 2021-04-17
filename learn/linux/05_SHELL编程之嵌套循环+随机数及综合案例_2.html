@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小游</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon1" href="http://you-blog.oss-accelerate.aliyuncs.com/typora/2021-02-18/d687f535b564447e82a3178a4e9b2f8c.jpg">
+    <link rel="icon2" href="https://you-blog.oss-cn-shenzhen.aliyuncs.com/typora/2021-02-18/icon.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    <meta name="description" content="知行合一">
+    <link rel="preload" href="/blog_publish/assets/css/0.styles.9a82886c.css" as="style"><link rel="preload" href="/blog_publish/assets/js/app.e9f73273.js" as="script"><link rel="preload" href="/blog_publish/assets/js/2.92f2819f.js" as="script"><link rel="preload" href="/blog_publish/assets/js/274.49e79caa.js" as="script"><link rel="prefetch" href="/blog_publish/assets/js/10.43a4635a.js"><link rel="prefetch" href="/blog_publish/assets/js/100.de5bf98c.js"><link rel="prefetch" href="/blog_publish/assets/js/101.a1eec209.js"><link rel="prefetch" href="/blog_publish/assets/js/102.b91d6ba3.js"><link rel="prefetch" href="/blog_publish/assets/js/103.25a2781d.js"><link rel="prefetch" href="/blog_publish/assets/js/104.dff1579f.js"><link rel="prefetch" href="/blog_publish/assets/js/105.5a821edb.js"><link rel="prefetch" href="/blog_publish/assets/js/106.612bd10d.js"><link rel="prefetch" href="/blog_publish/assets/js/107.f0abecd3.js"><link rel="prefetch" href="/blog_publish/assets/js/108.6662ae92.js"><link rel="prefetch" href="/blog_publish/assets/js/109.63368ef6.js"><link rel="prefetch" href="/blog_publish/assets/js/11.20553c69.js"><link rel="prefetch" href="/blog_publish/assets/js/110.14ff9021.js"><link rel="prefetch" href="/blog_publish/assets/js/111.a26492e3.js"><link rel="prefetch" href="/blog_publish/assets/js/112.f79fcc28.js"><link rel="prefetch" href="/blog_publish/assets/js/113.8d9dc557.js"><link rel="prefetch" href="/blog_publish/assets/js/114.0440bb9c.js"><link rel="prefetch" href="/blog_publish/assets/js/115.f79ba2f4.js"><link rel="prefetch" href="/blog_publish/assets/js/116.0a53c1e4.js"><link rel="prefetch" href="/blog_publish/assets/js/117.12d45698.js"><link rel="prefetch" href="/blog_publish/assets/js/118.fc9949f8.js"><link rel="prefetch" href="/blog_publish/assets/js/119.beb324ca.js"><link rel="prefetch" href="/blog_publish/assets/js/12.5ba20854.js"><link rel="prefetch" href="/blog_publish/assets/js/120.647d8af7.js"><link rel="prefetch" href="/blog_publish/assets/js/121.39fd9117.js"><link rel="prefetch" href="/blog_publish/assets/js/122.2651ddaa.js"><link rel="prefetch" href="/blog_publish/assets/js/123.2c9708b5.js"><link rel="prefetch" href="/blog_publish/assets/js/124.d62a946a.js"><link rel="prefetch" href="/blog_publish/assets/js/125.61217238.js"><link rel="prefetch" href="/blog_publish/assets/js/126.f4d173cc.js"><link rel="prefetch" href="/blog_publish/assets/js/127.e1616907.js"><link rel="prefetch" href="/blog_publish/assets/js/128.59e9b9bc.js"><link rel="prefetch" href="/blog_publish/assets/js/129.0b25326d.js"><link rel="prefetch" href="/blog_publish/assets/js/13.6201bcbf.js"><link rel="prefetch" href="/blog_publish/assets/js/130.b0f7c196.js"><link rel="prefetch" href="/blog_publish/assets/js/131.a4aa12f9.js"><link rel="prefetch" href="/blog_publish/assets/js/132.4c1294ca.js"><link rel="prefetch" href="/blog_publish/assets/js/133.716f6352.js"><link rel="prefetch" href="/blog_publish/assets/js/134.47f617c9.js"><link rel="prefetch" href="/blog_publish/assets/js/135.4ae7b491.js"><link rel="prefetch" href="/blog_publish/assets/js/136.1968a73c.js"><link rel="prefetch" href="/blog_publish/assets/js/137.3c299294.js"><link rel="prefetch" href="/blog_publish/assets/js/138.2926eb8f.js"><link rel="prefetch" href="/blog_publish/assets/js/139.9c0731ca.js"><link rel="prefetch" href="/blog_publish/assets/js/14.02e4d7e8.js"><link rel="prefetch" href="/blog_publish/assets/js/140.610956b7.js"><link rel="prefetch" href="/blog_publish/assets/js/141.ec69973d.js"><link rel="prefetch" href="/blog_publish/assets/js/142.c1b8375b.js"><link rel="prefetch" href="/blog_publish/assets/js/143.b89f01fb.js"><link rel="prefetch" href="/blog_publish/assets/js/144.4c59efc3.js"><link rel="prefetch" href="/blog_publish/assets/js/145.7d5cf177.js"><link rel="prefetch" href="/blog_publish/assets/js/146.178392e7.js"><link rel="prefetch" href="/blog_publish/assets/js/147.896bc309.js"><link rel="prefetch" href="/blog_publish/assets/js/148.e271c433.js"><link rel="prefetch" href="/blog_publish/assets/js/149.ff140aed.js"><link rel="prefetch" href="/blog_publish/assets/js/15.4893f488.js"><link rel="prefetch" href="/blog_publish/assets/js/150.62b21cc8.js"><link rel="prefetch" href="/blog_publish/assets/js/151.99fb14b0.js"><link rel="prefetch" href="/blog_publish/assets/js/152.54ddc166.js"><link rel="prefetch" href="/blog_publish/assets/js/153.e6885cc3.js"><link rel="prefetch" href="/blog_publish/assets/js/154.9e340011.js"><link rel="prefetch" href="/blog_publish/assets/js/155.ff86cd63.js"><link rel="prefetch" href="/blog_publish/assets/js/156.f4ed1a46.js"><link rel="prefetch" href="/blog_publish/assets/js/157.3ac56b71.js"><link rel="prefetch" href="/blog_publish/assets/js/158.cf346dd4.js"><link rel="prefetch" href="/blog_publish/assets/js/159.0068556f.js"><link rel="prefetch" href="/blog_publish/assets/js/16.8846169c.js"><link rel="prefetch" href="/blog_publish/assets/js/160.db7081e7.js"><link rel="prefetch" href="/blog_publish/assets/js/161.d93316de.js"><link rel="prefetch" href="/blog_publish/assets/js/162.403dd944.js"><link rel="prefetch" href="/blog_publish/assets/js/163.98406fd7.js"><link rel="prefetch" href="/blog_publish/assets/js/164.b4a7a898.js"><link rel="prefetch" href="/blog_publish/assets/js/165.f6f2d967.js"><link rel="prefetch" href="/blog_publish/assets/js/166.128e85af.js"><link rel="prefetch" href="/blog_publish/assets/js/167.f7247a72.js"><link rel="prefetch" href="/blog_publish/assets/js/168.05bfba1b.js"><link rel="prefetch" href="/blog_publish/assets/js/169.f83db172.js"><link rel="prefetch" href="/blog_publish/assets/js/17.55e72157.js"><link rel="prefetch" href="/blog_publish/assets/js/170.a6323669.js"><link rel="prefetch" href="/blog_publish/assets/js/171.bd8b7c56.js"><link rel="prefetch" href="/blog_publish/assets/js/172.a80e82af.js"><link rel="prefetch" href="/blog_publish/assets/js/173.96f7cd3f.js"><link rel="prefetch" href="/blog_publish/assets/js/174.71f0f83f.js"><link rel="prefetch" href="/blog_publish/assets/js/175.28dfe229.js"><link rel="prefetch" href="/blog_publish/assets/js/176.a6547cd6.js"><link rel="prefetch" href="/blog_publish/assets/js/177.e1bb6450.js"><link rel="prefetch" href="/blog_publish/assets/js/178.eaa950a5.js"><link rel="prefetch" href="/blog_publish/assets/js/179.54fe0ddb.js"><link rel="prefetch" href="/blog_publish/assets/js/18.c928c493.js"><link rel="prefetch" href="/blog_publish/assets/js/180.4df5c23c.js"><link rel="prefetch" href="/blog_publish/assets/js/181.21e14d5f.js"><link rel="prefetch" href="/blog_publish/assets/js/182.229de909.js"><link rel="prefetch" href="/blog_publish/assets/js/183.2ba587c1.js"><link rel="prefetch" href="/blog_publish/assets/js/184.019e7b2d.js"><link rel="prefetch" href="/blog_publish/assets/js/185.2e9a42ca.js"><link rel="prefetch" href="/blog_publish/assets/js/186.44f670ac.js"><link rel="prefetch" href="/blog_publish/assets/js/187.6d9f92a3.js"><link rel="prefetch" href="/blog_publish/assets/js/188.ea46513b.js"><link rel="prefetch" href="/blog_publish/assets/js/189.26128001.js"><link rel="prefetch" href="/blog_publish/assets/js/19.7c22b6ed.js"><link rel="prefetch" href="/blog_publish/assets/js/190.0c5a8585.js"><link rel="prefetch" href="/blog_publish/assets/js/191.ce7de326.js"><link rel="prefetch" href="/blog_publish/assets/js/192.088ee007.js"><link rel="prefetch" href="/blog_publish/assets/js/193.25b645bd.js"><link rel="prefetch" href="/blog_publish/assets/js/194.95abf19b.js"><link rel="prefetch" href="/blog_publish/assets/js/195.a1362250.js"><link rel="prefetch" href="/blog_publish/assets/js/196.224ffbeb.js"><link rel="prefetch" href="/blog_publish/assets/js/197.1cd51195.js"><link rel="prefetch" href="/blog_publish/assets/js/198.72748521.js"><link rel="prefetch" href="/blog_publish/assets/js/199.65d6952f.js"><link rel="prefetch" href="/blog_publish/assets/js/20.e0c8bc0f.js"><link rel="prefetch" href="/blog_publish/assets/js/200.a02f9122.js"><link rel="prefetch" href="/blog_publish/assets/js/201.fcccc05f.js"><link rel="prefetch" href="/blog_publish/assets/js/202.00a9b930.js"><link rel="prefetch" href="/blog_publish/assets/js/203.cd0c9269.js"><link rel="prefetch" href="/blog_publish/assets/js/204.694e6d1e.js"><link rel="prefetch" href="/blog_publish/assets/js/205.5fdaf7c6.js"><link rel="prefetch" href="/blog_publish/assets/js/206.429a58ae.js"><link rel="prefetch" href="/blog_publish/assets/js/207.60e15733.js"><link rel="prefetch" href="/blog_publish/assets/js/208.49847840.js"><link rel="prefetch" href="/blog_publish/assets/js/209.ec102045.js"><link rel="prefetch" href="/blog_publish/assets/js/21.58ffb29b.js"><link rel="prefetch" href="/blog_publish/assets/js/210.c96da4bf.js"><link rel="prefetch" href="/blog_publish/assets/js/211.4d98d3d6.js"><link rel="prefetch" href="/blog_publish/assets/js/212.0e37778b.js"><link rel="prefetch" href="/blog_publish/assets/js/213.1daf2a59.js"><link rel="prefetch" href="/blog_publish/assets/js/214.6abb9168.js"><link rel="prefetch" href="/blog_publish/assets/js/215.999e35ed.js"><link rel="prefetch" href="/blog_publish/assets/js/216.54f6ce91.js"><link rel="prefetch" href="/blog_publish/assets/js/217.98de30cc.js"><link rel="prefetch" href="/blog_publish/assets/js/218.5f8ca4c2.js"><link rel="prefetch" href="/blog_publish/assets/js/219.f618c0c1.js"><link rel="prefetch" href="/blog_publish/assets/js/22.fd13f710.js"><link rel="prefetch" href="/blog_publish/assets/js/220.618ba814.js"><link rel="prefetch" href="/blog_publish/assets/js/221.83de49a2.js"><link rel="prefetch" href="/blog_publish/assets/js/222.bc533958.js"><link rel="prefetch" href="/blog_publish/assets/js/223.4c200ee3.js"><link rel="prefetch" href="/blog_publish/assets/js/224.cb093d51.js"><link rel="prefetch" href="/blog_publish/assets/js/225.1ec21dcf.js"><link rel="prefetch" href="/blog_publish/assets/js/226.5a4d6253.js"><link rel="prefetch" href="/blog_publish/assets/js/227.b7314984.js"><link rel="prefetch" href="/blog_publish/assets/js/228.1a2a9c9c.js"><link rel="prefetch" href="/blog_publish/assets/js/229.6b7c04ed.js"><link rel="prefetch" href="/blog_publish/assets/js/23.c1c0be9e.js"><link rel="prefetch" href="/blog_publish/assets/js/230.9164eb46.js"><link rel="prefetch" href="/blog_publish/assets/js/231.9041f55a.js"><link rel="prefetch" href="/blog_publish/assets/js/232.c2cd31a6.js"><link rel="prefetch" href="/blog_publish/assets/js/233.c35d9a28.js"><link rel="prefetch" href="/blog_publish/assets/js/234.d517982a.js"><link rel="prefetch" href="/blog_publish/assets/js/235.1a7ee5a2.js"><link rel="prefetch" href="/blog_publish/assets/js/236.1c367e4a.js"><link rel="prefetch" href="/blog_publish/assets/js/237.2d3e54cd.js"><link rel="prefetch" href="/blog_publish/assets/js/238.9452b391.js"><link rel="prefetch" href="/blog_publish/assets/js/239.c745fb8e.js"><link rel="prefetch" href="/blog_publish/assets/js/24.ad4747b7.js"><link rel="prefetch" href="/blog_publish/assets/js/240.41dfa756.js"><link rel="prefetch" href="/blog_publish/assets/js/241.a9f7ff2c.js"><link rel="prefetch" href="/blog_publish/assets/js/242.6e457d08.js"><link rel="prefetch" href="/blog_publish/assets/js/243.b9c0aef1.js"><link rel="prefetch" href="/blog_publish/assets/js/244.73922524.js"><link rel="prefetch" href="/blog_publish/assets/js/245.18ec2edf.js"><link rel="prefetch" href="/blog_publish/assets/js/246.cdadb561.js"><link rel="prefetch" href="/blog_publish/assets/js/247.fbc336ed.js"><link rel="prefetch" href="/blog_publish/assets/js/248.e3d56b61.js"><link rel="prefetch" href="/blog_publish/assets/js/249.0bc069cc.js"><link rel="prefetch" href="/blog_publish/assets/js/25.5e69c47c.js"><link rel="prefetch" href="/blog_publish/assets/js/250.30fd4b86.js"><link rel="prefetch" href="/blog_publish/assets/js/251.7e0e7eb5.js"><link rel="prefetch" href="/blog_publish/assets/js/252.7faeaa9d.js"><link rel="prefetch" href="/blog_publish/assets/js/253.2b125735.js"><link rel="prefetch" href="/blog_publish/assets/js/254.e3c6e477.js"><link rel="prefetch" href="/blog_publish/assets/js/255.3b020c58.js"><link rel="prefetch" href="/blog_publish/assets/js/256.78eb6dc5.js"><link rel="prefetch" href="/blog_publish/assets/js/257.5cd036b7.js"><link rel="prefetch" href="/blog_publish/assets/js/258.09bc5d4d.js"><link rel="prefetch" href="/blog_publish/assets/js/259.5073b45d.js"><link rel="prefetch" href="/blog_publish/assets/js/26.dce3c8d0.js"><link rel="prefetch" href="/blog_publish/assets/js/260.6179fe6b.js"><link rel="prefetch" href="/blog_publish/assets/js/261.1775f4ff.js"><link rel="prefetch" href="/blog_publish/assets/js/262.843e3bda.js"><link rel="prefetch" href="/blog_publish/assets/js/263.0898899d.js"><link rel="prefetch" href="/blog_publish/assets/js/264.40e72f17.js"><link rel="prefetch" href="/blog_publish/assets/js/265.6914b261.js"><link rel="prefetch" href="/blog_publish/assets/js/266.c44f3dce.js"><link rel="prefetch" href="/blog_publish/assets/js/267.f7d0fcde.js"><link rel="prefetch" href="/blog_publish/assets/js/268.5af5a268.js"><link rel="prefetch" href="/blog_publish/assets/js/269.19cdfdc7.js"><link rel="prefetch" href="/blog_publish/assets/js/27.c6f599d8.js"><link rel="prefetch" href="/blog_publish/assets/js/270.fb0ab094.js"><link rel="prefetch" href="/blog_publish/assets/js/271.467a82f1.js"><link rel="prefetch" href="/blog_publish/assets/js/272.0de27920.js"><link rel="prefetch" href="/blog_publish/assets/js/273.d8977f33.js"><link rel="prefetch" href="/blog_publish/assets/js/275.58fd1634.js"><link rel="prefetch" href="/blog_publish/assets/js/276.77a0a255.js"><link rel="prefetch" href="/blog_publish/assets/js/277.4b78c82d.js"><link rel="prefetch" href="/blog_publish/assets/js/278.0c29ee61.js"><link rel="prefetch" href="/blog_publish/assets/js/279.93627701.js"><link rel="prefetch" href="/blog_publish/assets/js/28.d5d53f60.js"><link rel="prefetch" href="/blog_publish/assets/js/280.f80ca7b0.js"><link rel="prefetch" href="/blog_publish/assets/js/281.14a33ba7.js"><link rel="prefetch" href="/blog_publish/assets/js/282.b7ef9b9d.js"><link rel="prefetch" href="/blog_publish/assets/js/283.ad6b4712.js"><link rel="prefetch" href="/blog_publish/assets/js/284.560ba89a.js"><link rel="prefetch" href="/blog_publish/assets/js/285.7297bf40.js"><link rel="prefetch" href="/blog_publish/assets/js/286.4cc87443.js"><link rel="prefetch" href="/blog_publish/assets/js/287.20aeab9a.js"><link rel="prefetch" href="/blog_publish/assets/js/288.83c071a4.js"><link rel="prefetch" href="/blog_publish/assets/js/289.f545f9e6.js"><link rel="prefetch" href="/blog_publish/assets/js/29.f8dc1511.js"><link rel="prefetch" href="/blog_publish/assets/js/290.1b346ffa.js"><link rel="prefetch" href="/blog_publish/assets/js/291.ed942de2.js"><link rel="prefetch" href="/blog_publish/assets/js/292.65db48dd.js"><link rel="prefetch" href="/blog_publish/assets/js/293.6a9585be.js"><link rel="prefetch" href="/blog_publish/assets/js/294.69ccc91f.js"><link rel="prefetch" href="/blog_publish/assets/js/295.47b879b3.js"><link rel="prefetch" href="/blog_publish/assets/js/296.92c0bfc1.js"><link rel="prefetch" href="/blog_publish/assets/js/297.d5a414c9.js"><link rel="prefetch" href="/blog_publish/assets/js/298.17733c67.js"><link rel="prefetch" href="/blog_publish/assets/js/299.b564e11c.js"><link rel="prefetch" href="/blog_publish/assets/js/3.7b5be556.js"><link rel="prefetch" href="/blog_publish/assets/js/30.b3063b77.js"><link rel="prefetch" href="/blog_publish/assets/js/300.f6fdbbe4.js"><link rel="prefetch" href="/blog_publish/assets/js/301.e9730793.js"><link rel="prefetch" href="/blog_publish/assets/js/302.3167cf18.js"><link rel="prefetch" href="/blog_publish/assets/js/303.9326b257.js"><link rel="prefetch" href="/blog_publish/assets/js/304.b0dda1f5.js"><link rel="prefetch" href="/blog_publish/assets/js/305.20c411f2.js"><link rel="prefetch" href="/blog_publish/assets/js/306.ff53cc94.js"><link rel="prefetch" href="/blog_publish/assets/js/307.4b4a3361.js"><link rel="prefetch" href="/blog_publish/assets/js/308.79184800.js"><link rel="prefetch" href="/blog_publish/assets/js/309.9d6e4598.js"><link rel="prefetch" href="/blog_publish/assets/js/31.ca39c57a.js"><link rel="prefetch" href="/blog_publish/assets/js/310.b6869506.js"><link rel="prefetch" href="/blog_publish/assets/js/311.83bac133.js"><link rel="prefetch" href="/blog_publish/assets/js/312.b77764d2.js"><link rel="prefetch" href="/blog_publish/assets/js/313.efb89f66.js"><link rel="prefetch" href="/blog_publish/assets/js/314.7bd7d236.js"><link rel="prefetch" href="/blog_publish/assets/js/315.0fc75aec.js"><link rel="prefetch" href="/blog_publish/assets/js/316.024e7c1c.js"><link rel="prefetch" href="/blog_publish/assets/js/317.ab16994d.js"><link rel="prefetch" href="/blog_publish/assets/js/318.cdbb87d0.js"><link rel="prefetch" href="/blog_publish/assets/js/319.b619a68c.js"><link rel="prefetch" href="/blog_publish/assets/js/32.8a11ea47.js"><link rel="prefetch" href="/blog_publish/assets/js/320.935abf2b.js"><link rel="prefetch" href="/blog_publish/assets/js/321.125ca37c.js"><link rel="prefetch" href="/blog_publish/assets/js/322.671cab90.js"><link rel="prefetch" href="/blog_publish/assets/js/323.c629dc39.js"><link rel="prefetch" href="/blog_publish/assets/js/324.4d5e53ab.js"><link rel="prefetch" href="/blog_publish/assets/js/325.8cd8ffcf.js"><link rel="prefetch" href="/blog_publish/assets/js/326.7da3900e.js"><link rel="prefetch" href="/blog_publish/assets/js/327.ce18dd03.js"><link rel="prefetch" href="/blog_publish/assets/js/328.83dc9555.js"><link rel="prefetch" href="/blog_publish/assets/js/329.d0a07170.js"><link rel="prefetch" href="/blog_publish/assets/js/33.0eeacbf9.js"><link rel="prefetch" href="/blog_publish/assets/js/330.70c54f3e.js"><link rel="prefetch" href="/blog_publish/assets/js/331.e4b1065e.js"><link rel="prefetch" href="/blog_publish/assets/js/332.0ae2564f.js"><link rel="prefetch" href="/blog_publish/assets/js/333.42fd8b0e.js"><link rel="prefetch" href="/blog_publish/assets/js/334.c1831045.js"><link rel="prefetch" href="/blog_publish/assets/js/335.1d8c0f76.js"><link rel="prefetch" href="/blog_publish/assets/js/336.16fd5b41.js"><link rel="prefetch" href="/blog_publish/assets/js/337.bc696878.js"><link rel="prefetch" href="/blog_publish/assets/js/338.1ebb1595.js"><link rel="prefetch" href="/blog_publish/assets/js/339.1dfb9045.js"><link rel="prefetch" href="/blog_publish/assets/js/34.bad15237.js"><link rel="prefetch" href="/blog_publish/assets/js/340.17e7f57d.js"><link rel="prefetch" href="/blog_publish/assets/js/341.105fb22f.js"><link rel="prefetch" href="/blog_publish/assets/js/342.1ce4ccdb.js"><link rel="prefetch" href="/blog_publish/assets/js/343.8f1b68d1.js"><link rel="prefetch" href="/blog_publish/assets/js/344.def69ab4.js"><link rel="prefetch" href="/blog_publish/assets/js/345.b51d638b.js"><link rel="prefetch" href="/blog_publish/assets/js/346.91452ae7.js"><link rel="prefetch" href="/blog_publish/assets/js/347.fb376c1b.js"><link rel="prefetch" href="/blog_publish/assets/js/348.2e62b6aa.js"><link rel="prefetch" href="/blog_publish/assets/js/349.c7709a5f.js"><link rel="prefetch" href="/blog_publish/assets/js/35.ecfbe002.js"><link rel="prefetch" href="/blog_publish/assets/js/350.24d2a3f3.js"><link rel="prefetch" href="/blog_publish/assets/js/351.c4f208ae.js"><link rel="prefetch" href="/blog_publish/assets/js/352.f657528d.js"><link rel="prefetch" href="/blog_publish/assets/js/353.cc6f77a1.js"><link rel="prefetch" href="/blog_publish/assets/js/354.edb96131.js"><link rel="prefetch" href="/blog_publish/assets/js/355.3cb19ed7.js"><link rel="prefetch" href="/blog_publish/assets/js/356.31b46eab.js"><link rel="prefetch" href="/blog_publish/assets/js/357.c63530cb.js"><link rel="prefetch" href="/blog_publish/assets/js/358.68a66f46.js"><link rel="prefetch" href="/blog_publish/assets/js/359.aa53f936.js"><link rel="prefetch" href="/blog_publish/assets/js/36.47566dac.js"><link rel="prefetch" href="/blog_publish/assets/js/360.39208478.js"><link rel="prefetch" href="/blog_publish/assets/js/361.4894f627.js"><link rel="prefetch" href="/blog_publish/assets/js/362.fa042d89.js"><link rel="prefetch" href="/blog_publish/assets/js/363.49e1452e.js"><link rel="prefetch" href="/blog_publish/assets/js/364.2f485742.js"><link rel="prefetch" href="/blog_publish/assets/js/365.5a1e07b4.js"><link rel="prefetch" href="/blog_publish/assets/js/366.3a4f087b.js"><link rel="prefetch" href="/blog_publish/assets/js/367.06ebd8a0.js"><link rel="prefetch" href="/blog_publish/assets/js/368.49d45174.js"><link rel="prefetch" href="/blog_publish/assets/js/369.6f54de99.js"><link rel="prefetch" href="/blog_publish/assets/js/37.ee13059e.js"><link rel="prefetch" href="/blog_publish/assets/js/370.d1dec056.js"><link rel="prefetch" href="/blog_publish/assets/js/371.53c7ba18.js"><link rel="prefetch" href="/blog_publish/assets/js/372.07f46c4e.js"><link rel="prefetch" href="/blog_publish/assets/js/373.5f051e9b.js"><link rel="prefetch" href="/blog_publish/assets/js/374.300496f7.js"><link rel="prefetch" href="/blog_publish/assets/js/38.c6d156e2.js"><link rel="prefetch" href="/blog_publish/assets/js/39.c4942ba1.js"><link rel="prefetch" href="/blog_publish/assets/js/4.b0cb765d.js"><link rel="prefetch" href="/blog_publish/assets/js/40.3c3b852e.js"><link rel="prefetch" href="/blog_publish/assets/js/41.7961d999.js"><link rel="prefetch" href="/blog_publish/assets/js/42.703a40d4.js"><link rel="prefetch" href="/blog_publish/assets/js/43.1e1b61ef.js"><link rel="prefetch" href="/blog_publish/assets/js/44.e0fd4b34.js"><link rel="prefetch" href="/blog_publish/assets/js/45.01f8140d.js"><link rel="prefetch" href="/blog_publish/assets/js/46.3db58dc9.js"><link rel="prefetch" href="/blog_publish/assets/js/47.f6fabe74.js"><link rel="prefetch" href="/blog_publish/assets/js/48.a231176d.js"><link rel="prefetch" href="/blog_publish/assets/js/49.6417fcf5.js"><link rel="prefetch" href="/blog_publish/assets/js/5.e723c1a9.js"><link rel="prefetch" href="/blog_publish/assets/js/50.d87b0611.js"><link rel="prefetch" href="/blog_publish/assets/js/51.50baa302.js"><link rel="prefetch" href="/blog_publish/assets/js/52.ab9331d2.js"><link rel="prefetch" href="/blog_publish/assets/js/53.b256aa1c.js"><link rel="prefetch" href="/blog_publish/assets/js/54.06dccf04.js"><link rel="prefetch" href="/blog_publish/assets/js/55.10eee97c.js"><link rel="prefetch" href="/blog_publish/assets/js/56.494e1260.js"><link rel="prefetch" href="/blog_publish/assets/js/57.8f8e8c73.js"><link rel="prefetch" href="/blog_publish/assets/js/58.342d438e.js"><link rel="prefetch" href="/blog_publish/assets/js/59.606ea721.js"><link rel="prefetch" href="/blog_publish/assets/js/6.43debd78.js"><link rel="prefetch" href="/blog_publish/assets/js/60.af33dc60.js"><link rel="prefetch" href="/blog_publish/assets/js/61.a9fa3797.js"><link rel="prefetch" href="/blog_publish/assets/js/62.ce20d10d.js"><link rel="prefetch" href="/blog_publish/assets/js/63.63ad730b.js"><link rel="prefetch" href="/blog_publish/assets/js/64.2e0b7e4d.js"><link rel="prefetch" href="/blog_publish/assets/js/65.f85ed5fa.js"><link rel="prefetch" href="/blog_publish/assets/js/66.deb1a5c1.js"><link rel="prefetch" href="/blog_publish/assets/js/67.ca349b07.js"><link rel="prefetch" href="/blog_publish/assets/js/68.69d976e5.js"><link rel="prefetch" href="/blog_publish/assets/js/69.bbddef12.js"><link rel="prefetch" href="/blog_publish/assets/js/7.23b88edf.js"><link rel="prefetch" href="/blog_publish/assets/js/70.7c2cda55.js"><link rel="prefetch" href="/blog_publish/assets/js/71.85d87299.js"><link rel="prefetch" href="/blog_publish/assets/js/72.b8d96a0a.js"><link rel="prefetch" href="/blog_publish/assets/js/73.63e1c01e.js"><link rel="prefetch" href="/blog_publish/assets/js/74.0fccbeb8.js"><link rel="prefetch" href="/blog_publish/assets/js/75.7353b526.js"><link rel="prefetch" href="/blog_publish/assets/js/76.88951533.js"><link rel="prefetch" href="/blog_publish/assets/js/77.95b68684.js"><link rel="prefetch" href="/blog_publish/assets/js/78.09c3bef7.js"><link rel="prefetch" href="/blog_publish/assets/js/79.914a823d.js"><link rel="prefetch" href="/blog_publish/assets/js/8.786386d2.js"><link rel="prefetch" href="/blog_publish/assets/js/80.8e3db83d.js"><link rel="prefetch" href="/blog_publish/assets/js/81.b022b19d.js"><link rel="prefetch" href="/blog_publish/assets/js/82.31de2df7.js"><link rel="prefetch" href="/blog_publish/assets/js/83.a2f84810.js"><link rel="prefetch" href="/blog_publish/assets/js/84.5a9d6138.js"><link rel="prefetch" href="/blog_publish/assets/js/85.653959e6.js"><link rel="prefetch" href="/blog_publish/assets/js/86.2b67b925.js"><link rel="prefetch" href="/blog_publish/assets/js/87.f5855c23.js"><link rel="prefetch" href="/blog_publish/assets/js/88.03ec0f84.js"><link rel="prefetch" href="/blog_publish/assets/js/89.cd89102c.js"><link rel="prefetch" href="/blog_publish/assets/js/9.e8b3a48d.js"><link rel="prefetch" href="/blog_publish/assets/js/90.8171bd61.js"><link rel="prefetch" href="/blog_publish/assets/js/91.a72bfd91.js"><link rel="prefetch" href="/blog_publish/assets/js/92.8ff96830.js"><link rel="prefetch" href="/blog_publish/assets/js/93.5d35bb2d.js"><link rel="prefetch" href="/blog_publish/assets/js/94.0b3baef9.js"><link rel="prefetch" href="/blog_publish/assets/js/95.f485e21e.js"><link rel="prefetch" href="/blog_publish/assets/js/96.a68dd3b6.js"><link rel="prefetch" href="/blog_publish/assets/js/97.fdf1f34f.js"><link rel="prefetch" href="/blog_publish/assets/js/98.1a25454b.js"><link rel="prefetch" href="/blog_publish/assets/js/99.4f973974.js">
+    <link rel="stylesheet" href="/blog_publish/assets/css/0.styles.9a82886c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog_publish/" class="home-link router-link-active"><!----> <span class="site-name">小游</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog_publish/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/java/01_ProgrammingBasic/link.html" class="nav-link">
+  编程基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/02_DevelopmentTools/link.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/03_ApplicationFramework/link.html" class="nav-link">
+  应用框架
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/04_OperationAndMaintenance/" class="nav-link">
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/05_SourceCode/" class="nav-link">
+  源码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/web/01_vue/使用webpack打包一个简单的前端程序.html" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/tools/essay/04_SpringBoot中处理跨域的几种方式.html" class="nav-link">
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/installSoftware/01_jdk_linux.html" class="nav-link">
+  软件安装
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/bugRepository/03_MySQL主从复制Bug.html" class="nav-link">
+  bug库
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/other/07_打包插件maven-assembly-plugin.html" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog_publish/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/java/01_ProgrammingBasic/link.html" class="nav-link">
+  编程基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/02_DevelopmentTools/link.html" class="nav-link">
+  开发工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/03_ApplicationFramework/link.html" class="nav-link">
+  应用框架
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/04_OperationAndMaintenance/" class="nav-link">
+  运维
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/java/05_SourceCode/" class="nav-link">
+  源码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/web/01_vue/使用webpack打包一个简单的前端程序.html" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog_publish/tools/essay/04_SpringBoot中处理跨域的几种方式.html" class="nav-link">
+  随笔
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/installSoftware/01_jdk_linux.html" class="nav-link">
+  软件安装
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/bugRepository/03_MySQL主从复制Bug.html" class="nav-link">
+  bug库
+</a></li><li class="dropdown-item"><!----> <a href="/blog_publish/tools/other/07_打包插件maven-assembly-plugin.html" class="nav-link">
+  其他
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Linux</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog_publish/learn/linux/01_SHELL编程前奏_小工具.html" class="sidebar-link">/learn/linux/01_SHELL编程前奏_小工具.html</a></li><li><a href="/blog_publish/learn/linux/02_SHELL编程之变量定义.html" class="sidebar-link">/learn/linux/02_SHELL编程之变量定义.html</a></li><li><a href="/blog_publish/learn/linux/03_SHELL编程之条件判断和流程控制.html" class="sidebar-link">/learn/linux/03_SHELL编程之条件判断和流程控制.html</a></li><li><a href="/blog_publish/learn/linux/04_SHELL编程之循环语句.html" class="sidebar-link">/learn/linux/04_SHELL编程之循环语句.html</a></li><li><a href="/blog_publish/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html" class="active sidebar-link">/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog_publish/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html#_1-如何生成随机数？" class="sidebar-link">1. 如何生成随机数？</a></li><li class="sidebar-sub-header"><a href="/blog_publish/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html#_2-实战案例" class="sidebar-link">2. 实战案例</a></li><li class="sidebar-sub-header"><a href="/blog_publish/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html#_1-变量定义" class="sidebar-link">1. 变量定义</a></li><li class="sidebar-sub-header"><a href="/blog_publish/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html#_2-流程控制语句" class="sidebar-link">2. 流程控制语句</a></li><li class="sidebar-sub-header"><a href="/blog_publish/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html#_3-循环语句" class="sidebar-link">3. 循环语句</a></li><li class="sidebar-sub-header"><a href="/blog_publish/learn/linux/05_SHELL编程之嵌套循环+随机数及综合案例_2.html#_4-影响shell程序的内置命令" class="sidebar-link">4. 影响shell程序的内置命令</a></li></ul></li><li><a href="/blog_publish/learn/linux/06_SHELL编程之CASE语句+函数+正则.html" class="sidebar-link">/learn/linux/06_SHELL编程之CASE语句+函数+正则.html</a></li><li><a href="/blog_publish/learn/linux/07_SHELL编程之文本处理工具sed.html" class="sidebar-link">/learn/linux/07_SHELL编程之文本处理工具sed.html</a></li><li><a href="/blog_publish/learn/linux/08_SHELL编程之文本处理工具awk.html" class="sidebar-link">/learn/linux/08_SHELL编程之文本处理工具awk.html</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>[toc]
+#课程目标</p> <ul><li>==掌握for循环语句的基本语法结构==</li> <li>==掌握while和until循环语句的基本语法结构==</li> <li>能会使用RANDOM产生随机数</li> <li>理解嵌套循环</li></ul> <h1 id="一、随机数"><a href="#一、随机数" class="header-anchor">#</a> 一、随机数</h1> <p><strong>关键词：一切都是未知数，永远不知道明天会抽什么风</strong>🎐😅</p> <h2 id="_1-如何生成随机数？"><a href="#_1-如何生成随机数？" class="header-anchor">#</a> 1. 如何生成随机数？</h2> <p><strong>系统变量</strong>：<strong>==RANDOM==</strong>，默认会产生0~32767的随机整数</p> <p>**前言：**要想调用变量，不管你是什么变量都要给钱，而且是美元💲</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code>打印一个随机数
+<span class="token function">echo</span> <span class="token variable">$RANDOM</span>
+查看系统上一次生成的随机数
+<span class="token comment"># set|grep RANDOM</span>
+RANDOM=28325
+
+产生0~1之间的随机数
+<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>2<span class="token punctuation">]</span>
+
+产生0~2之间的随机数
+<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>3<span class="token punctuation">]</span>
+
+产生0~3之间的随机数
+<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>4<span class="token punctuation">]</span>
+
+产生0~9内的随机数
+<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+
+产生0~100内的随机数
+<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>101<span class="token punctuation">]</span>
+
+
+产生50<span class="token operator">-</span>100之内的随机数
+<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>51<span class="token operator">+</span>50<span class="token punctuation">]</span>
+
+产生三位数的随机数
+<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>900<span class="token operator">+</span>100<span class="token punctuation">]</span>
+</code></pre></div><h2 id="_2-实战案例"><a href="#_2-实战案例" class="header-anchor">#</a> 2. 实战案例</h2> <h3 id="㈠-随机产生以139开头的电话号码"><a href="#㈠-随机产生以139开头的电话号码" class="header-anchor">#</a> ㈠ 随机产生以139开头的电话号码</h3> <p><strong>具体需求1：</strong></p> <p>写一个脚本，产生一个phonenum.txt文件，随机产生以139开头的手机号1000个，每个一行。</p> <h4 id="①-思路"><a href="#①-思路" class="header-anchor">#</a> ① 思路</h4> <ol><li>产生1000个电话号码，脚本需要循环1000次 <code>FOR WHILE UNTIL</code></li> <li>139+8位,后8位随机产生，可以让每一位数字都随机产生  <code>echo $[$RANDOM%10]</code></li> <li>将随机产生的数字分别保存到变量里，然后加上139保存到文件里</li></ol> <h4 id="②-落地实现"><a href="#②-落地实现" class="header-anchor">#</a> ② 落地实现</h4> <div class="language-powershell extra-class"><pre class="language-powershell"><code>
+<span class="token comment">#!/bin/env bash</span>
+<span class="token comment">#产生1000个以139开头的电话号码并保存文件phonenum.txt</span>
+file=<span class="token operator">/</span>shell03<span class="token operator">/</span>phonenum<span class="token punctuation">.</span>txt
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=1000<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	n1=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n2=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n3=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n4=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n5=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n6=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n7=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n8=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	<span class="token function">echo</span> <span class="token string">&quot;139<span class="token variable">$n1</span><span class="token variable">$n2</span><span class="token variable">$n3</span><span class="token variable">$n4</span><span class="token variable">$n5</span><span class="token variable">$n6</span><span class="token variable">$n7</span><span class="token variable">$n8</span>&quot;</span> &gt;&gt; <span class="token variable">$file</span>
+done
+
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token comment"># random phonenum</span>
+<span class="token comment"># 循环1000次产生电话号码并保存到文件</span>
+<span class="token keyword">for</span> i in <span class="token punctuation">{</span>1<span class="token punctuation">.</span><span class="token punctuation">.</span>1000<span class="token punctuation">}</span>
+<span class="token keyword">do</span>
+	n1=$<span class="token namespace">[RANDOM%10]</span>
+	n2=$<span class="token namespace">[RANDOM%10]</span>
+	n3=$<span class="token namespace">[RANDOM%10]</span>
+	n4=$<span class="token namespace">[RANDOM%10]</span>
+	n5=$<span class="token namespace">[RANDOM%10]</span>
+	n6=$<span class="token namespace">[RANDOM%10]</span>
+	n7=$<span class="token namespace">[RANDOM%10]</span>
+	n8=$<span class="token namespace">[RANDOM%10]</span>
+	<span class="token function">echo</span> <span class="token string">&quot;139<span class="token variable">$n1</span><span class="token variable">$n2</span><span class="token variable">$n3</span><span class="token variable">$n4</span><span class="token variable">$n5</span><span class="token variable">$n6</span><span class="token variable">$n7</span><span class="token variable">$n8</span>&quot;</span> &gt;&gt; phonenum<span class="token punctuation">.</span>txt
+done
+
+<span class="token comment">#!/bin/bash</span>
+i=1
+<span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$i</span> <span class="token operator">-le</span> 1000 <span class="token punctuation">]</span>
+<span class="token keyword">do</span>
+	n1=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n2=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n3=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n4=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n5=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n6=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n7=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n8=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	<span class="token function">echo</span> <span class="token string">&quot;139<span class="token variable">$n1</span><span class="token variable">$n2</span><span class="token variable">$n3</span><span class="token variable">$n4</span><span class="token variable">$n5</span><span class="token variable">$n6</span><span class="token variable">$n7</span><span class="token variable">$n8</span>&quot;</span> &gt;&gt; phonenum<span class="token punctuation">.</span>txt
+	let i+<span class="token operator">+</span>
+done
+
+<span class="token keyword">continue</span>:继续，跳过本次循环，执行下一次循环
+<span class="token keyword">break</span>:打断，执行循环体外的代码<span class="token keyword">do</span><span class="token punctuation">.</span><span class="token punctuation">.</span>done外
+<span class="token keyword">exit</span>:退出程序
+
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">for</span> i in <span class="token punctuation">{</span>1<span class="token punctuation">.</span><span class="token punctuation">.</span>1000<span class="token punctuation">}</span>
+<span class="token keyword">do</span>
+	n1=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n2=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n3=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n4=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n5=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n6=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n7=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n8=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	<span class="token function">echo</span> <span class="token string">&quot;139<span class="token variable">$n1</span><span class="token variable">$n2</span><span class="token variable">$n3</span><span class="token variable">$n4</span><span class="token variable">$n5</span><span class="token variable">$n6</span><span class="token variable">$n7</span><span class="token variable">$n8</span>&quot;</span> &gt;&gt; phonenum<span class="token punctuation">.</span>txt
+done
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token comment">#create phone num file</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=1000<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	n1=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n2=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n3=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n4=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n5=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n6=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n7=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n8=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	<span class="token function">echo</span> <span class="token string">&quot;139<span class="token variable">$n1</span><span class="token variable">$n2</span><span class="token variable">$n3</span><span class="token variable">$n4</span><span class="token variable">$n5</span><span class="token variable">$n6</span><span class="token variable">$n7</span><span class="token variable">$n8</span>&quot;</span> <span class="token punctuation">|</span><span class="token function">tee</span> <span class="token operator">-</span>a phonenum<span class="token punctuation">.</span>txt
+done
+
+<span class="token comment">#!/bin/bash</span>
+count=0
+<span class="token keyword">while</span> true
+<span class="token keyword">do</span>
+	n1=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n2=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n3=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n4=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n5=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n6=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n7=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	n8=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>10<span class="token punctuation">]</span>
+	<span class="token function">echo</span> <span class="token string">&quot;139<span class="token variable">$n1</span><span class="token variable">$n2</span><span class="token variable">$n3</span><span class="token variable">$n4</span><span class="token variable">$n5</span><span class="token variable">$n6</span><span class="token variable">$n7</span><span class="token variable">$n8</span>&quot;</span> <span class="token punctuation">|</span><span class="token function">tee</span> <span class="token operator">-</span>a phonenum<span class="token punctuation">.</span>txt &amp;&amp; let count+<span class="token operator">+</span>
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$count</span> <span class="token operator">-eq</span> 1000 <span class="token punctuation">]</span><span class="token punctuation">;</span>then
+		<span class="token keyword">break</span>
+	fi
+done
+</code></pre></div><h3 id="㈡-随机抽出5位幸运观众"><a href="#㈡-随机抽出5位幸运观众" class="header-anchor">#</a> ㈡ 随机抽出5位幸运观众</h3> <p><strong>具体需求：</strong></p> <ol><li>在上面的1000个手机号里抽奖==5个==幸运观众，显示出这5个幸运观众。</li> <li>但只显示头3个数和尾号的4个数，中间的都用*代替</li></ol> <h4 id="①-思路-2"><a href="#①-思路-2" class="header-anchor">#</a> ① 思路</h4> <ol><li>确定幸运观众所在的行	<code>0-1000 随机找出一个数字 $[$RANDOM%1000+1]</code></li> <li>将电话号码提取出来      <code>head -随机产生行号 phonenum.txt |tail -1</code></li> <li>==显示==前3个和后4个数到屏幕   <code>echo 139****</code></li></ol> <h4 id="②-落地实现-2"><a href="#②-落地实现-2" class="header-anchor">#</a> ② 落地实现</h4> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/bin/bash</span>
+<span class="token comment">#定义变量</span>
+phone=<span class="token operator">/</span>shell03<span class="token operator">/</span>phonenum<span class="token punctuation">.</span>txt
+<span class="token comment">#循环抽出5位幸运观众</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=5<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	<span class="token comment">#定位幸运观众所在行号</span>
+	line=`wc <span class="token operator">-</span>l <span class="token variable">$phone</span> <span class="token punctuation">|</span>cut <span class="token operator">-</span>d<span class="token string">' '</span> <span class="token operator">-</span>f1`
+	luck_line=$<span class="token namespace">[RANDOM%$line+1]</span>
+	<span class="token comment">#取出幸运观众所在行的电话号码</span>
+	luck_num=`head <span class="token operator">-</span><span class="token variable">$luck_line</span> <span class="token variable">$phone</span><span class="token punctuation">|</span>tail <span class="token operator">-</span>1`
+	<span class="token comment">#显示到屏幕</span>
+	<span class="token function">echo</span> <span class="token string">&quot;139****${luck_num:7:4}&quot;</span>
+	<span class="token function">echo</span> <span class="token variable">$luck_num</span> &gt;&gt; luck<span class="token punctuation">.</span>txt
+	<span class="token comment">#删除已经被抽取的幸运观众号码</span>
+	<span class="token comment">#sed -i &quot;/$luck_num/d&quot; $phone</span>
+done
+
+
+<span class="token comment">#!/bin/bash</span>
+file=<span class="token operator">/</span>shell04<span class="token operator">/</span>phonenum<span class="token punctuation">.</span>txt
+<span class="token keyword">for</span> i in <span class="token punctuation">{</span>1<span class="token punctuation">.</span><span class="token punctuation">.</span>5<span class="token punctuation">}</span>
+<span class="token keyword">do</span>
+	file_num=`wc <span class="token operator">-</span>l <span class="token variable">$file</span> <span class="token punctuation">|</span>cut <span class="token operator">-</span>d<span class="token string">' '</span> <span class="token operator">-</span>f1`
+	line=`<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span><span class="token variable">$file_num</span><span class="token operator">+</span>1<span class="token punctuation">]</span>`
+	luck=`head <span class="token operator">-</span>n <span class="token variable">$line</span>  <span class="token variable">$file</span><span class="token punctuation">|</span>tail <span class="token operator">-</span>1`
+	<span class="token function">echo</span> <span class="token string">&quot;139****${luck:7:4}&quot;</span> &amp;&amp; <span class="token function">echo</span> <span class="token variable">$luck</span> &gt;&gt; <span class="token operator">/</span>shell04<span class="token operator">/</span>luck_num<span class="token punctuation">.</span>txt
+done
+
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=5<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+file=phonenum<span class="token punctuation">.</span>txt
+line=`<span class="token function">cat</span> phonenum<span class="token punctuation">.</span>txt <span class="token punctuation">|</span>wc <span class="token operator">-</span>l`	1000
+luckline=$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span><span class="token variable">$line</span><span class="token operator">+</span>1<span class="token punctuation">]</span>
+phone=`<span class="token function">cat</span> <span class="token variable">$file</span><span class="token punctuation">|</span>head <span class="token operator">-</span><span class="token variable">$luckline</span><span class="token punctuation">|</span>tail <span class="token operator">-</span>1`
+<span class="token function">echo</span> <span class="token string">&quot;幸运观众为:139****${phone:7:4}&quot;</span>
+done
+
+
+或者
+<span class="token comment">#!/bin/bash</span>
+<span class="token comment"># choujiang</span>
+phone=phonenum<span class="token punctuation">.</span>txt
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=5<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	num=`wc <span class="token operator">-</span>l phonenum<span class="token punctuation">.</span>txt <span class="token punctuation">|</span>cut <span class="token operator">-</span>d<span class="token string">' '</span> <span class="token operator">-</span>f1`
+	line=`<span class="token function">echo</span> $<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span><span class="token variable">$num</span><span class="token operator">+</span>1<span class="token punctuation">]</span>`
+	luck=`head <span class="token operator">-</span><span class="token variable">$line</span> <span class="token variable">$phone</span> <span class="token punctuation">|</span>tail <span class="token operator">-</span>1`
+	sed <span class="token operator">-</span>i <span class="token string">&quot;/<span class="token variable">$luck</span>/d&quot;</span> <span class="token variable">$phone</span>
+	<span class="token function">echo</span> <span class="token string">&quot;幸运观众是:139****${luck:7:4}&quot;</span>
+done
+
+</code></pre></div><h3 id="㈢-批量创建用户-密码随机产生"><a href="#㈢-批量创建用户-密码随机产生" class="header-anchor">#</a> ㈢ 批量创建用户(密码随机产生)</h3> <p>**需求：**批量创建5个用户，每个用户的密码为一个随机数</p> <h4 id="①-思路-3"><a href="#①-思路-3" class="header-anchor">#</a> ① 思路</h4> <ol><li>循环5次创建用户</li> <li>产生一个密码文件来保存用户的随机密码</li> <li>从密码文件中取出随机密码赋值给用户</li></ol> <h4 id="②-落地实现-3"><a href="#②-落地实现-3" class="header-anchor">#</a> ② 落地实现</h4> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/bin/bash</span>
+<span class="token comment">#crate user and set passwd</span>
+<span class="token comment">#产生一个保存用户名和密码的文件</span>
+<span class="token function">echo</span> user0<span class="token punctuation">{</span>1<span class="token punctuation">.</span><span class="token punctuation">.</span>5<span class="token punctuation">}</span>:itcast$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>9000<span class="token operator">+</span>1000<span class="token punctuation">]</span><span class="token comment">#@~|tr ' ' '\n'&gt;&gt; user_pass.file</span>
+
+<span class="token comment">#循环创建5个用户</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=5<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	user=`head <span class="token operator">-</span><span class="token variable">$i</span> user_pass<span class="token punctuation">.</span>file<span class="token punctuation">|</span>tail <span class="token operator">-</span>1<span class="token punctuation">|</span>cut <span class="token operator">-</span>d: <span class="token operator">-</span>f1`
+	pass=`head <span class="token operator">-</span><span class="token variable">$i</span> user_pass<span class="token punctuation">.</span>file<span class="token punctuation">|</span>tail <span class="token operator">-</span>1<span class="token punctuation">|</span>cut <span class="token operator">-</span>d: <span class="token operator">-</span>f2`
+	useradd <span class="token variable">$user</span>
+	<span class="token function">echo</span> <span class="token variable">$pass</span><span class="token punctuation">|</span>passwd <span class="token operator">--</span>stdin <span class="token variable">$user</span>
+done
+
+或者
+<span class="token keyword">for</span> i in `<span class="token function">cat</span> user_pass<span class="token punctuation">.</span>file`
+<span class="token keyword">do</span>
+	user=`<span class="token function">echo</span> <span class="token variable">$i</span><span class="token punctuation">|</span>cut <span class="token operator">-</span>d: <span class="token operator">-</span>f1`
+	pass=`<span class="token function">echo</span> <span class="token variable">$i</span><span class="token punctuation">|</span>cut <span class="token operator">-</span>d: <span class="token operator">-</span>f2`
+	useradd <span class="token variable">$user</span>
+	<span class="token function">echo</span> <span class="token variable">$pass</span><span class="token punctuation">|</span>passwd <span class="token operator">--</span>stdin <span class="token variable">$user</span>
+done
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token comment">#crate user and set passwd</span>
+<span class="token comment">#产生一个保存用户名和密码的文件</span>
+<span class="token function">echo</span> user0<span class="token punctuation">{</span>1<span class="token punctuation">.</span><span class="token punctuation">.</span>3<span class="token punctuation">}</span>:itcast$<span class="token punctuation">[</span><span class="token variable">$RANDOM</span><span class="token operator">%</span>9000<span class="token operator">+</span>1000<span class="token punctuation">]</span><span class="token comment">#@~|tr ' ' '\n'|tr ':' ' ' &gt;&gt; user_pass.file</span>
+<span class="token comment">#循环创建5个用户</span>
+<span class="token keyword">while</span> read user pass
+<span class="token keyword">do</span>
+useradd <span class="token variable">$user</span>
+<span class="token function">echo</span> <span class="token variable">$pass</span><span class="token punctuation">|</span>passwd <span class="token operator">--</span>stdin <span class="token variable">$user</span>
+done &lt; user_pass<span class="token punctuation">.</span>file
+
+
+pwgen工具产生随机密码：
+<span class="token namespace">[root@server shell04]</span><span class="token comment"># pwgen -cn1 12</span>
+Meep5ob1aesa
+<span class="token namespace">[root@server shell04]</span><span class="token comment"># echo user0{1..3}:$(pwgen -cn1 12)</span>
+user01:Bahqu9haipho user02:Feiphoh7moo4 user03:eilahj5eth2R
+<span class="token namespace">[root@server shell04]</span><span class="token comment"># echo user0{1..3}:$(pwgen -cn1 12)|tr ' ' '\n'</span>
+user01:eiwaShuZo5hi
+user02:eiDeih7aim9k
+user03:aeBahwien8co
+</code></pre></div><h1 id="二、嵌套循环"><a href="#二、嵌套循环" class="header-anchor">#</a> 二、嵌套循环</h1> <p><strong>关键字：大圈套小圈</strong></p> <p>🕒<strong>时钟</strong>：分针与秒针，秒针转⼀圈（60格），分针转1格。循环嵌套就是外层循环⼀次，内层循环⼀轮。</p> <ol><li>一个==循环体==内又包含另一个<strong>完整</strong>的循环结构，称为循环的嵌套。</li> <li>每次外部循环都会==触发==内部循环，直至内部循环完成，才接着执行下一次的外部循环。</li> <li>for循环、while循环和until循环可以<strong>相互</strong>嵌套。</li></ol> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/bin/env bash</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=5<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+	
+	done
+
+done
+</code></pre></div><p>##1. 应用案例</p> <h3 id="㈠-打印指定图案"><a href="#㈠-打印指定图案" class="header-anchor">#</a> ㈠ 打印指定图案</h3> <div class="language-powershell extra-class"><pre class="language-powershell"><code>1
+12
+123
+1234
+12345
+
+5
+54
+543
+5432
+54321
+
+外部循环：打印换行，并且换5行 ，循环5次
+
+内部循环：打印54321数字
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>y=5<span class="token punctuation">;</span>y&gt;=1<span class="token punctuation">;</span>y-<span class="token operator">-</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x=5<span class="token punctuation">;</span>x&gt;=1<span class="token punctuation">;</span>x-<span class="token operator">-</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+	
+	<span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$x</span>
+	done
+<span class="token function">echo</span>
+done
+
+</code></pre></div><h3 id="㈡-落地实现1"><a href="#㈡-落地实现1" class="header-anchor">#</a> ㈡ 落地实现1</h3> <div class="language-powershell extra-class"><pre class="language-powershell"><code>X轴：
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i=1<span class="token punctuation">;</span>i&lt;=5<span class="token punctuation">;</span>i+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">do</span> <span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$i</span><span class="token punctuation">;</span>done
+Y轴：
+负责打印换行
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>y=1<span class="token punctuation">;</span>y&lt;=5<span class="token punctuation">;</span>y+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x=1<span class="token punctuation">;</span>x&lt;=<span class="token variable">$y</span><span class="token punctuation">;</span>x+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+		<span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$x</span>
+	done
+<span class="token function">echo</span>
+done
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>y=1<span class="token punctuation">;</span>y&lt;=5<span class="token punctuation">;</span>y+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	x=1
+	<span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$x</span> <span class="token operator">-le</span> <span class="token variable">$y</span> <span class="token punctuation">]</span>
+		<span class="token keyword">do</span>
+		<span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$x</span>
+		let x+<span class="token operator">+</span>
+		done
+<span class="token function">echo</span>
+done
+</code></pre></div><h3 id="㈢-落地实现2"><a href="#㈢-落地实现2" class="header-anchor">#</a> ㈢ 落地实现2</h3> <div class="language-powershell extra-class"><pre class="language-powershell"><code>Y轴：打印换行
+X轴：打印数字 5<span class="token operator">-</span>1
+
+<span class="token comment">#!/bin/bash</span>
+y=5
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span> <span class="token variable">$y</span> &gt;= 1 <span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x=5<span class="token punctuation">;</span>x&gt;=<span class="token variable">$y</span><span class="token punctuation">;</span>x-<span class="token operator">-</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+		<span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$x</span>
+	done
+<span class="token function">echo</span>
+let y-<span class="token operator">-</span>
+done
+
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span> y=5<span class="token punctuation">;</span>y&gt;=1<span class="token punctuation">;</span>y-<span class="token operator">-</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span> x=5<span class="token punctuation">;</span>x&gt;=<span class="token variable">$y</span><span class="token punctuation">;</span>x-<span class="token operator">-</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+	<span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$x</span>
+	done
+<span class="token function">echo</span>
+done
+
+<span class="token comment">#!/bin/bash</span>
+y=5
+<span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$y</span> <span class="token operator">-ge</span> 1 <span class="token punctuation">]</span>
+<span class="token keyword">do</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x=5<span class="token punctuation">;</span>x&gt;=<span class="token variable">$y</span><span class="token punctuation">;</span>x-<span class="token operator">-</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+	<span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$x</span>
+	done
+<span class="token function">echo</span>
+let y-<span class="token operator">-</span>
+done
+
+
+<span class="token comment">#!/bin/bash</span>
+y=1
+<span class="token keyword">until</span> <span class="token punctuation">(</span><span class="token punctuation">(</span> <span class="token variable">$y</span> &gt;5 <span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	x=1
+	<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span> <span class="token variable">$x</span> &lt;= <span class="token variable">$y</span> <span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+	<span class="token function">echo</span> <span class="token operator">-</span>n $<span class="token punctuation">[</span>6<span class="token operator">-</span><span class="token variable">$x</span><span class="token punctuation">]</span>
+	let x+<span class="token operator">+</span>
+	done	
+<span class="token function">echo</span>
+let y+<span class="token operator">+</span>
+done
+
+<span class="token comment">#!/bin/env bash</span>
+y=1
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span> <span class="token variable">$y</span>&lt;= 5 <span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x=5<span class="token punctuation">;</span>x&gt;=6<span class="token operator">-</span><span class="token variable">$y</span><span class="token punctuation">;</span>x-<span class="token operator">-</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">do</span>
+                <span class="token function">echo</span> <span class="token operator">-</span>n <span class="token variable">$x</span>
+
+        done
+
+
+<span class="token function">echo</span>
+let y+<span class="token operator">+</span>
+done
+
+
+
+课后打印：
+54321
+5432
+543
+54
+5
+
+</code></pre></div><p>##2. 课堂练习</p> <p><strong>打印九九乘法表（三种方法）</strong></p> <div class="language-powershell extra-class"><pre class="language-powershell"><code>1<span class="token operator">*</span>1=1
+
+1<span class="token operator">*</span>2=2   2<span class="token operator">*</span>2=4
+
+1<span class="token operator">*</span>3=3   2<span class="token operator">*</span>3=6   3<span class="token operator">*</span>3=9
+
+1<span class="token operator">*</span>4=4   2<span class="token operator">*</span>4=8   3<span class="token operator">*</span>4=12  4<span class="token operator">*</span>4=16
+
+1<span class="token operator">*</span>5=5   2<span class="token operator">*</span>5=10  3<span class="token operator">*</span>5=15  4<span class="token operator">*</span>5=20  5<span class="token operator">*</span>5=25
+
+1<span class="token operator">*</span>6=6   2<span class="token operator">*</span>6=12  3<span class="token operator">*</span>6=18  4<span class="token operator">*</span>6=24  5<span class="token operator">*</span>6=30  6<span class="token operator">*</span>6=36
+
+1<span class="token operator">*</span>7=7   2<span class="token operator">*</span>7=14  3<span class="token operator">*</span>7=21  4<span class="token operator">*</span>7=28  5<span class="token operator">*</span>7=35  6<span class="token operator">*</span>7=42  7<span class="token operator">*</span>7=49
+
+1<span class="token operator">*</span>8=8   2<span class="token operator">*</span>8=16  3<span class="token operator">*</span>8=24  4<span class="token operator">*</span>8=32  5<span class="token operator">*</span>8=40  6<span class="token operator">*</span>8=48  7<span class="token operator">*</span>8=56  8<span class="token operator">*</span>8=64
+
+1<span class="token operator">*</span>9=9   2<span class="token operator">*</span>9=18  3<span class="token operator">*</span>9=27  4<span class="token operator">*</span>9=36  5<span class="token operator">*</span>9=45  6<span class="token operator">*</span>9=54  7<span class="token operator">*</span>9=63  8<span class="token operator">*</span>9=72  9<span class="token operator">*</span>9=81
+
+
+Y轴：循环9次，打印9行空行
+X轴：循环次数和Y轴相关；打印的是X和Y轴乘积 $<span class="token punctuation">[</span><span class="token punctuation">]</span> $<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>y=1<span class="token punctuation">;</span>y&lt;=9<span class="token punctuation">;</span>y+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x=1<span class="token punctuation">;</span>x&lt;=<span class="token variable">$y</span><span class="token punctuation">;</span>x+<span class="token operator">+</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">do</span>
+		<span class="token function">echo</span> <span class="token operator">-ne</span> <span class="token string">&quot;<span class="token variable">$x</span>*<span class="token variable">$y</span>=$[<span class="token variable">$x</span>*<span class="token variable">$y</span>]\t&quot;</span>
+	done
+<span class="token function">echo</span>
+<span class="token function">echo</span>
+done
+
+
+<span class="token comment">#!/bin/bash</span>
+y=1
+<span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$y</span> <span class="token operator">-le</span> 9 <span class="token punctuation">]</span>
+<span class="token keyword">do</span>
+        x=1
+        <span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$x</span> <span class="token operator">-le</span> <span class="token variable">$y</span> <span class="token punctuation">]</span>
+        <span class="token keyword">do</span>
+                <span class="token function">echo</span> <span class="token operator">-ne</span> <span class="token string">&quot;<span class="token variable">$x</span>*<span class="token variable">$y</span>=$[<span class="token variable">$x</span>*<span class="token variable">$y</span>]\t&quot;</span>
+                let x+<span class="token operator">+</span>
+        done
+<span class="token function">echo</span>
+<span class="token function">echo</span>
+let y+<span class="token operator">+</span>
+done
+
+或者
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">for</span> i in `seq 9`
+<span class="token keyword">do</span>
+    <span class="token keyword">for</span> j in `seq <span class="token variable">$i</span>`
+    <span class="token keyword">do</span>
+        <span class="token function">echo</span> <span class="token operator">-ne</span>  <span class="token string">&quot;<span class="token variable">$j</span>*<span class="token variable">$i</span>=$[<span class="token variable">$i</span>*<span class="token variable">$j</span>]\t&quot;</span>
+    done
+<span class="token function">echo</span>
+<span class="token function">echo</span>
+done
+或者
+<span class="token comment">#!/bin/bash</span>
+y=1
+<span class="token keyword">until</span> <span class="token punctuation">[</span> <span class="token variable">$y</span> <span class="token operator">-gt</span> 9 <span class="token punctuation">]</span>
+<span class="token keyword">do</span>
+        x=1
+        <span class="token keyword">until</span> <span class="token punctuation">[</span> <span class="token variable">$x</span> <span class="token operator">-gt</span> <span class="token variable">$y</span> <span class="token punctuation">]</span>
+        <span class="token keyword">do</span>
+                <span class="token function">echo</span> <span class="token operator">-ne</span> <span class="token string">&quot;<span class="token variable">$x</span>*<span class="token variable">$y</span>=$[ <span class="token variable">$x</span>*<span class="token variable">$y</span> ]\t&quot;</span>
+                let x+<span class="token operator">+</span>
+        done
+<span class="token function">echo</span>
+<span class="token function">echo</span>
+let y+<span class="token operator">+</span>
+done
+
+</code></pre></div><h1 id="三、阶段性补充总结"><a href="#三、阶段性补充总结" class="header-anchor">#</a> 三、阶段性补充总结</h1> <h2 id="_1-变量定义"><a href="#_1-变量定义" class="header-anchor">#</a> 1. 变量定义</h2> <div class="language- extra-class"><pre class="language-text"><code>1）变量名=变量值
+echo $变量名
+echo ${变量名}
+
+2）read -p &quot;提示用户信息:&quot; 变量名
+
+3） declare -i/-x/-r  变量名=变量值
+
+</code></pre></div><h2 id="_2-流程控制语句"><a href="#_2-流程控制语句" class="header-anchor">#</a> 2. 流程控制语句</h2> <div class="language-powershell extra-class"><pre class="language-powershell"><code>1）<span class="token keyword">if</span> <span class="token punctuation">[</span> 条件判断 <span class="token punctuation">]</span><span class="token punctuation">;</span>then
+		command
+	fi
+	
+2<span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">[</span> 条件判断 <span class="token punctuation">]</span><span class="token punctuation">;</span>then
+		command
+	<span class="token keyword">else</span>
+   	command
+   fi
+   
+ 3<span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">[</span> 条件判断1 <span class="token punctuation">]</span><span class="token punctuation">;</span>then
+ 		command1
+ 	 elif <span class="token punctuation">[</span> 条件判断2 <span class="token punctuation">]</span><span class="token punctuation">;</span>then
+ 	 	command2
+ 	 <span class="token keyword">else</span>
+    	command3
+   fi 	
+   
+</code></pre></div><h2 id="_3-循环语句"><a href="#_3-循环语句" class="header-anchor">#</a> 3. 循环语句</h2> <div class="language-powershell extra-class"><pre class="language-powershell"><code>目的：某个动作重复去做，用到循环
+<span class="token keyword">for</span>
+<span class="token keyword">while</span>
+<span class="token keyword">until</span>
+</code></pre></div><h2 id="_4-影响shell程序的内置命令"><a href="#_4-影响shell程序的内置命令" class="header-anchor">#</a> 4. 影响shell程序的内置命令</h2> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token keyword">exit</span>			退出整个程序
+<span class="token keyword">break</span>		   结束当前循环，或跳出本层循环
+<span class="token keyword">continue</span> 	忽略本次循环剩余的代码，直接进行下一次循环
+shift			使位置参数向左移动，默认移动1位，可以使用shift 2
+
+:
+true
+false
+
+</code></pre></div><p><strong>举例说明：</strong></p> <div class="language-powershell extra-class"><pre class="language-powershell"><code>以下脚本都能够实现用户自定义输入数字，然后脚本计算和：
+<span class="token namespace">[root@MissHou shell04]</span><span class="token comment"># cat shift.sh </span>
+<span class="token comment">#!/bin/bash</span>
+sum=0
+<span class="token keyword">while</span> <span class="token punctuation">[</span> $<span class="token comment"># -ne 0 ]</span>
+<span class="token keyword">do</span>
+let sum=<span class="token variable">$sum</span><span class="token operator">+</span><span class="token variable">$1</span>
+shift
+done
+<span class="token function">echo</span> sum=<span class="token variable">$sum</span>
+
+
+<span class="token namespace">[root@MissHou shell04]</span><span class="token comment"># cat for3.sh </span>
+<span class="token comment">#!/bin/bash</span>
+sum=0
+<span class="token keyword">for</span> i
+<span class="token keyword">do</span>
+let sum=<span class="token variable">$sum</span><span class="token operator">+</span><span class="token variable">$i</span>
+done
+<span class="token function">echo</span> sum=<span class="token variable">$sum</span>
+</code></pre></div><p>##5. 补充扩展expect</p> <p>expect 自动应答  tcl语言</p> <p>**需求1：**A远程登录到server上什么都不做</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/usr/bin/expect</span>
+<span class="token comment"># 开启一个程序</span>
+spawn ssh root@10<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1
+<span class="token comment"># 捕获相关内容</span>
+expect <span class="token punctuation">{</span>
+        <span class="token string">&quot;(yes/no)?&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+        <span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;123456\r&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+interact   <span class="token operator">/</span><span class="token operator">/</span>交互
+
+脚本执行方式：
+<span class="token comment"># ./expect1.sh</span>
+<span class="token comment"># /shell04/expect1.sh</span>
+<span class="token comment"># expect -f expect1.sh</span>
+
+1）定义变量
+<span class="token comment">#!/usr/bin/expect</span>
+<span class="token function">set</span> ip 10<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1
+<span class="token function">set</span> pass 123456
+<span class="token function">set</span> timeout 5
+spawn ssh root@<span class="token variable">$ip</span>
+expect <span class="token punctuation">{</span>
+	<span class="token string">&quot;yes/no&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+	<span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\r&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+interact
+
+
+2）使用位置参数
+<span class="token comment">#!/usr/bin/expect</span>
+<span class="token function">set</span> ip <span class="token punctuation">[</span> lindex <span class="token variable">$argv</span> 0 <span class="token punctuation">]</span>
+<span class="token function">set</span> pass <span class="token punctuation">[</span> lindex <span class="token variable">$argv</span> 1 <span class="token punctuation">]</span>
+<span class="token function">set</span> timeout 5
+spawn ssh root@<span class="token variable">$ip</span>
+expect <span class="token punctuation">{</span>
+	<span class="token string">&quot;yes/no&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+	<span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\r&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+interact
+
+</code></pre></div><p>**需求2：**A远程登录到server上操作</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/usr/bin/expect</span>
+<span class="token function">set</span> ip 10<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1
+<span class="token function">set</span> pass 123456
+<span class="token function">set</span> timeout 5
+spawn ssh root@<span class="token variable">$ip</span>
+expect <span class="token punctuation">{</span>
+	<span class="token string">&quot;yes/no&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+	<span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\r&quot;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+expect <span class="token string">&quot;#&quot;</span>
+send <span class="token string">&quot;rm -rf /tmp/*\r&quot;</span>
+send <span class="token string">&quot;touch /tmp/file{1..3}\r&quot;</span>
+send <span class="token string">&quot;date\r&quot;</span>
+send <span class="token string">&quot;exit\r&quot;</span>
+expect eof
+
+</code></pre></div><p>**需求3：**shell脚本和expect结合使用，在==多台服务器==上创建1个用户</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token namespace">[root@server shell04]</span><span class="token comment"># cat ip.txt </span>
+10<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1 123456
+10<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1<span class="token punctuation">.</span>2 123456
+
+
+1<span class="token punctuation">.</span> 循环  useradd username
+2<span class="token punctuation">.</span> 登录远程主机——&gt;ssh——&gt;从ip<span class="token punctuation">.</span>txt文件里获取IP和密码分别赋值给两个变量
+3<span class="token punctuation">.</span> 使用expect程序来解决交互问题
+
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token comment"># 循环在指定的服务器上创建用户和文件</span>
+<span class="token keyword">while</span> read ip pass
+<span class="token keyword">do</span>
+	<span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>expect &lt;&lt;<span class="token operator">-</span><span class="token keyword">END</span> &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+	spawn ssh root@<span class="token variable">$ip</span>
+	expect <span class="token punctuation">{</span>
+	<span class="token string">&quot;yes/no&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+	<span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\r&quot;</span> <span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	expect <span class="token string">&quot;#&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;useradd yy1;rm -rf /tmp/*;exit\r&quot;</span> <span class="token punctuation">}</span>
+	expect eof
+	<span class="token keyword">END</span>
+<span class="token function">echo</span> <span class="token string">&quot;<span class="token variable">$ip</span>服务器用户创建完毕&quot;</span>
+done &lt; ip<span class="token punctuation">.</span>txt
+
+
+
+<span class="token comment">#!/bin/bash</span>
+<span class="token function">cat</span> ip<span class="token punctuation">.</span>txt<span class="token punctuation">|</span><span class="token keyword">while</span> read ip pass
+<span class="token keyword">do</span>
+        <span class="token punctuation">{</span>
+
+        <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>expect &lt;&lt;<span class="token operator">-</span>HOU
+        spawn ssh root@<span class="token variable">$ip</span>
+        expect <span class="token punctuation">{</span>
+                <span class="token string">&quot;yes/no&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+                <span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\r&quot;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        expect <span class="token string">&quot;#&quot;</span>
+        send <span class="token string">&quot;hostname\r&quot;</span>
+        send <span class="token string">&quot;exit\r&quot;</span>
+        expect eof
+        HOU
+
+        <span class="token punctuation">}</span>&amp;
+done
+wait
+<span class="token function">echo</span> <span class="token string">&quot;user is ok....&quot;</span>
+
+
+或者
+<span class="token comment">#!/bin/bash</span>
+<span class="token keyword">while</span> read ip pass
+<span class="token keyword">do</span>
+        <span class="token punctuation">{</span>
+
+        <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>expect &lt;&lt;<span class="token operator">-</span>HOU
+        spawn ssh root@<span class="token variable">$ip</span>
+        expect <span class="token punctuation">{</span>
+                <span class="token string">&quot;yes/no&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+                <span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\r&quot;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        expect <span class="token string">&quot;#&quot;</span>
+        send <span class="token string">&quot;hostname\r&quot;</span>
+        send <span class="token string">&quot;exit\r&quot;</span>
+        expect eof
+        HOU
+
+        <span class="token punctuation">}</span>&amp;
+done&lt;ip<span class="token punctuation">.</span>txt
+wait
+<span class="token function">echo</span> <span class="token string">&quot;user is ok....&quot;</span>
+</code></pre></div><p>#四、综合案例</p> <p>##1. 实战案例1</p> <h3 id="㈠-具体需求"><a href="#㈠-具体需求" class="header-anchor">#</a> ㈠ 具体需求</h3> <p>写一个脚本，将跳板机上yunwei用户的公钥推送到==局域网内==可以ping通的所有机器上</p> <p>说明：主机和密码文件已经提供</p> <p>10.1.1.1:123456</p> <p>10.1.1.2:123456</p> <h3 id="㈡-案例分析"><a href="#㈡-案例分析" class="header-anchor">#</a> ㈡ 案例分析</h3> <ol><li>跳板机上的yunwei用户生成秘钥对
+<ul><li>判断账号是否存在  (id yunwei)</li> <li>判断该用户是否有密钥对文件  [ -f xxx ]</li></ul></li> <li>判断expect程序是否安装</li> <li>判断局域网内主机是否ping通（循环判断|for while until）
+<ul><li>循环判断  for  while</li> <li>循环体do......done    ping 主机  如果ping通 调用expect程序自动应答推送公钥</li></ul></li> <li>测试验证是否免密登录成功</li></ol> <ul><li>检查服务器上ssh服务端口号</li> <li>把公钥推送成功的主机的信息保存到文件</li> <li>关闭防火墙和selinux</li> <li>日志记录</li> <li>推送公钥需要自动应答expect</li></ul> <h3 id="㈢-落地实现"><a href="#㈢-落地实现" class="header-anchor">#</a> ㈢ 落地实现</h3> <h4 id="①-代码拆分"><a href="#①-代码拆分" class="header-anchor">#</a> ① 代码拆分</h4> <p>功能1：管理员root创建yunwei用户和安装expect软件包</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/bin/env bash</span>
+<span class="token comment"># 实现批量推送公钥</span>
+<span class="token comment"># 判断jumper上的yunwei账号是否存在</span>
+<span class="token punctuation">{</span>
+id yunwei
+<span class="token punctuation">[</span> $? <span class="token operator">-ne</span> 0 <span class="token punctuation">]</span> &amp;&amp; useradd yunwei &amp;&amp; <span class="token function">echo</span> 123<span class="token punctuation">|</span>passwd <span class="token operator">--</span>stdin yunwei
+<span class="token punctuation">}</span> &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+<span class="token comment">#判断expect程序是否安装</span>
+rpm <span class="token operator">-</span>q expect
+<span class="token punctuation">[</span> $? <span class="token operator">-ne</span> 0 <span class="token punctuation">]</span> &amp;&amp; yum <span class="token operator">-</span>y install expect &amp;&amp; <span class="token function">echo</span> <span class="token string">&quot;expect软件已经成功安装&quot;</span>
+</code></pre></div><p>功能2：判断主机是否ping通并且==yunwei用户==推送公钥</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/bin/env bash</span>
+<span class="token comment"># 判断yunwei用户密钥对是否存在</span>
+home_dir=<span class="token operator">/</span>home<span class="token operator">/</span>yunwei
+<span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token operator">-</span>f <span class="token variable">$home_dir</span><span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa<span class="token punctuation">.</span>pub <span class="token punctuation">]</span> &amp;&amp; ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>P <span class="token string">''</span> <span class="token operator">-</span>f id_rsa &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+
+<span class="token comment">#循环检查主机的网络并且进行公钥推送</span>
+ip_txt=<span class="token variable">$home_dir</span><span class="token operator">/</span>ip<span class="token punctuation">.</span>txt
+
+<span class="token keyword">for</span> i in `<span class="token function">cat</span> <span class="token variable">$ip_txt</span>`
+<span class="token keyword">do</span>
+	ip=`<span class="token function">echo</span> <span class="token variable">$i</span><span class="token punctuation">|</span>cut <span class="token operator">-</span>d: <span class="token operator">-</span>f1`
+	pass=`<span class="token function">echo</span> <span class="token variable">$i</span><span class="token punctuation">|</span>cut <span class="token operator">-</span>d: <span class="token operator">-</span>f2`
+	ping <span class="token operator">-</span>c1 <span class="token variable">$ip</span> &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+	<span class="token keyword">if</span> <span class="token punctuation">[</span> $? <span class="token operator">-eq</span> 0 <span class="token punctuation">]</span><span class="token punctuation">;</span>then
+		<span class="token function">echo</span> <span class="token variable">$ip</span> &gt;&gt; ~<span class="token operator">/</span>ip_up<span class="token punctuation">.</span>txt
+		<span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>expect &lt;&lt;<span class="token operator">-</span><span class="token keyword">END</span> &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+		spawn ssh<span class="token operator">-</span><span class="token function">copy</span><span class="token operator">-</span>id root@<span class="token variable">$ip</span>
+		expect
+			<span class="token punctuation">{</span>
+            <span class="token string">&quot;(yes/no)&quot;</span>  <span class="token punctuation">{</span> send <span class="token string">&quot;yes\n&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+            <span class="token string">&quot;password:&quot;</span>  <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\n&quot;</span> <span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		expect eof
+		<span class="token keyword">END</span>	
+	<span class="token keyword">else</span>
+		<span class="token function">echo</span> <span class="token variable">$ip</span> &gt;&gt; <span class="token variable">$home_dir</span><span class="token operator">/</span>ip_down<span class="token punctuation">.</span>txt
+	fi
+done
+
+<span class="token comment"># 测试验证</span>
+remote_ip=`head <span class="token operator">-</span>1 ~<span class="token operator">/</span>ip_up<span class="token punctuation">.</span>txt`
+ssh root@<span class="token variable">$remote_ip</span> hostname
+<span class="token punctuation">[</span> $? <span class="token operator">-eq</span> 0 <span class="token punctuation">]</span> &amp;&amp; <span class="token function">echo</span> <span class="token string">&quot;公钥推送成功&quot;</span>
+</code></pre></div><h4 id="②-最终实现"><a href="#②-最终实现" class="header-anchor">#</a> ② 最终实现</h4> <ol><li><strong>环境准备</strong></li></ol> <div class="language-powershell extra-class"><pre class="language-powershell"><code>jumper<span class="token operator">-</span>server	有yunwei用户
+
+yunwei用户sudo授权：
+visudo
+<span class="token comment">## Allow root to run any commands anywhere</span>
+root    ALL=<span class="token punctuation">(</span>ALL<span class="token punctuation">)</span>       ALL
+yunwei  ALL=<span class="token punctuation">(</span>root<span class="token punctuation">)</span>      NOPASSWD:ALL<span class="token punctuation">,</span><span class="token operator">!</span><span class="token operator">/</span>sbin<span class="token operator">/</span>shutdown<span class="token punctuation">,</span><span class="token operator">!</span><span class="token operator">/</span>sbin<span class="token operator">/</span>init<span class="token punctuation">,</span><span class="token operator">!</span><span class="token operator">/</span>bin<span class="token operator">/</span><span class="token function">rm</span> <span class="token operator">-</span>rf <span class="token operator">/</span>
+
+解释说明：
+1）第一个字段yunwei指定的是用户：可以是用户名，也可以是别名。每个用户设置一行，多个用户设置多行，也可以将多个用户设置成一个别名后再进行设置。
+2）第二个字段ALL指定的是用户所在的主机：可以是ip<span class="token punctuation">,</span>也可以是主机名，表示该sudo设置只在该主机上生效，ALL表示在所有主机上都生效！限制的一般都是本机，也就是限制使用这个文件的主机<span class="token punctuation">;</span>一般都指定为<span class="token string">&quot;ALL&quot;</span>表示所有的主机，不管文件拷到那里都可以用。比如：10<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1<span class="token punctuation">.</span>1=<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>则表示只在当前主机生效。
+3）第三个字段（root）括号里指定的也是用户：指定以什么用户身份执行sudo，即使用sudo后可以享有所有root账号下的权限。如果要排除个别用户，可以在括号内设置，比如ALL=<span class="token punctuation">(</span>ALL<span class="token punctuation">,</span><span class="token operator">!</span>oracle<span class="token punctuation">,</span><span class="token operator">!</span>pos<span class="token punctuation">)</span>。
+4）第四个字段ALL指定的是执行的命令：即使用sudo后可以执行所有的命令。除了关机和删除根内容以外；也可以设置别名。NOPASSWD: ALL表示使用sudo的不需要输入密码。
+5）也可以授权给一个用户组
+	<span class="token operator">%</span>admin ALL=<span class="token punctuation">(</span>ALL<span class="token punctuation">)</span> ALL	表示admin组里的所有成员可以在任何主机上以任何用户身份执行任何命令
+</code></pre></div><ol start="2"><li><strong>脚本实现</strong></li></ol> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/bin/bash</span>
+<span class="token comment">#判断公钥是否存在</span>
+<span class="token punctuation">[</span> <span class="token operator">!</span> <span class="token operator">-</span>f <span class="token operator">/</span>home<span class="token operator">/</span>yunwei<span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa <span class="token punctuation">]</span> &amp;&amp; ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>P <span class="token string">''</span> <span class="token operator">-</span>f ~<span class="token operator">/</span><span class="token punctuation">.</span>ssh<span class="token operator">/</span>id_rsa
+
+<span class="token comment">#循环判断主机是否ping通，如果ping通推送公钥</span>
+tr <span class="token string">':'</span> <span class="token string">' '</span> &lt; <span class="token operator">/</span>shell04<span class="token operator">/</span>ip<span class="token punctuation">.</span>txt<span class="token punctuation">|</span><span class="token keyword">while</span> read ip pass
+<span class="token keyword">do</span>
+<span class="token punctuation">{</span>
+        ping <span class="token operator">-</span>c1 <span class="token variable">$ip</span> &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+        <span class="token keyword">if</span> <span class="token punctuation">[</span> $? <span class="token operator">-eq</span> 0 <span class="token punctuation">]</span><span class="token punctuation">;</span>then
+        <span class="token function">echo</span> <span class="token variable">$ip</span> &gt;&gt; ~<span class="token operator">/</span>ip_up<span class="token punctuation">.</span>txt
+        <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>expect &lt;&lt;<span class="token operator">-</span><span class="token keyword">END</span> &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+         spawn ssh<span class="token operator">-</span><span class="token function">copy</span><span class="token operator">-</span>id root@<span class="token variable">$ip</span>
+         expect <span class="token punctuation">{</span>
+                <span class="token string">&quot;yes/no&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;yes\r&quot;</span><span class="token punctuation">;</span>exp_continue <span class="token punctuation">}</span>
+                <span class="token string">&quot;password:&quot;</span> <span class="token punctuation">{</span> send <span class="token string">&quot;<span class="token variable">$pass</span>\r&quot;</span> <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+        expect eof
+        <span class="token keyword">END</span>
+        fi
+<span class="token punctuation">}</span>&amp;
+done
+wait
+<span class="token function">echo</span> <span class="token string">&quot;公钥已经推送完毕，正在测试....&quot;</span>
+<span class="token comment">#测试验证</span>
+remote_ip=`tail <span class="token operator">-</span>1 ~<span class="token operator">/</span>ip_up<span class="token punctuation">.</span>txt`
+ssh root@<span class="token variable">$remote_ip</span> hostname &amp;&gt;<span class="token operator">/</span>dev<span class="token operator">/</span>null
+test $? <span class="token operator">-eq</span> 0 &amp;&amp; <span class="token function">echo</span> <span class="token string">&quot;公钥成功推送完毕&quot;</span>
+</code></pre></div><p>##2. 实战案例2</p> <p>写一个脚本，统计web服务的不同==连接状态==个数</p> <ol><li>找出查看网站连接状态的命令  <code>ss -natp|grep :80</code></li> <li>如何统计==不同的==状态   循环去统计，需要计算</li></ol> <div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#!/bin/bash</span>
+<span class="token comment">#count_http_80_state</span>
+<span class="token comment">#统计每个状态的个数</span>
+
+declare <span class="token operator">-</span>A array1
+states=`ss <span class="token operator">-</span>ant<span class="token punctuation">|</span>grep 80<span class="token punctuation">|</span>cut <span class="token operator">-</span>d<span class="token string">' '</span> <span class="token operator">-</span>f1`
+
+<span class="token keyword">for</span> i in <span class="token variable">$states</span>
+<span class="token keyword">do</span>
+        let array1<span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span><span class="token operator">++</span>
+done
+
+<span class="token comment">#通过遍历数组里的索引和元素打印出来</span>
+<span class="token keyword">for</span> j in $<span class="token punctuation">{</span><span class="token operator">!</span>array1<span class="token punctuation">[</span>@<span class="token punctuation">]</span><span class="token punctuation">}</span>
+<span class="token keyword">do</span>
+        <span class="token function">echo</span> <span class="token variable">$j</span>:$<span class="token punctuation">{</span>array1<span class="token punctuation">[</span><span class="token variable">$j</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+done
+
+
+</code></pre></div><p>#五、课后实战</p> <p>1、将/etc/passwd里的用户名分类，分为管理员用户，系统用户，普通用户。
+2、写一个倒计时脚本，要求显示离2019年1月1日（元旦）的凌晨0点，还有多少天，多少时，多少分，多少秒。
+3、写一个脚本把一个目录内的所有==空文件==都删除，最后输出删除的文件的个数。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog_publish/learn/linux/04_SHELL编程之循环语句.html" class="prev">
+        /learn/linux/04_SHELL编程之循环语句.html
+      </a></span> <span class="next"><a href="/blog_publish/learn/linux/06_SHELL编程之CASE语句+函数+正则.html">
+        /learn/linux/06_SHELL编程之CASE语句+函数+正则.html
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog_publish/assets/js/app.e9f73273.js" defer></script><script src="/blog_publish/assets/js/2.92f2819f.js" defer></script><script src="/blog_publish/assets/js/274.49e79caa.js" defer></script>
+  </body>
+</html>
